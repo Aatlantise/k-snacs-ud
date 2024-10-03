@@ -299,18 +299,19 @@ doc_id	sent_id	token_id	form	morph	p	gold_scene	gold_function
 1	31	7	별	별/MM	_	_	_
 1	31	8	이야기도	이야기/NNG + 도/JX	도	focus	focus
 1	31	9	꺼내지	꺼내/VV + 지/EC	_	_	_
-1	31	10	않았다.나는	않/VX + 았/EP + 다/EF + ./SF + 나/NP + 는/JX	는	topical	topical
-1	32	1	그가	그/NP + 가/JKS	가	experiencer	agent
-1	32	2	알아	알/VV + 아/EC	_	_	_
-1	32	3	들을	듣/VV + 을/ETM	_	_	_
-1	32	4	수	수/NNB	_	_	_
-1	32	5	있는	있/VV + 는/ETM	_	_	_
-1	32	6	트럼프	트럼프/NNG	_	_	_
-1	32	7	이야기,	이야기/NNG + ,/SP	_	_	_
-1	32	8	골프	골프/NNG	_	_	_
-1	32	9	이야기,	이야기/NNG + ,/SP	_	_	_
-1	32	10	넥타이이야기를	넥타이/NNG + 이야기/NNG + 를/JKO	를	theme	theme
-1	32	11	했다.	하/VV + 았/EP + 다/EF + ./SF	_	_	_
+1	31	10	않았다.	않/VX + 았/EP + 다/EF + ./SF	_	_	_
+1	32	1	나는	나/NP + 는/JX	는	topical	topical
+1	32	2	그가	그/NP + 가/JKS	가	experiencer	agent
+1	32	3	알아	알/VV + 아/EC	_	_	_
+1	32	4	들을	듣/VV + 을/ETM	_	_	_
+1	32	5	수	수/NNB	_	_	_
+1	32	6	있는	있/VV + 는/ETM	_	_	_
+1	32	7	트럼프	트럼프/NNG	_	_	_
+1	32	8	이야기,	이야기/NNG + ,/SP	_	_	_
+1	32	9	골프	골프/NNG	_	_	_
+1	32	10	이야기,	이야기/NNG + ,/SP	_	_	_
+1	32	11	넥타이이야기를	넥타이/NNG + 이야기/NNG + 를/JKO	를	theme	theme
+1	32	12	했다.	하/VV + 았/EP + 다/EF + ./SF	_	_	_
 1	33	1	그러면	그러면/MAJ	_	_	_
 1	33	2	그	그/MM	_	_	_
 1	33	3	어른은	어른/NNG + 은/JX	은	topical	topical
@@ -370,8 +371,8 @@ doc_id	sent_id	token_id	form	morph	p	gold_scene	gold_function
 2	5	4	하는	하/VX + 는/ETM	_	_	_
 2	5	5	문제였다.	문제/NNG + 이/VCP + 었/EP + 다/EF + ./SF	_	_	_
 2	6	1	가진	가지/VV + ㄴ/ETM	_	_	_
-2	6	2-0	것이라고는	_	라고	comparisonref	quote
-2	6	2-1	것이라고는	것/NNB + 이/VCP + 라고/EC + 는/JX	는	topical	topical
+2	6	2-1	것이라고는	_	라고	comparisonref	quote
+2	6	2-2	것이라고는	것/NNB + 이/VCP + 라고/EC + 는/JX	는	topical	topical
 2	6	3	겨우	겨우/MAG	_	_	_
 2	6	4	일주일	일/NR + 주일/NNB	_	_	_
 2	6	5	동안	동안/NNG	_	_	_
@@ -507,17 +508,18 @@ doc_id	sent_id	token_id	form	morph	p	gold_scene	gold_function
 2	19	25	본	보/VX + ㄴ/ETM	_	_	_
 2	19	26	적이	적/NNB + 이/JKS	이	theme	theme
 2	19	27	없지	없/VA + 지/EC	_	_	_
-2	19	28	않은가.아뭏든	않/VX + 은가/EF + ./SF + 아뭏든/MAG	_	_	_
-2	20	1	나는	나/NP + 는/JX	는	topical	topical
-2	20	2	놀란	놀라/VV + ㄴ/ETM	_	_	_
-2	20	3	눈을	눈/NNG + 을/JKO	을	theme	theme
-2	20	4	휘둥그레	휘둥그레/MAG	_	_	_
-2	20	5	뜨고	뜨/VV + 고/EC	_	_	_
-2	20	6	홀연히	홀연히/MAG	_	_	_
-2	20	7	나타난	나타나/VV + ㄴ/ETM	_	_	_
-2	20	8	그	그/MM	_	_	_
-2	20	9	모습을	모습/NNG + 을/JKO	을	stimulus	topic
-2	20	10	바라보았다.	바라보/VV + 았/EP + 다/EF + ./SF	_	_	_
+2	19	28	않은가.	않/VX + 은가/EF + ./SF	_	_	_
+2	20	1	아뭏든	아뭏든/MAG	_	_	_
+2	20	2	나는	나/NP + 는/JX	는	topical	topical
+2	20	3	놀란	놀라/VV + ㄴ/ETM	_	_	_
+2	20	4	눈을	눈/NNG + 을/JKO	을	theme	theme
+2	20	5	휘둥그레	휘둥그레/MAG	_	_	_
+2	20	6	뜨고	뜨/VV + 고/EC	_	_	_
+2	20	7	홀연히	홀연히/MAG	_	_	_
+2	20	8	나타난	나타나/VV + ㄴ/ETM	_	_	_
+2	20	9	그	그/MM	_	_	_
+2	20	10	모습을	모습/NNG + 을/JKO	을	stimulus	topic
+2	20	11	바라보았다.	바라보/VV + 았/EP + 다/EF + ./SF	_	_	_
 2	21	1	사람이	사람/NNG + 이/JKS	이	agent	agent
 2	21	2	사는	살/VV + 는/ETM	_	_	_
 2	21	3	곳에서	곳/NNG + 에서/JKB	에서	locus	source
@@ -535,20 +537,20 @@ doc_id	sent_id	token_id	form	morph	p	gold_scene	gold_function
 2	22	7	것	것/NNB	_	_	_
 2	22	8	같지도	같/VA + 지/EC + 도/JX	도	focus	focus
 2	22	9	않았고,	않/VX + 았/EP + 고/EC + ,/SP	_	_	_
-2	22	10-1	피곤이나굶주림이나	피곤/NNG + 이나/JC + 굶주림/NNG + 이나/JC	이나	focus	focus
-2	22	10-2	피곤이나굶주림이나	피곤/NNG + 이나/JC + 굶주림/NNG + 이나/JC	이나	focus	focus
-2	22	11	목마름에	목마름/NNG + 에/JKB	에	explanation	explanation
-2	22	12	시달려	시달리/VV + 어/EC	_	_	_
-2	22	13	녹초가	녹초/NNG + 가/JKC	가	theme	theme
-2	22	14	된	되/VV + ㄴ/ETM	_	_	_
-2	22	15	것	것/NNB	_	_	_
-2	22	16	같지도	같/VA + 지/EC + 도/JX	도	focus	focus
-2	22	17	않았으며,	않/VX + 았/EP + 으며/EC + ,/SP	_	_	_
-2	22	18	겁에질려	겁/NNG + 에/JKB + 질리/VV + 어/EC	에	stimulus	circumstance
-2	22	19	있는	있/VX + 는/ETM	_	_	_
-2	22	20	것	것/NNB	_	_	_
-2	22	21	같지도	같/VA + 지/EC + 도/JX	도	focus	focus
-2	22	22	않았다.	않/VX + 았/EP + 다/EF + ./SF	_	_	_
+2	22	10	피곤이나	피곤/NNG + 이나/JC	이나	focus	focus
+2	22	11	굶주림이나	굶주림/NNG + 이나/JC	이나	focus	focus
+2	22	12	목마름에	목마름/NNG + 에/JKB	에	explanation	explanation
+2	22	13	시달려	시달리/VV + 어/EC	_	_	_
+2	22	14	녹초가	녹초/NNG + 가/JKC	가	theme	theme
+2	22	15	된	되/VV + ㄴ/ETM	_	_	_
+2	22	16	것	것/NNB	_	_	_
+2	22	17	같지도	같/VA + 지/EC + 도/JX	도	focus	focus
+2	22	18	않았으며,	않/VX + 았/EP + 으며/EC + ,/SP	_	_	_
+2	22	19	겁에질려	겁/NNG + 에/JKB + 질리/VV + 어/EC	에	stimulus	circumstance
+2	22	20	있는	있/VX + 는/ETM	_	_	_
+2	22	21	것	것/NNB	_	_	_
+2	22	22	같지도	같/VA + 지/EC + 도/JX	도	focus	focus
+2	22	23	않았다.	않/VX + 았/EP + 다/EF + ./SF	_	_	_
 2	23	1	사람이	사람/NNG + 이/JKS	이	agent	agent
 2	23	2	사는	살/VV + 는/ETM	_	_	_
 2	23	3	곳에서	곳/NNG + 에서/JKB	에서	locus	source
@@ -1944,7 +1946,8 @@ doc_id	sent_id	token_id	form	morph	p	gold_scene	gold_function
 5	19	7	한참	한참/NNG	_	_	_
 5	19	8	머리를	머리/NNG + 를/JKO	를	theme	theme
 5	19	9	짜내야만	짜내/VV + 아야만/EC	_	_	_
-5	19	10	했다.어린	하/VX + 았/EP + 다/EF + ./SF + 어린/NNG	_	_	_
+5	19	10	했다.	하/VX + 았/EP + 다/EF + ./SF	_	_	_
+5	20	1	어린	어린/NNG	_	_	_
 5	20	1	왕자가	왕자/NNG + 가/JKS	가	theme	theme
 5	20	2	사는	살/VV + 는/ETM	_	_	_
 5	20	3-1	별에는	별/NNG + 에/JKB + 는/JX	에	locus	circumstance
@@ -3999,20 +4002,20 @@ doc_id	sent_id	token_id	form	morph	p	gold_scene	gold_function
 10	29	1	"""어흠!"	"""/SS + 어흠/IC + !/SF"	_	_	_
 10	29	2	어흠!	어흠/IC + !/SF	_	_	_
 10	29	3	그렇다면	그렇/VA + 다면/EC	_	_	_
-10	29	4-1	짐이......짐이	짐/NNG + 이/JKS + ....../SE + 짐/NNG + 이/JKS	이	agent	agent
-10	29	4-2	짐이......짐이	짐/NNG + 이/JKS + ....../SE + 짐/NNG + 이/JKS	이	agent	agent
-10	29	5	명하노니	명하/VV + 노니/EC	_	_	_
-10	29	6	어떤	어떤/MM	_	_	_
-10	29	7	때는	때/NNG + 는/JX	는	topical	topical
-10	29	8	하품을	하품/NNG + 을/JKO	을	theme	theme
-10	29	9	하고	하/VV + 고/EC	_	_	_
-10	29	10	또	또/MAG	_	_	_
-10	29	11	어떤	어떤/MM	_	_	_
-10	29	12	때는	때/NNG + 는/JX	는	topical	topical
-10	29	13	"......"""	"....../SE + ""/SS"	_	_	_
-10	29	14	하고	하/VV + 고/EC	_	_	_
-10	29	15	왕이	왕/NNG + 이/JKS	이	agent	agent
-10	29	16	말했다.	말/NNG + 하/XSV + 았/EP + 다/EF + ./SF	_	_	_
+10	29	4	짐이......	짐/NNG + 이/JKS + ....../SE	이	agent	agent
+10	29	5	짐이	짐/NNG + 이/JKS	이	agent	agent
+10	29	6	명하노니	명하/VV + 노니/EC	_	_	_
+10	29	7	어떤	어떤/MM	_	_	_
+10	29	8	때는	때/NNG + 는/JX	는	topical	topical
+10	29	9	하품을	하품/NNG + 을/JKO	을	theme	theme
+10	29	10	하고	하/VV + 고/EC	_	_	_
+10	29	11	또	또/MAG	_	_	_
+10	29	12	어떤	어떤/MM	_	_	_
+10	29	13	때는	때/NNG + 는/JX	는	topical	topical
+10	29	14	"......"""	"....../SE + ""/SS"	_	_	_
+10	29	15	하고	하/VV + 고/EC	_	_	_
+10	29	16	왕이	왕/NNG + 이/JKS	이	agent	agent
+10	29	17	말했다.	말/NNG + 하/XSV + 았/EP + 다/EF + ./SF	_	_	_
 10	30	1	그는	그/NP + 는/JX	는	topical	topical
 10	30	2	뭐라고	뭐/NP + 이/VCP + 라고/EC	_	_	_
 10	30	3	중얼중얼했다.	중얼중얼/MAG + 하/XSV + 았/EP + 다/EF + ./SF	_	_	_
