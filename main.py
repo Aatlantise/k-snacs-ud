@@ -2,6 +2,7 @@ import csv
 import stanza
 import json
 import re
+from typing import List
 from tqdm import tqdm
 
 
@@ -193,12 +194,173 @@ def align_original_with_stanza(og_anno, stanza_anno):
         merged_anno.append(merged_doc)
 
     with open("little_prince_merged.json", "w", encoding="utf-8") as f:
-        json.dump(merged_anno, f, ensure_ascii=False)
+        json.dump(merged_anno, f, ensure_ascii=False, indent=4)
 
     return merged_anno
 
 
+def adjust_token_boundaries(merged_anno):
+    """
+    Here, we adjust token boundaries by performing two tasks.
+
+     1. join separated ellipses: ....(SE) + .(SF) -> .....(SE)
+     2. duplicate postpositions as additional node: 마리만 -> 마리만(NNB+JXC) + 만(JXC)
+
+    :param merged_anno: Merged annotations
+    :return: Boundary adjusted annotations
+    """
+
+    # First, we join separated ellipses
+    _adjusted_doc = []
+    for chapter in merged_anno:
+        adjusted_chapter = []
+        for sentence in chapter:
+            i = 0
+            i_token = 1
+            id2nid = {}
+            adjusted_sentence = []
+            while i < len(sentence):
+                # Map id to newly formed id
+                id2nid[sentence[i]["id"]] = i_token
+                # Could be part of separated elipsis
+                if re.fullmatch(r'\.+', sentence[i]["text"]) and i < len(sentence) - 1:
+                    # thankfully, elipses seem to be only breaking once
+                    if re.fullmatch(r'\.+', sentence[i + 1]["text"]):
+                        merged_elipsis_token = {
+                            "token_id": sentence[i]["token_id"],
+                            "form": sentence[i]["form"],
+                            "morph": sentence[i]["morph"],
+                            "p": "_",
+                            "gold_scene": "_",
+                            "gold_function": "_",
+                            "id": sentence[i]["id"],
+                            "text": sentence[i]["text"] + sentence[i + 1]["text"],
+                            "lemma": sentence[i]["lemma"] + sentence[i + 1]["lemma"],
+                            "upos": "PUNCT",
+                            "xpos": "sf", # should be sf, rather than sl or sr
+                            "head": sentence[i]["head"], # take the first head, as the second period often points to the previous elipsis
+                            "deprel": sentence[i]["deprel"], # should probably be punct, but there are some artifacts that relates to head too
+                            "start_char": sentence[i]["start_char"],
+                            "end_char": sentence[i+1]["end_char"]
+                        }
+                        adjusted_sentence.append(merged_elipsis_token)
+                        i_token += 1
+                        i += 1
+                    i += 1
+                # no elipsis in this token
+                else:
+                    adjusted_sentence.append(sentence[i])
+                    i_token += 1
+                    i += 1
+            for adj_token in adjusted_sentence:
+                if adj_token['head'] == 0: # root stays root
+                    pass
+                else:
+                    adj_token['head'] = id2nid[adj_token['head']]
+            adjusted_chapter.append(adjusted_sentence)
+        _adjusted_doc.append(adjusted_chapter)
+
+    # Then, duplicate the postpositions
+    # If single postposition, duplicate the postposition to produce one additional node
+    # If stacked postposition, duplicate each postposition to produce one additional node per stacked postposition
+    # Postposition annotations are made at the additional postposition node
+    adjusted_doc = []
+    xpos_errors = 0
+    for chapter in _adjusted_doc:
+        adjusted_chapter = []
+        for sentence in chapter:
+            i = 0
+            adjusted_sentence = []
+            while i < len(sentence):
+                token = sentence[i]
+                if '-' not in token['token_id'] or '-1' in token['token_id']:
+                    # Add token and postposition if it exists
+                    full_token = json.loads(json.dumps(token)) # deepcopy
+                    full_token['p'] = "_"
+                    full_token["gold_scene"] = "_"
+                    full_token["gold_function"] = "_"
+                    del full_token["form"]
+                    del full_token["morph"]
+                    del full_token["token_id"]
+
+                    adjusted_sentence.append(full_token)
+
+                    if token['p'] != "_":
+                        p_node = json.loads(json.dumps(token))
+                        p_node['id'] = f"{p_node['id']}-1"
+                        p_node['form'] = p_node["p"]
+                        p_node["text"] = p_node["p"]
+                        p_node["lemma"] = p_node["p"]
+                        p_node["upos"] = "ADP"
+                        p_node["deprel"] = "case"
+                        p_node["start_char"] = token["end_char"] - 1 if token["text"][-1] == p_node["text"] else None
+                        p_node["end_char"] = token["end_char"] if token["text"][-1] == p_node["text"] else None
+                        p_node["head"] = full_token["id"]
+                        del p_node["form"]
+                        del p_node["morph"]
+                        del p_node["token_id"]
+                        # We update the head when the sentence is finished parsing by
+                        # using an original_id to new_id map,
+                        # since the indices may have shifted due to ellipsis processing
+
+                        # xpos must be r'j[cx][acjmorst]'
+                        # Annotate ERROR if:
+                        # 1. There are more than 1 postposition tags in unstacked token
+                        # 2. There are no postposition tags in token
+                        try:
+                            xpos_labels = p_node["xpos"].split("+")
+                            p_node["xpos"] = xpos_labels[-1] if '-' not in token["token_id"] else [xpos for xpos in xpos_labels if re.match(r'j[cx][acjmorst]', xpos)][0]
+                            assert re.match(r'j[cx][acjmorst]', p_node["xpos"])
+                        except:
+                            p_node["xpos"] = "ERROR"
+                            xpos_errors += 1
+
+                        adjusted_sentence.append(p_node)
+
+                else: # second or third stacked postpositions
+                    p_node = token
+
+                    ord = p_node['token_id'][-1]
+                    p_node['id'] = f"{p_node['id']}-{ord}"
+                    p_node['form'] = p_node["p"]
+                    p_node["text"] = p_node["p"]
+                    p_node["lemma"] = p_node["p"]
+                    p_node["upos"] = "ADP"
+                    p_node["deprel"] = "case"
+                    p_node["start_char"] = token["end_char"] - 1 if token["text"][-1] == p_node["text"] else None
+                    p_node["end_char"] = token["end_char"] if token["text"][-1] == p_node["text"] else None
+                    p_node["head"] = token["id"]
+                    del p_node["form"]
+                    del p_node["morph"]
+                    del p_node["token_id"]
+
+                    # xpos must be r'j[cx][acjmorst]'
+                    # Annotate ERROR if:
+                    # 1. Number of xpos labels is less than postposition stack depth (ord)
+                    try:
+                        xpos_labels = [xpos for xpos in p_node["xpos"].split("+") if re.match(r'j[cx][acjmorst]', xpos)]
+                        assert len(xpos_labels) >= int(ord)
+                        p_node["xpos"] = xpos_labels[int(ord)]
+                    except:
+                        p_node["xpos"] = "ERROR"
+                        xpos_errors += 1
+
+                    adjusted_sentence.append(p_node)
+                i += 1
+
+            adjusted_chapter.append(adjusted_sentence)
+        adjusted_doc.append(adjusted_chapter)
+
+    print(f"Encountered {xpos_errors} xpos_errors where annotated postposition was not matched to an xpos tag.")
+
+    with open("little_prince_annotation_ready.json", "w", encoding="utf-8") as f:
+        json.dump(adjusted_doc, f, ensure_ascii=False, indent=4)
+
+    return adjusted_doc
+
+
 if __name__ == "__main__":
+    pass
     # original_annotations = read_original_annotation()
     # stanza_annotations = get_stanza_annotation(original_annotations)
 
@@ -210,6 +372,4 @@ if __name__ == "__main__":
     merged_annotations = align_original_with_stanza(original_annotations, stanza_annotations)
     assert all([len(m_doc) == len(s_doc) for m_doc, s_doc in zip(merged_annotations, stanza_annotations)])
 
-    with open("little_prince_merged.json", 'w', encoding='utf-8') as f:
-        json.dump(merged_annotations, f, ensure_ascii=False, indent=4)
-    pass
+    adjusted_annotations = adjust_token_boundaries(merged_annotations)
