@@ -2,6 +2,7 @@ import csv
 import stanza
 import json
 import re
+from util import p2xpos, decompose_hangul
 from typing import List
 from tqdm import tqdm
 
@@ -38,12 +39,12 @@ def parse_tsv(file_path):
 
             # Create a dictionary for each word (token) with the word-level information
             word_info = {
-                'token_id': row['token_id'],
-                'form': row['form'],
-                'morph': row['morph'],
-                'p': row['p'],
-                'gold_scene': row['gold_scene'],
-                'gold_function': row['gold_function']
+                'token_id': row["token_id"],
+                'form': row["form"],
+                'morph': row["morph"],
+                'p': row["p"],
+                'gold_scene': row["gold_scene"],
+                'gold_function': row["gold_function"]
             }
 
             # Add the word to the current sentence
@@ -224,8 +225,11 @@ def adjust_token_boundaries(merged_anno):
                 id2nid[sentence[i]["id"]] = i_token
                 # Could be part of separated elipsis
                 if re.fullmatch(r'\.+', sentence[i]["text"]) and i < len(sentence) - 1:
-                    # thankfully, elipses seem to be only breaking once
+                    _is_ellipsis = False
+                    # thankfully, ellipses seem to be only breaking once
                     if re.fullmatch(r'\.+', sentence[i + 1]["text"]):
+                        _is_ellipsis = True
+                        # separated ellipsis confirmed
                         merged_elipsis_token = {
                             "token_id": sentence[i]["token_id"],
                             "form": sentence[i]["form"],
@@ -246,7 +250,14 @@ def adjust_token_boundaries(merged_anno):
                         adjusted_sentence.append(merged_elipsis_token)
                         i_token += 1
                         i += 1
+
+                    if _is_ellipsis:
+                        pass
+                    else:
+                        # false alarm; no ellipsis--add to sentence token list
+                        adjusted_sentence.append(sentence[i])
                     i += 1
+
                 # no elipsis in this token
                 else:
                     adjusted_sentence.append(sentence[i])
@@ -285,7 +296,7 @@ def adjust_token_boundaries(merged_anno):
 
                     adjusted_sentence.append(full_token)
 
-                    if token['p'] != "_":
+                    if token['p'] != "_" and token["upos"] not in ["PUNCT"]:
                         p_node = json.loads(json.dumps(token))
                         p_node['id'] = f"{p_node['id']}-1"
                         p_node['form'] = p_node["p"]
@@ -293,8 +304,12 @@ def adjust_token_boundaries(merged_anno):
                         p_node["lemma"] = p_node["p"]
                         p_node["upos"] = "ADP"
                         p_node["deprel"] = "case"
-                        p_node["start_char"] = token["end_char"] - 1 if token["text"][-1] == p_node["text"] else None
-                        p_node["end_char"] = token["end_char"] if token["text"][-1] == p_node["text"] else None
+                        if p_node["text"] in token["text"]:
+                            p_node["start_char"] = token["start_char"] + token["text"].index(p_node["text"])
+                            p_node["end_char"] = p_node["start_char"] + len(p_node["text"])
+                        else:  # -ㄴ from 난, -의 from 내
+                            p_node["start_char"] = None
+                            p_node["end_char"] = None
                         p_node["head"] = full_token["id"]
                         del p_node["form"]
                         del p_node["morph"]
@@ -315,10 +330,16 @@ def adjust_token_boundaries(merged_anno):
                             p_node["xpos"] = "ERROR"
                             xpos_errors += 1
 
+                        # Or, just use the p to xpos table. Keep above code for error counting
+                        p_node["xpos"] = p2xpos(p_node["p"], p_node["gold_function"])
+
                         adjusted_sentence.append(p_node)
 
-                else: # second or third stacked postpositions
-                    p_node = token
+                else:
+                    # Pseudo-token for marking second or third stacked postposition
+                    # We do not have access to head token id, so we use the first part of the pseudo-token id
+                    # e.g. map id = "1-2" to id = 1
+                    p_node = json.loads(json.dumps(token))
 
                     ord = p_node['token_id'][-1]
                     p_node['id'] = f"{p_node['id']}-{ord}"
@@ -327,9 +348,17 @@ def adjust_token_boundaries(merged_anno):
                     p_node["lemma"] = p_node["p"]
                     p_node["upos"] = "ADP"
                     p_node["deprel"] = "case"
-                    p_node["start_char"] = token["end_char"] - 1 if token["text"][-1] == p_node["text"] else None
-                    p_node["end_char"] = token["end_char"] if token["text"][-1] == p_node["text"] else None
-                    p_node["head"] = token["id"]
+
+                    # adposition form in token
+                    if p_node["text"] in token["text"]:
+                        p_node["start_char"] = token["start_char"] + token["text"].index(p_node["text"])
+                        p_node["end_char"] = p_node["start_char"] + len(p_node["text"])
+                    else: # -ㄴ from 난, -의 from 내
+                        p_node["start_char"] = None
+                        p_node["end_char"] = None
+
+                    p_node["head"] = int(token["id"].split("-")[0]) if type(token["id"]) == str else token["id"]
+
                     del p_node["form"]
                     del p_node["morph"]
                     del p_node["token_id"]
@@ -344,6 +373,9 @@ def adjust_token_boundaries(merged_anno):
                     except:
                         p_node["xpos"] = "ERROR"
                         xpos_errors += 1
+
+                    # Or, just use the p to xpos table. Keep above code for error counting
+                    p_node["xpos"] = p2xpos(p_node["p"], p_node["gold_function"])
 
                     adjusted_sentence.append(p_node)
                 i += 1
