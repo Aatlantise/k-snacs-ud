@@ -263,6 +263,10 @@ def adjust_token_boundaries(merged_anno):
                     adjusted_sentence.append(sentence[i])
                     i_token += 1
                     i += 1
+
+            # We update the head when the sentence is finished parsing by
+            # using an original_id to new_id map,
+            # since the indices may have shifted due to ellipsis processing
             for adj_token in adjusted_sentence:
                 if adj_token['head'] == 0: # root stays root
                     pass
@@ -277,6 +281,7 @@ def adjust_token_boundaries(merged_anno):
     # Postposition annotations are made at the additional postposition node
     adjusted_doc = []
     xpos_errors = 0
+    match_errors = 0
     for chapter in _adjusted_doc:
         adjusted_chapter = []
         for sentence in chapter:
@@ -293,8 +298,6 @@ def adjust_token_boundaries(merged_anno):
                     del full_token["form"]
                     del full_token["morph"]
                     del full_token["token_id"]
-
-                    adjusted_sentence.append(full_token)
 
                     if token['p'] != "_" and token["upos"] not in ["PUNCT"]:
                         p_node = json.loads(json.dumps(token))
@@ -314,26 +317,25 @@ def adjust_token_boundaries(merged_anno):
                         del p_node["form"]
                         del p_node["morph"]
                         del p_node["token_id"]
-                        # We update the head when the sentence is finished parsing by
-                        # using an original_id to new_id map,
-                        # since the indices may have shifted due to ellipsis processing
 
-                        # xpos must be r'j[cx][acjmorst]'
-                        # Annotate ERROR if:
-                        # 1. There are more than 1 postposition tags in unstacked token
-                        # 2. There are no postposition tags in token
-                        try:
-                            xpos_labels = p_node["xpos"].split("+")
-                            p_node["xpos"] = xpos_labels[-1] if '-' not in token["token_id"] else [xpos for xpos in xpos_labels if re.match(r'j[cx][acjmorst]', xpos)][0]
-                            assert re.match(r'j[cx][acjmorst]', p_node["xpos"])
-                        except:
-                            p_node["xpos"] = "ERROR"
+                        # Check for lemma-xpos length mismatch error and xpos type
+                        xpos = full_token["xpos"].split("+")
+                        if len(full_token["lemma"].split("+")) != len(xpos):
+                            match_errors += 1
+                            full_token["match_error"] = True
+                        if not any([re.match(r'j[cx][acjmorst]', xpo) for xpo in xpos]):
                             xpos_errors += 1
+                            full_token["xpos_error"] = True
 
-                        # Or, just use the p to xpos table. Keep above code for error counting
+                        # Use the p to xpos table for XPOS.
                         p_node["xpos"] = p2xpos(p_node["p"], p_node["gold_function"])
 
+                        # Finally, mark full_token that it contains ADP, and add to sentence (list of tokens)
+                        full_token["p"] = p_node["p"]
+                        adjusted_sentence.append(full_token)
                         adjusted_sentence.append(p_node)
+                    else:
+                        adjusted_sentence.append(full_token)
 
                 else:
                     # Pseudo-token for marking second or third stacked postposition
@@ -363,18 +365,7 @@ def adjust_token_boundaries(merged_anno):
                     del p_node["morph"]
                     del p_node["token_id"]
 
-                    # xpos must be r'j[cx][acjmorst]'
-                    # Annotate ERROR if:
-                    # 1. Number of xpos labels is less than postposition stack depth (ord)
-                    try:
-                        xpos_labels = [xpos for xpos in p_node["xpos"].split("+") if re.match(r'j[cx][acjmorst]', xpos)]
-                        assert len(xpos_labels) >= int(ord)
-                        p_node["xpos"] = xpos_labels[int(ord)]
-                    except:
-                        p_node["xpos"] = "ERROR"
-                        xpos_errors += 1
-
-                    # Or, just use the p to xpos table. Keep above code for error counting
+                    # Use the p to xpos table for XPOS.
                     p_node["xpos"] = p2xpos(p_node["p"], p_node["gold_function"])
 
                     adjusted_sentence.append(p_node)
@@ -383,7 +374,7 @@ def adjust_token_boundaries(merged_anno):
             adjusted_chapter.append(adjusted_sentence)
         adjusted_doc.append(adjusted_chapter)
 
-    print(f"Encountered {xpos_errors} xpos_errors where annotated postposition was not matched to an xpos tag.")
+    print(f"Encountered {xpos_errors} xpos_errors, {match_errors} match_errors.")
 
     with open("little_prince_annotation_ready.json", "w", encoding="utf-8") as f:
         json.dump(adjusted_doc, f, ensure_ascii=False, indent=4)
