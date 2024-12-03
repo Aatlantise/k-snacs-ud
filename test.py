@@ -1,22 +1,25 @@
 import re
+from typing import Union, List
 
 class TokenObject:
-    def __init__(self, **kwargs):
+    def __init__(self, args: dict):
         self.p = None
         self.gold_scene = None
         self.gold_function = None
         self.id = -1
-        self.text = ""
-        self.lemma = ""
-        self.upos = ""
-        self.xpos = ""
+        self.text = "_"
+        self.lemma = "_"
+        self.upos = "_"
+        self.feats = "_"
+        self.xpos = "_"
         self.head = -1
-        self.deprel = ""
+        self.deprel = "_"
+        self.deps = "_"
         self.start_char = -1
         self.end_char = -1
-        self.misc = None
+        self.misc = "_"
 
-        for key, value in kwargs.items():
+        for key, value in args.items():
             if value == "_":
                 setattr(self, key, None)
             else:
@@ -24,6 +27,17 @@ class TokenObject:
 
         self.lemma = self.lemma.split("+")
         self.xpos = self.xpos.split("+")
+
+    @staticmethod
+    def to_str(attr) -> str:
+        if type(attr) == list:
+            return "+".join(attr)
+        else:
+            return str(attr)
+
+    def conllu_line(self):
+        return '\t'.join([self.to_str(k) for k in [self.id, self.text, self.lemma, self.upos, self.xpos, self.feats,
+                                                   self.head, self.deprel, self.deps, self.misc]])
 
     def _lemma_xpos_length_match_test(self):
         return len(self.lemma) == len(self.xpos)
@@ -63,7 +77,10 @@ class TokenObject:
         else:
             raise ValueError("p attribute somehow incorrect")
 
-
+# todo: text-lemma mistmatch check
+# e.g.
+#                 "text": ".....",
+#                 "lemma": "....+하+지",
 
 
 
