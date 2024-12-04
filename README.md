@@ -1,12 +1,18 @@
 # K-SNACS Dataset and Guidelines
 **Korean Semantic Network of Adposition and Case Supersense**
 
-## Dataset
+## Work in progress
+This is a work in progress. Our goal is to add to the
+[currently publicly available dataset](https://github.com/jenahwang/k-snacs)
+and publish as an addition to Universal Dependencies in the CoNLL-U format, 
+as well as to [Xposition](http://flat.nert.georgetown.edu/) in the augmented CoNLL-U-Lex
+format complete with adposition annotation.
 
-**File:** [little_prince_ko.tsv](./little_prince_ko.tsv)
+## Dataset
+**File:** [little_prince_ko.conllu](./little_prince_ko.conllu)
 
 **Data Version:**  
-* Current: 1.0
+* Current: 1.1
 * Compatible with K-SNACS Guidelines v0.9
 
 **Data Info:** 
@@ -16,14 +22,17 @@
 * Genre: Childrens literature, Novella
 
 **Column Description:**
-* <tt>doc_id</tt>: chapter number, starts at 1
-* <tt>sent_id</tt>: sentence id, starts at 1
-* <tt>token_id</tt>: token id, starts at 1. Stacked postpositions receive token_id-N designation, where N is a sequencial value starting at 1 (as an example see doc_id 1, sent_id 14, token_id 1).
-* <tt>form</tt>: word form
-* <tt>morph</tt>: morphological analysis obtained from [KOMA Tagger](https://ieeexplore.ieee.org/document/5075772). 
-* <tt>p</tt>: postposition
-* <tt>gold_scene</tt>: gold adjudicated scene role label
-* <tt>gold_function</tt>: gold adjudicated function label
+Follows [CoNLL-U format](https://universaldependencies.org/format.html)
+* ID: Word index, integer starting at 1 for each new sentence; may be a range for multiword tokens; may be a decimal number for empty nodes (decimal numbers can be lower than 1 but must be greater than 0).
+* FORM: Word form or punctuation symbol.
+* LEMMA: Lemma or stem of word form.
+* UPOS: Universal part-of-speech tag.
+* XPOS: Optional language-specific (or treebank-specific) part-of-speech / morphological tag; underscore if not available.
+* FEATS: List of morphological features from the universal feature inventory or from a defined language-specific extension; underscore if not available.
+* HEAD: Head of the current word, which is either a value of ID or zero (0).
+* DEPREL: Universal dependency relation to the HEAD (root iff HEAD = 0) or a defined language-specific subtype of one.
+* DEPS: Enhanced dependency graph in the form of a list of head-deprel pairs.
+* MISC: Any other annotation.
 
 **License:**
 This dataset's supersense annotations are licensed under CC BY 4.0 ([Creative Commons Attribution-ShareAlike 4.0 International license](https://creativecommons.org/licenses/by/4.0/legalcode)).
@@ -52,7 +61,8 @@ Please cite the following when using this data:
 
 * [Jena Hwang](https://jdch00.github.io/) - Allen Institute for AI
 * [Na-Rae Han](http://www.pitt.edu/~naraehan/) - University Pittsburgh 
-* Hanwool Choe - Georgetown University
+* [Hanwool Choe](https://english.hku.hk/people/Faculty/258/Dr_Hanwool_Choe) - Hong Kong University
+* [Hyun Min](https://aatlantise.science/georgetown/) - Georgetown University
 * [Nathan Schneider](http://people.cs.georgetown.edu/nschneid/) - Georgetown University
 
 ### Special Thanks to:

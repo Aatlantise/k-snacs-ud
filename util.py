@@ -8,9 +8,9 @@ def json2conllu(annotation_json_obj):
     Converts json annotation file to conll-u format, saves as a plain text file, per UD advice.
 
     :param annotation_json_obj: JSON object, imported from little_prince_annotation_ready.json
-    :return: None. Saves lp_korean.conllu to root folder.
+    :return: None. Saves little_prince_ko.conllu to root folder.
     """
-    conll_file_name = "lp_korean.conllu"
+    conll_file_name = "little_prince_ko.conllu"
     with open(conll_file_name, "w", encoding="utf-8") as f:
         for c, chapter in enumerate(annotation_json_obj):
             for s, sent in enumerate(chapter):
