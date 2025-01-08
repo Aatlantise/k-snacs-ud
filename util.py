@@ -244,6 +244,50 @@ xpos_error_fix = {
     "않았느냐에": {"lemma": "않+았+느냐+에", "xpos": "px+ep+ef+jca", "upos": "NOUN"}, # upos unsure
 }
 
+def syntactic_features(t: TokenObject) -> TokenObject:
+    feats = []
+
+    # case
+    # -을/를 (jco): Case=Acc
+    # -은/는 (jxt), -이/가 (jcs): Case=Nom
+    # -의 (jcm): Case=Gen
+    if "jco" in t.xpos.split("+"):
+        feats.append("Case=Acc")
+    elif "jxt" in t.xpos.split("+") or "jcs" in t.xpos.split("+"):
+        feats.append("Case=Nom")
+    elif "jcm" in t.xpos.split("+"):
+        feats.append("Case=Gen")
+
+    # Mood: XPOS + rule
+    # Mood=Imp (-라)
+    # Mood=Ind (-다)
+    if t.upos == "VERB":
+        inflected_lemma = "+".join(t.lemma.split("+")[1:])
+        if "라" in inflected_lemma
+            feats.append("Mood=Imp")
+            feats.append("VerbForm=Fin")
+        elif "다" in inflected_lemma:
+            feats.append("Mood=Ind")
+            feats.append("VerbForm=Fin")
+
+    # Tense: KAIST XPOS + rule
+    # Tense=PAST (-(하)였, -했, -ㄴ)
+    # Tense=Fut (-(하)ㄹ)
+        if "ㅆ" in inflected_lemma:
+            feats.append("Tense=Past")
+        elif "ㄹ" in inflected_lemma:
+            feats.append("Tense=Fut")
+
+    # VerbForm: rule
+    # VerbForm=Fin (non-empty mood)
+    # VerbForm=Ger (-ㅁ)
+    if "ㅁ" in t.lemma:
+        feats.append("VerbForm=Ger")
+
+    token.feats = "|".join(feats)
+    
+    return token
+
 if __name__ == "__main__":
     with open("little_prince_annotation_ready.json", encoding="utf-8") as f:
         annotation_json = json.load(f)
