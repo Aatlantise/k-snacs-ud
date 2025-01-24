@@ -1598,7 +1598,6 @@
 2	너무	너무	ADV	mag	_	4	advmod	_	_
 3	복잡한	복잡+하+ㄴ	VERB	ncps+xsm+etm	_	5	amod	_	_
 4	그림이라서	그림+이+라서	VERB	ncn+jp+ef	_	13	obj	_	SpaceAfter=No
-4-1	를	를	ADP	jco	_	4	case	_	SpaceAfter=No
 5	)	)	PUNCT	sr	_	5	punct	_	SpaceAfter=No
 6	를	를	ADP	jco	_	5	case	_	_
 6-1	를	를	ADP	jco	_	6	case	_	_
@@ -2669,7 +2668,6 @@
 9	살아	살+아	VERB	pvg+ecx	_	11	ccomp	_	_
 10	있다는	있	AUX	px+etm	_	9	aux	_	_
 11	증거이다	증거+이+다	VERB	ncpa+jp+ef	_	0	root	_	SpaceAfter=No
-11-1	라고	라고	ADP	jcr	_	11	case	_	SpaceAfter=No
 12	.	.	PUNCT	sf	_	11	punct	_	SpaceAfter=No
 13	"	"	PUNCT	sr	_	11	punct	_	SpaceAfter=No
 14	라고	라고	ADP	jcr	_	11	case	_	SpaceAfter=No
@@ -2702,7 +2700,6 @@
 5	비612로부터	비612+로+부터	ADV	nno+jca+jxc	_	6	advcl	_	_
 5-1	로부터	로부터	ADP	jxc	_	5	case	_	_
 6	왔다	오+았+다	VERB	pvg+ep+ef	_	0	root	_	SpaceAfter=No
-6-1	고	고	ADP	jcr	_	6	case	_	SpaceAfter=No
 7	.	.	PUNCT	sf	_	6	punct	_	SpaceAfter=No
 8	"	"	PUNCT	sr	_	6	punct	_	SpaceAfter=No
 9	고	고	ADP	jcr	_	6	case	_	SpaceAfter=No
@@ -3396,7 +3393,6 @@
 10-1	을	을	ADP	jco	_	10	case	_	_
 11	포개	포+개	VERB	pvg+ecx	_	7	conj	_	_
 12	놓아야겠네	놓+아야겠+네	VERB	pvg+ep+ef	_	11	compound	_	SpaceAfter=No
-12-1	하고	하고	ADP	jcr	_	12	case	_	SpaceAfter=No
 13	.....	.....	PUNCT	sf	_	12	punct	_	_
 15	.	.	PUNCT	sf	_	12	punct	_	SpaceAfter=No
 16	"	"	PUNCT	sr	_	12	punct	_	SpaceAfter=No
@@ -5189,7 +5185,6 @@
 7	어딘가에	어디+이+ㄴ가+에	ADV	npd+jp+etn+jca	_	8	obl	_	_
 7-1	에	에	ADP	jca	_	7	case	_	_
 8	있겠지	있+겠+지	ADJ	paa+ep+ef	_	0	root	_	SpaceAfter=No
-8-1	하고	하고	ADP	jcr	_	8	case	_	SpaceAfter=No
 9	.....	.....	PUNCT	sf	_	8	punct	_	_
 11	.	.	PUNCT	sf	_	8	punct	_	SpaceAfter=No
 12	>하고	>하+고	CCONJ	pvg+ecc	_	8	conj	_	_
@@ -7745,7 +7740,6 @@
 16	꽃으로	꽃+으로	ADV	ncn+jca	_	16	advcl	_	_
 16-1	으로	으로	ADP	jca	_	16	case	_	_
 17	날아다	날+아다	SCONJ	pvg+ecs	_	28	ccomp	_	SpaceAfter=No
-17-1	을	을	ADP	jco	_	17	case	_	SpaceAfter=No
 18	닐것을	닐것+을	PRON	npd+jco	_	18	obj	_	_
 18-1	을	을	ADP	jco	_	18	case	_	_
 19	명령하거나	명령+하+거나	CCONJ	ncpa+xsv+ecc	_	23	ccomp	_	_
@@ -12318,7 +12312,6 @@
 9	왕을	왕+을	NOUN	ncn+jco	_	11	obj	_	_
 9-1	을	을	ADP	jco	_	9	case	_	_
 10	포함해서	포함+하+어서	SCONJ	ncpa+xsv+ecs	_	5	appos	_	SpaceAfter=No
-10-1	과	과	ADP	jcj	_	10	case	_	SpaceAfter=No
 11	)	)	PUNCT	sr	_	11	punct	_	SpaceAfter=No
 12	과	과	CCONJ	jcj	_	5	case	_	_
 12-1	과	과	ADP	jcj	_	12	case	_	_
@@ -13315,7 +13308,6 @@
 1	난	나+ㄴ	PRON	npp+jxt	_	8	nsubj	_	SpaceAfter=No
 1-1	ㄴ	ㄴ	ADP	jxt	_	1	case	_	SpaceAfter=No
 2	......"	......"	ADV	mag	_	8	advmod	_	_
-2-1	ㄴ	ㄴ	ADP	jxt	_	2	case	_	_
 3	"	"	PUNCT	sl	_	4	punct	_	SpaceAfter=No
 4	응	응	NOUN	ncn	_	8	obl	_	SpaceAfter=No
 5	!	!	PUNCT	sf	_	4	punct	_	_
@@ -15705,7 +15697,6 @@
 12	남겨둔	남기+어+두+ㄴ	VERB	pvg+ecx+px+etm	_	5	aux	_	_
 13	것	것	NOUN	nbn	_	5	aux	_	_
 14	말고	말+고	VERB	pvg+ef	_	5	punct	_	SpaceAfter=No
-14-1	도	도	ADP	jxc	_	14	case	_	SpaceAfter=No
 15	)	)	PUNCT	sr	_	5	punct	_	SpaceAfter=No
 16	도	도	ADP	jxc	_	5	iobj	_	_
 16-1	도	도	ADP	jxc	_	16	case	_	_
@@ -15946,13 +15937,11 @@
 5	철도의	철도+의	NOUN	ncn+jcm	_	5	nmod	_	_
 5-1	의	의	ADP	jcm	_	5	case	_	_
 6	전철수	전철수	NOUN	ncn	_	12	nsubj	_	SpaceAfter=No
-6-1	를	를	ADP	jco	_	6	case	_	SpaceAfter=No
 7	(	(	PUNCT	sl	_	9	punct	_	SpaceAfter=No
 8	전철기를	전철기+를	NOUN	ncn+jco	_	8	obj	_	_
 8-1	를	를	ADP	jco	_	8	case	_	_
 9	조정하는	조정+하+는	VERB	ncpa+xsv+etm	_	9	acl	_	_
 10	사람	사람	NOUN	ncn	_	5	appos	_	SpaceAfter=No
-10-1	가	가	ADP	jcs	_	10	case	_	SpaceAfter=No
 11	)	)	PUNCT	sr	_	9	punct	_	SpaceAfter=No
 12	가	가	ADP	jcs	_	5	case	_	_
 12-1	가	가	ADP	jcs	_	12	case	_	_
@@ -16541,7 +16530,6 @@
 4	여우는	여우+는	NOUN	ncn+jxt	_	8	dislocated	_	SpaceAfter=No
 4-1	는	는	ADP	jxt	_	4	case	_	SpaceAfter=No
 5	......"	......"	ADV	mag	_	8	advmod	_	_
-5-1	는	는	ADP	jxt	_	5	case	_	_
 6	어린	어리+ㄴ	ADJ	paa+etm	_	7	amod	_	_
 7	왕자가	왕자+가	NOUN	ncn+jcs	_	8	nsubj	_	_
 7-1	가	가	ADP	jcs	_	7	case	_	_
@@ -16897,13 +16885,11 @@
 6	때문에	때문+에	ADV	nbn+jca	_	22	obl	_	SpaceAfter=No
 6-1	에	에	ADP	jca	_	6	case	_	SpaceAfter=No
 7	......	......	PRON	npp	_	22	obl	_	SpaceAfter=No
-7-1	에	에	ADP	jca	_	7	case	_	SpaceAfter=No
 8	"	"	PUNCT	sl	_	22	punct	_	_
 9	나는	나+는	PRON	npp+jxt	_	22	dislocated	_	_
 9-1	는	는	ADP	jxt	_	9	case	_	_
 10	"	"	PUNCT	sl	_	10	punct	_	SpaceAfter=No
 11	그렇지	그렇+지	VERB	pad+ef	_	12	dep	_	SpaceAfter=No
-11-1	하고	하고	ADP	jcr	_	11	case	_	SpaceAfter=No
 12	"	"	PUNCT	sr	_	10	punct	_	SpaceAfter=No
 13	하고	하+고	CCONJ	pvg+ecc	_	22	ccomp	_	_
 13-1	하고	하고	ADP	jcr	_	13	case	_	_

@@ -263,7 +263,7 @@ def syntactic_features(t: TokenObject) -> TokenObject:
     # Mood=Ind (-다)
     if t.upos == "VERB":
         inflected_lemma = "+".join(t.lemma.split("+")[1:])
-        if "라" in inflected_lemma
+        if "라" in inflected_lemma:
             feats.append("Mood=Imp")
             feats.append("VerbForm=Fin")
         elif "다" in inflected_lemma:
@@ -284,9 +284,9 @@ def syntactic_features(t: TokenObject) -> TokenObject:
     if "ㅁ" in t.lemma:
         feats.append("VerbForm=Ger")
 
-    token.feats = "|".join(feats)
+    t.feats = "|".join(feats)
     
-    return token
+    return t
 
 if __name__ == "__main__":
     with open("little_prince_annotation_ready.json", encoding="utf-8") as f:

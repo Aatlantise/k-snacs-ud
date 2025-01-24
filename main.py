@@ -123,22 +123,35 @@ def align_original_with_stanza(og_anno, stanza_anno):
     Original annotations with the KOMA tagger do not separate punctuation, while stanza annotations do. Here we map
     KOMA morphemes to stanza heads.
 
+    For example,
+    KOMA form "있겠지......>하고" becomes five tokens: "있겠지", ".", "....", ".", ">하고".
+
+    Three of these five tokens ".", "....", "." are taken care of in the following adjust_token_boundaries() function.
+
+    This function uses many counters:
+        n_d: KOMA sentence number id
+        n_s: Stanza sentence number id
+        o: KOMA token id inside sentence
+        s: Stanza token id inside sentence
+
     :param og_anno: original annotations, in JSON format
     :param stanza_anno: stanza annotations, also in JSON format
     :return: JSON object, where original annotation information is added to stanza entries.
     """
 
-    merged_anno = []
+    merged_anno = [] # entire annotation document
     for n_d, [og_doc, stanza_doc] in enumerate(zip(og_anno, stanza_anno)):
         merged_doc = []  # contains merged sentences
         for n_s, [og_sent, stanza_sent] in enumerate(zip(og_doc, stanza_doc)):
-            merged_sent = []
+            merged_sent = [] # contains merged tokens
             o = 0
             s = 0
             while o < len(og_sent) and s < len(stanza_sent):
                 og_morpheme = og_sent[o]
                 stanza_morpheme = stanza_sent[s]
                 # stanza morpheme is equivalent to og morpheme
+                stanza_head = just_korean_chars(stanza_morpheme["text"])
+                og_head = just_korean_chars(og_morpheme["form"])
                 if stanza_morpheme["text"] == og_morpheme["form"]:
                     merged_sent.append({**og_morpheme, **stanza_morpheme})
                     # if next OG entry contains the same morpheme, keep s constant--next OG morpheme also needs
@@ -152,8 +165,8 @@ def align_original_with_stanza(og_anno, stanza_anno):
                     else:
                         o += 1
                         s += 1
-                # stanza morpheme is head (korean text only) of og morpheme
-                elif stanza_morpheme["text"] == just_korean_chars(og_morpheme["form"]):
+                # stanza morpheme is head (korean text only) of og morpheme e.g. "그랬어" in "그랬어....?"
+                elif stanza_morpheme["text"] == og_head:
                     merged_sent.append({**og_morpheme, **stanza_morpheme})
                     # if next OG entry contains the same OG morpheme, just increase o
                     if '-' in og_morpheme["token_id"] and '-' in og_sent[o + 1]["token_id"]:
@@ -165,9 +178,15 @@ def align_original_with_stanza(og_anno, stanza_anno):
                     # otherwise, just move to next stanza morpheme
                     else:
                         s += 1
-                # stanza morpheme is part of the head of og token
-                elif just_korean_chars(stanza_morpheme["text"]) in just_korean_chars(og_morpheme["form"]):
-                    merged_sent.append({**og_morpheme, **stanza_morpheme})
+                # stanza morpheme is part of the head of og token e.g. "있겠지" in "있겠지......>하고"
+                elif stanza_head in og_head:
+                    merged_token = {**og_morpheme, **stanza_morpheme}
+                    # remove adposition annotation artifacts if head does not include adposition
+                    if merged_token["p"] != "_" and merged_token["p"] not in stanza_head:
+                        merged_token["p"] = "_"
+                        merged_token["gold_scene"] = "_"
+                        merged_token["gold_function"] = "_"
+                    merged_sent.append(merged_token)
                     s += 1
                     # if stanza morpheme is the final morpheme in og token, move to next og token as well
                     if "misc" not in stanza_morpheme or stanza_morpheme["misc"] != "SpaceAfter=No":
