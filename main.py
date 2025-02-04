@@ -325,14 +325,14 @@ def adjust_token_boundaries(merged_anno):
                         p_node["text"] = p_node["p"]
                         p_node["lemma"] = p_node["p"]
                         p_node["upos"] = "ADP"
-                        p_node["deprel"] = "case"
+                        p_node["deprel"] = "_" # abstract nodes should not have deprel
                         if p_node["text"] in token["text"]:
                             p_node["start_char"] = token["start_char"] + token["text"].index(p_node["text"])
                             p_node["end_char"] = p_node["start_char"] + len(p_node["text"])
                         else:  # -ㄴ from 난, -의 from 내
-                            p_node["start_char"] = None
-                            p_node["end_char"] = None
-                        p_node["head"] = full_token["id"]
+                            p_node["start_char"] = "_"
+                            p_node["end_char"] = "_"
+                        p_node["head"] = "_" # not full_token["id"]; abstract nodes should not have deprel
                         del p_node["form"]
                         del p_node["morph"]
                         del p_node["token_id"]
@@ -375,8 +375,8 @@ def adjust_token_boundaries(merged_anno):
                         p_node["start_char"] = token["start_char"] + token["text"].index(p_node["text"])
                         p_node["end_char"] = p_node["start_char"] + len(p_node["text"])
                     else: # -ㄴ from 난, -의 from 내
-                        p_node["start_char"] = None
-                        p_node["end_char"] = None
+                        p_node["start_char"] = "_"
+                        p_node["end_char"] = "_"
 
                     p_node["head"] = int(token["id"].split("-")[0]) if type(token["id"]) == str else token["id"]
 

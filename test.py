@@ -20,10 +20,7 @@ class TokenObject:
         self.misc = "_"
 
         for key, value in args.items():
-            if value == "_":
-                setattr(self, key, None)
-            else:
-                setattr(self, key, value)
+            setattr(self, key, value)
 
         self.lemma = self.lemma.split("+")
         self.xpos = self.xpos.split("+")

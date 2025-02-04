@@ -17,15 +17,21 @@ def json2conllu(annotation_json_obj):
                 sentence_text = " "
                 token_lines = []
                 for _tok in sent:
-                    tok = TokenObject(_tok)
+                    tok = syntactic_features(TokenObject(_tok))
                     if type(tok.id) == int:
                         sentence_text += tok.text
                         sentence_text = sentence_text + " " if "SpaceAfter=No" not in tok.misc else sentence_text
+                    else:
+                        tok.id = tok.id.replace("-", ".")
+                        tok.misc = "_"
+                        tok.head = "_"
+                        tok.deprel = "_"
                     token_lines.append(tok.conllu_line())
-                f.write(f"# sent_id = {c}-{s}\n")
-                f.write(f"#{sentence_text}\n")
+                f.write("# sent_id = lpp.ko" + str(c+1).zfill(2) + "-" + str(s+1).zfill(3) + "\n") # index starts at 1
+                f.write(f"# text = {sentence_text}\n")
                 for token_line in token_lines:
                     f.write(token_line + "\n")
+                f.write("\n")
 
 
 def p2xpos(p, function):
@@ -232,7 +238,7 @@ xpos_error_fix = {
     "느낌까지": {"lemma": "느낌+까지", "xpos": "ncn+jxc",},
     "가는게": {"lemma": "가+는+것+이", "xpos": "pvg+etm+nbn+jcs", "upos": "NOUN"},
     "있는게": {"lemma": "있+는+것+이", "xpos": "paa+etm+nbn+jcs", "upos": "NOUN"},
-    "하는게": {"lemma": "보+는+것+이", "xpos": "pvg+etm+nbn+jcs", "upos": "NOUN"},
+    "하는게": {"lemma": "하+는+것+이", "xpos": "pvg+etm+nbn+jcs", "upos": "NOUN"},
     "여기는": {"xpos": "npd+jxt", "upos": "PRON"},
     "이젠": {"xpos": "ncn+jxt", "lemma": "이제+ㄴ", "upos": "NOUN"},
     "꼬마야": {"lemma": "꼬마+야", "xpos": "ncn+ef", "upos": "NOUN"},  # todo: `d vocative as ef?
@@ -251,18 +257,18 @@ def syntactic_features(t: TokenObject) -> TokenObject:
     # -을/를 (jco): Case=Acc
     # -은/는 (jxt), -이/가 (jcs): Case=Nom
     # -의 (jcm): Case=Gen
-    if "jco" in t.xpos.split("+"):
+    if "jco" in t.xpos:
         feats.append("Case=Acc")
-    elif "jxt" in t.xpos.split("+") or "jcs" in t.xpos.split("+"):
+    elif "jxt" in t.xpos or "jcs" in t.xpos:
         feats.append("Case=Nom")
-    elif "jcm" in t.xpos.split("+"):
+    elif "jcm" in t.xpos:
         feats.append("Case=Gen")
 
     # Mood: XPOS + rule
     # Mood=Imp (-라)
     # Mood=Ind (-다)
     if t.upos == "VERB":
-        inflected_lemma = "+".join(t.lemma.split("+")[1:])
+        inflected_lemma = "+".join(t.lemma[1:])
         if "라" in inflected_lemma:
             feats.append("Mood=Imp")
             feats.append("VerbForm=Fin")
@@ -284,7 +290,7 @@ def syntactic_features(t: TokenObject) -> TokenObject:
     if "ㅁ" in t.lemma:
         feats.append("VerbForm=Ger")
 
-    t.feats = "|".join(feats)
+    t.feats = "|".join(feats) if feats else "_"
     
     return t
 
