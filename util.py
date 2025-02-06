@@ -257,12 +257,13 @@ def syntactic_features(t: TokenObject) -> TokenObject:
     # -을/를 (jco): Case=Acc
     # -은/는 (jxt), -이/가 (jcs): Case=Nom
     # -의 (jcm): Case=Gen
-    if "jco" in t.xpos:
-        feats.append("Case=Acc")
-    elif "jxt" in t.xpos or "jcs" in t.xpos:
-        feats.append("Case=Nom")
-    elif "jcm" in t.xpos:
-        feats.append("Case=Gen")
+    if type(t.id) == int:
+        if "jco" in t.xpos:
+            feats.append("Case=Acc")
+        elif "jxt" in t.xpos or "jcs" in t.xpos:
+            feats.append("Case=Nom")
+        elif "jcm" in t.xpos:
+            feats.append("Case=Gen")
 
     # Mood: XPOS + rule
     # Mood=Imp (-라)
