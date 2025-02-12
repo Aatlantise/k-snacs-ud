@@ -42020,7 +42020,15 @@
                 "gold_function": "_"
             },
             {
-                "token_id": "8",
+                "token_id": "8-1",
+                "form": "금빛나는",
+                "morph": "금빛/NNG + 나/JX + 는/JX",
+                "p": "_",
+                "gold_scene": "_",
+                "gold_function": "_"
+            },
+            {
+                "token_id": "8-2",
                 "form": "금빛나는",
                 "morph": "금빛/NNG + 나/JX + 는/JX",
                 "p": "_",

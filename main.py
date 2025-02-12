@@ -81,8 +81,7 @@ def get_stanza_annotation(og_anno):
     :param og_anno: original annotations
     :return: stanza annotations
     """
-    nlp = stanza.Pipeline(lang="ko", processors="tokenize,pos,lemma,depparse", package={"tokenize": "gsd"},
-                          tokenize_no_ssplit=True)
+    nlp = stanza.Pipeline(lang="ko", processors="tokenize,pos,lemma,depparse")
 
     sentences_in_raw_text = []
     dd = []
@@ -118,10 +117,10 @@ def just_korean_chars(mixed_text):
     return ''.join(korean_chars)
 
 
-def align_original_with_stanza(og_anno, stanza_anno):
+def align_original_with_stanza(og_book, stanza_book):
     """
     Original annotations with the KOMA tagger do not separate punctuation, while stanza annotations do. Here we map
-    KOMA morphemes to stanza heads.
+    KOMA tokens to stanza tokens (one to many).
 
     For example,
     KOMA form "있겠지......>하고" becomes five tokens: "있겠지", ".", "....", ".", ">하고".
@@ -129,94 +128,84 @@ def align_original_with_stanza(og_anno, stanza_anno):
     Three of these five tokens ".", "....", "." are taken care of in the following adjust_token_boundaries() function.
 
     This function uses many counters:
-        n_d: KOMA sentence number id
-        n_s: Stanza sentence number id
+        n_chapter: Chapter number id
+        n_sent: Sentence number id, inside the chapter
         o: KOMA token id inside sentence
         s: Stanza token id inside sentence
 
-    :param og_anno: original annotations, in JSON format
-    :param stanza_anno: stanza annotations, also in JSON format
+    :param og_book: original annotations, in JSON format
+    :param stanza_book: stanza annotations, also in JSON format
     :return: JSON object, where original annotation information is added to stanza entries.
     """
 
-    merged_anno = [] # entire annotation document
-    for n_d, [og_doc, stanza_doc] in enumerate(zip(og_anno, stanza_anno)):
-        merged_doc = []  # contains merged sentences
-        for n_s, [og_sent, stanza_sent] in enumerate(zip(og_doc, stanza_doc)):
+    merged_book = [] # entire annotation book
+    for n_chapter, [og_chapter, stanza_chapter] in enumerate(zip(og_book, stanza_book)):
+        merged_chapter = []  # contains merged sentences
+        og_tokens_in_chapter = [t for s in og_chapter for t in s] # flatten all tokens in og chapter
+        o = 0
+        for n_sent, stanza_sent in enumerate(stanza_chapter):
             merged_sent = [] # contains merged tokens
-            o = 0
+
             s = 0
-            while o < len(og_sent) and s < len(stanza_sent):
-                og_morpheme = og_sent[o]
-                stanza_morpheme = stanza_sent[s]
-                # stanza morpheme is equivalent to og morpheme
-                stanza_head = just_korean_chars(stanza_morpheme["text"])
-                og_head = just_korean_chars(og_morpheme["form"])
-                if stanza_morpheme["text"] == og_morpheme["form"]:
-                    merged_sent.append({**og_morpheme, **stanza_morpheme})
-                    # if next OG entry contains the same morpheme, keep s constant--next OG morpheme also needs
+            while s < len(stanza_sent):
+                og_token = og_tokens_in_chapter[o]
+                stanza_token = stanza_sent[s]
+                # stanza token is equivalent to og token
+                stanza_head = just_korean_chars(stanza_token["text"])
+                og_head = just_korean_chars(og_token["form"])
+                if stanza_token["text"] == og_token["form"]:
+                    merged_sent.append({**og_token, **stanza_token})
+                    # if next OG entry contains the same token, keep s constant--next OG token also needs
                     # current Stanza parse.
-                    # identical_token checks whether next OG token refers to the identical token, to escape cases
+                    # There exists 4 cases '"저녁에는', '"제겐', '"어린아이들만이', '"나에겐' where an og-token with stacked postposition
+                    # start with a punct in its form, 0 cases where an og-token with stacked postposition with ends with one.
+                    # Check whether next OG token refers to the identical token, to escape cases
                     # like a token 4-2 being followed by token 5-1.
-                    if '-' in og_morpheme["token_id"] and '-' in og_sent[o + 1]["token_id"] and \
-                            (og_morpheme["token_id"].split('-')[0] == og_sent[o + 1]["token_id"].split('-')[0]):
+                    if '-' in og_token["token_id"] and '-' in og_tokens_in_chapter[o + 1]["token_id"] and \
+                            (og_token["token_id"].split('-')[0] == og_tokens_in_chapter[o + 1]["token_id"].split('-')[0]):
                         o += 1
-                    # otherwise, move to next morpheme
+                    # otherwise, move to next token
                     else:
                         o += 1
                         s += 1
-                # stanza morpheme is head (korean text only) of og morpheme e.g. "그랬어" in "그랬어....?"
-                elif stanza_morpheme["text"] == og_head:
-                    merged_sent.append({**og_morpheme, **stanza_morpheme})
-                    # if next OG entry contains the same OG morpheme, just increase o
-                    if '-' in og_morpheme["token_id"] and '-' in og_sent[o + 1]["token_id"]:
-                        o += 1
-                    # if og morpheme ends with stanza morpheme, increase o too, as new morphemes exist for both
-                    elif stanza_morpheme["text"] == og_morpheme["form"][-1 * len(stanza_morpheme["text"]):]:
+                else: # only partial match
+                    og_token_form = og_token["form"]
+                    partial_s_tokens_together = ""
+                    local_stanza_tokens_list = []
+
+                    # parse through stanza tokens until we cover the entire og token
+                    # e.g. parse through stanza tokens: "있겠지", ".", "....", ".", ">하고", corresponding to og token "있겠지......>하고"
+                    while partial_s_tokens_together != og_token_form and s < len(stanza_sent):
+                        stanza_token = stanza_sent[s]
+                        partial_s_tokens_together += stanza_token["text"]
+                        local_stanza_tokens_list.append({**og_token, **stanza_token})
                         s += 1
+                    # Done parsing.
+                    # Now check if next og token is duplicate, in case of stacked postpositions
+                    if '-' in og_token["token_id"] and '-' in og_tokens_in_chapter[o + 1]["token_id"] and \
+                            (og_token["token_id"].split('-')[0] == og_tokens_in_chapter[o + 1]["token_id"].split('-')[
+                                0]):
+                        # Yes, duplicate--we do not see any cases where og tokens with stacked tokens end with
+                        # punctuation, so we do not care about order
+                        # this way, we will always have ["punct", "punct", "main-word-adp-1", "main-word-adp-2"]
                         o += 1
-                    # otherwise, just move to next stanza morpheme
+                        og_token = og_tokens_in_chapter[o]
+                        local_stanza_tokens_list += [{**og_token, **_s} for _s in local_stanza_tokens_list if _s["upos"] != "PUNCT"]
                     else:
-                        s += 1
-                # stanza morpheme is part of the head of og token e.g. "있겠지" in "있겠지......>하고"
-                elif stanza_head in og_head:
-                    merged_token = {**og_morpheme, **stanza_morpheme}
-                    # remove adposition annotation artifacts if head does not include adposition
-                    if merged_token["p"] != "_" and merged_token["p"] not in stanza_head:
-                        merged_token["p"] = "_"
-                        merged_token["gold_scene"] = "_"
-                        merged_token["gold_function"] = "_"
-                    merged_sent.append(merged_token)
-                    s += 1
-                    # if stanza morpheme is the final morpheme in og token, move to next og token as well
-                    if "misc" not in stanza_morpheme or stanza_morpheme["misc"] != "SpaceAfter=No":
-                        o += 1
-                # stanza morpheme is non-ending punctuation of og morpheme
-                elif stanza_morpheme["text"] in og_morpheme["form"] and \
-                        (stanza_morpheme["deprel"] == "punct" or stanza_morpheme["upos"] == "PUNCT" or
-                         "pad" in stanza_morpheme["xpos"]) and \
-                        "misc" in stanza_morpheme and stanza_morpheme["misc"] == "SpaceAfter=No":
-                    merged_sent.append({**og_morpheme, **stanza_morpheme})
-                    s += 1
-                # stanza morpheme is final punctuation of og morpheme
-                elif stanza_morpheme["text"] == og_morpheme["form"][-1 * len(stanza_morpheme["text"]):] and \
-                        (stanza_morpheme["deprel"] == "punct" or stanza_morpheme["upos"] == "PUNCT" or
-                         "pad" in stanza_morpheme["xpos"]):
-                    merged_sent.append({**og_morpheme, **stanza_morpheme})
-                    s += 1
+                        # Nothing to do
+                        pass
+
+                    # add to merged_sent, move to next og and stanza tokens
+                    merged_sent += local_stanza_tokens_list
+                    # advnace just o since s has been advanced in the while loop parsing through local stanza tokens
                     o += 1
-                else:
-                    print(f"Location: {n_d}:{n_s}")
-                    print(og_morpheme)
-                    print(stanza_morpheme)
-                    raise ValueError("Something's wrong, man!")
-            merged_doc.append(merged_sent)
-        merged_anno.append(merged_doc)
+            merged_chapter.append(merged_sent)
+        merged_book.append(merged_chapter)
 
     with open("little_prince_merged.json", "w", encoding="utf-8") as f:
-        json.dump(merged_anno, f, ensure_ascii=False, indent=4)
+        json.dump(merged_book, f, ensure_ascii=False, indent=4)
 
-    return merged_anno
+    return merged_book
 
 
 def adjust_token_boundaries(merged_anno):
@@ -402,7 +391,6 @@ def adjust_token_boundaries(merged_anno):
 
 
 if __name__ == "__main__":
-    pass
     # original_annotations = read_original_annotation()
     # stanza_annotations = get_stanza_annotation(original_annotations)
 
