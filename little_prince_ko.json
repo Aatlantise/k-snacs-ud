@@ -41972,15 +41972,7 @@
                 "gold_function": "_"
             },
             {
-                "token_id": "3-1",
-                "form": "게으름배이이들을",
-                "morph": "게으름/NNG + 배/NNG + 이/JKS + 이/NP + 들/XSN + 을/JKO",
-                "p": "_",
-                "gold_scene": "_",
-                "gold_function": "_"
-            },
-            {
-                "token_id": "3-2",
+                "token_id": "3",
                 "form": "게으름배이이들을",
                 "morph": "게으름/NNG + 배/NNG + 이/JKS + 이/NP + 들/XSN + 을/JKO",
                 "p": "을",
@@ -42020,15 +42012,7 @@
                 "gold_function": "_"
             },
             {
-                "token_id": "8-1",
-                "form": "금빛나는",
-                "morph": "금빛/NNG + 나/JX + 는/JX",
-                "p": "_",
-                "gold_scene": "_",
-                "gold_function": "_"
-            },
-            {
-                "token_id": "8-2",
+                "token_id": "8",
                 "form": "금빛나는",
                 "morph": "금빛/NNG + 나/JX + 는/JX",
                 "p": "_",

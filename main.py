@@ -150,6 +150,7 @@ def align_original_with_stanza(og_book, stanza_book):
             while s < len(stanza_sent):
                 og_token = og_tokens_in_chapter[o]
                 stanza_token = stanza_sent[s]
+
                 # stanza token is equivalent to og token
                 stanza_head = just_korean_chars(stanza_token["text"])
                 og_head = just_korean_chars(og_token["form"])
@@ -225,20 +226,24 @@ def adjust_token_boundaries(merged_anno):
         adjusted_chapter = []
         for sentence in chapter:
             i = 0
-            i_token = 1
+            new_index = 1
             id2nid = {}
             adjusted_sentence = []
             while i < len(sentence):
                 # Map id to newly formed id
-                id2nid[sentence[i]["id"]] = i_token
                 # Could be part of separated elipsis
-                if re.fullmatch(r'\.+', sentence[i]["text"]) and i < len(sentence) - 1:
-                    _is_ellipsis = False
-                    # thankfully, ellipses seem to be only breaking once
-                    if re.fullmatch(r'\.+', sentence[i + 1]["text"]):
-                        _is_ellipsis = True
-                        # separated ellipsis confirmed
-                        merged_elipsis_token = {
+                if sentence[i]["text"] == "." and i < len(sentence) - 1:
+                    # check if elipsis, and length of elipsis if yes
+                    j = 1
+                    while i + j < len(sentence):
+                        if sentence[i + j]["text"] == ".":
+                            j += 1
+                            continue
+                        else:
+                            break
+
+                    # sentence[i:i+j] is ellipsis
+                    merged_period_or_ellipsis_token = {
                             "token_id": sentence[i]["token_id"],
                             "form": sentence[i]["form"],
                             "morph": sentence[i]["morph"],
@@ -246,31 +251,28 @@ def adjust_token_boundaries(merged_anno):
                             "gold_scene": "_",
                             "gold_function": "_",
                             "id": sentence[i]["id"],
-                            "text": sentence[i]["text"] + sentence[i + 1]["text"],
-                            "lemma": sentence[i]["lemma"] + sentence[i + 1]["lemma"],
+                            "text": ''.join([p["text"] for p in sentence[i:i + j]]),
+                            "lemma": ''.join([p["lemma"] for p in sentence[i:i + j]]),
                             "upos": "PUNCT",
                             "xpos": "sf", # should be sf, rather than sl or sr
                             "head": sentence[i]["head"], # take the first head, as the second period often points to the previous elipsis
                             "deprel": sentence[i]["deprel"], # should probably be punct, but there are some artifacts that relates to head too
                             "start_char": sentence[i]["start_char"],
-                            "end_char": sentence[i+1]["end_char"]
+                            "end_char": sentence[i + j - 1]["end_char"]
                         }
-                        adjusted_sentence.append(merged_elipsis_token)
-                        i_token += 1
-                        i += 1
 
-                    if _is_ellipsis:
-                        pass
-                    else:
-                        # false alarm; no ellipsis--add to sentence token list
-                        adjusted_sentence.append(sentence[i])
-                    i += 1
+                    adjusted_sentence.append(merged_period_or_ellipsis_token)
+                    id2nid[sentence[i]["id"]] = new_index
+                    i += j
+                    new_index += 1
 
                 # no elipsis in this token
                 else:
-                    adjusted_sentence.append(sentence[i])
-                    i_token += 1
+                    token_with_new_index = {**sentence[i], "id": new_index}
+                    adjusted_sentence.append(token_with_new_index)
+                    id2nid[sentence[i]["id"]] = new_index
                     i += 1
+                    new_index += 1
 
             # We update the head when the sentence is finished parsing by
             # using an original_id to new_id map,
@@ -394,12 +396,15 @@ if __name__ == "__main__":
     # original_annotations = read_original_annotation()
     # stanza_annotations = get_stanza_annotation(original_annotations)
 
-    with open("little_prince_ko.json", encoding='utf-8') as f:
-        original_annotations = json.load(f)
+    # with open("little_prince_ko.json", encoding='utf-8') as f:
+    #     original_annotations = json.load(f)
     with open("little_prince_stanza.json", encoding='utf-8') as f:
         stanza_annotations = json.load(f)
 
-    merged_annotations = align_original_with_stanza(original_annotations, stanza_annotations)
+    # merged_annotations = align_original_with_stanza(original_annotations, stanza_annotations)
+
+    with open("little_prince_merged.json", encoding='utf-8') as f:
+        merged_annotations = json.load(f)
     assert all([len(m_doc) == len(s_doc) for m_doc, s_doc in zip(merged_annotations, stanza_annotations)])
 
     adjusted_annotations = adjust_token_boundaries(merged_annotations)

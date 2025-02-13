@@ -5165,14 +5165,12 @@ doc_id	sent_id	token_id	form	morph	p	gold_scene	gold_function
 13	28	6	"말이야."""	"말/NNG + 이/VCP + 야/EF + ./SF + ""/SS"	_	_	_
 13	29	1	"""꿀벌?"""	"""/SS + 꿀벌/NNG + ?/SF + ""/SS"	_	_	_
 13	29	2	"""아니,"	"""/SS + 아니/IC + ,/SP"	_	_	_
-13	29	3-1	게으름배이이들을	게으름/NNG + 배/NNG + 이/JKS + 이/NP + 들/XSN + 을/JKO	_	_	_
-13	29	3-2	게으름배이이들을	게으름/NNG + 배/NNG + 이/JKS + 이/NP + 들/XSN + 을/JKO	을	theme	theme
+13	29	3	게으름배이이들을	게으름/NNG + 배/NNG + 이/JKS + 이/NP + 들/XSN + 을/JKO	을	theme	theme
 13	29	4	멍청이	멍청이/MAG	_	_	_
 13	29	5	공상에	공상/NNG + 에/JKB	에	locus	circumstance
 13	29	6	잠기게	잠기/VV + 게/EC	_	_	_
 13	29	7	만드는	만들/VV + 는/ETM	_	_	_
-13	29	8-1	금빛나는	금빛/NNG + 나/JX + 는/JX	_	_	_
-13	29	8-2	금빛나는	금빛/NNG + 나/JX + 는/JX	_	_	_
+13	29	8	금빛나는	금빛/NNG + 나/JX + 는/JX	_	_	_
 13	29	9	작은	작/VA + 은/ETM	_	_	_
 13	29	10	것들	것/NNB + 들/XSN	_	_	_
 13	29	11	말이야.	말/NNG + 이/VCP + 야/EF + ./SF	_	_	_
