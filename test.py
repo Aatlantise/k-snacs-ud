@@ -22,6 +22,12 @@ class TokenObject:
         for key, value in args.items():
             setattr(self, key, value)
 
+        if self.deps == "_":
+            self.deps = f"{self.head}:{self.deprel}"
+
+        if self.deprel == "advmod":
+            self.upos = 'ADV'
+
         self.lemma = self.lemma.split("+")
         self.xpos = self.xpos.split("+")
 

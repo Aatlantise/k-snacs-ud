@@ -28,7 +28,7 @@ def json2conllu(annotation_json_obj):
                         tok.deprel = "_"
                     token_lines.append(tok.conllu_line())
                 f.write("# sent_id = lpp.ko" + str(c+1).zfill(2) + "-" + str(s+1).zfill(3) + "\n") # index starts at 1
-                f.write(f"# text = {sentence_text}\n")
+                f.write(f"# text = {sentence_text.strip()}\n")
                 for token_line in token_lines:
                     f.write(token_line + "\n")
                 f.write("\n")
@@ -123,6 +123,38 @@ def decompose_hangul(syllable):
     coda = codas[coda_index]
 
     return onset, nucleus, coda
+
+
+def compose_syllable(onset, nucleus, coda=''):
+    # Hangul base constants
+    hangul_base = 0xAC00
+    onset_base = 588  # Number of combinations for onsets
+    nucleus_base = 28  # Number of combinations for nuclei
+
+    # Onsets, nuclei, and codas lists
+    onsets = [
+        'ㄱ', 'ㄲ', 'ㄴ', 'ㄷ', 'ㄸ', 'ㄹ', 'ㅁ', 'ㅂ', 'ㅃ', 'ㅅ', 'ㅆ',
+        'ㅇ', 'ㅈ', 'ㅉ', 'ㅊ', 'ㅋ', 'ㅌ', 'ㅍ', 'ㅎ'
+    ]
+    nuclei = [
+        'ㅏ', 'ㅐ', 'ㅑ', 'ㅒ', 'ㅓ', 'ㅔ', 'ㅕ', 'ㅖ', 'ㅗ', 'ㅘ', 'ㅙ', 'ㅚ',
+        'ㅛ', 'ㅜ', 'ㅝ', 'ㅞ', 'ㅟ', 'ㅠ', 'ㅡ', 'ㅢ', 'ㅣ'
+    ]
+    codas = [
+        '', 'ㄱ', 'ㄲ', 'ㄳ', 'ㄴ', 'ㄵ', 'ㄶ', 'ㄷ', 'ㄹ', 'ㄺ', 'ㄻ', 'ㄼ', 'ㄽ', 'ㄾ', 'ㄿ',
+        'ㅀ', 'ㅁ', 'ㅂ', 'ㅄ', 'ㅅ', 'ㅆ', 'ㅇ', 'ㅈ', 'ㅊ', 'ㅋ', 'ㅌ', 'ㅍ', 'ㅎ'
+    ]
+
+    # Find the indices for onset, nucleus, and coda
+    onset_idx = onsets.index(onset)
+    nucleus_idx = nuclei.index(nucleus)
+    coda_idx = codas.index(coda)
+
+    # Calculate the syllable code
+    syllable_code = hangul_base + (onset_idx * onset_base) + (nucleus_idx * nucleus_base) + coda_idx
+
+    # Return the combined syllable character
+    return chr(syllable_code)
 
 
 xpos_error_fix = {
@@ -257,11 +289,13 @@ def syntactic_features(t: TokenObject) -> TokenObject:
     # -을/를 (jco): Case=Acc
     # -은/는 (jxt), -이/가 (jcs): Case=Nom
     # -의 (jcm): Case=Gen
-    if type(t.id) == int:
+    if type(t.id) == int and t.upos not in ["ADP", "CCONJ", "NUM", "AUX"]:
+        if "jxt" in t.xpos or "jcs" in t.xpos:
+            feats.append("Case=Nom")
+
+    if type(t.id) == int and t.upos not in ["ADP", "CCONJ", "NUM"]:
         if "jco" in t.xpos:
             feats.append("Case=Acc")
-        elif "jxt" in t.xpos or "jcs" in t.xpos:
-            feats.append("Case=Nom")
         elif "jcm" in t.xpos:
             feats.append("Case=Gen")
 
@@ -288,10 +322,10 @@ def syntactic_features(t: TokenObject) -> TokenObject:
     # VerbForm: rule
     # VerbForm=Fin (non-empty mood)
     # VerbForm=Ger (-ㅁ)
-    if "ㅁ" in t.lemma:
-        feats.append("VerbForm=Ger")
+        if "ㅁ" in t.lemma:
+            feats.append("VerbForm=Ger")
 
-    t.feats = "|".join(feats) if feats else "_"
+    t.feats = "|".join(sorted(feats)) if feats else "_"
     
     return t
 
