@@ -11289,8 +11289,8 @@
             },
             {
                 "token_id": "5",
-                "form": "없다.\"그",
-                "morph": "없/VA + 다/EF + ./SF + \"/SS + 그/MM",
+                "form": "없다.",
+                "morph": "없/VA + 다/EF + ./SF ",
                 "p": "_",
                 "gold_scene": "_",
                 "gold_function": "_"
@@ -11299,6 +11299,14 @@
         [
             {
                 "token_id": "1",
+                "form": "\"그",
+                "morph": "\"/SS + 그/MM",
+                "p": "_",
+                "gold_scene": "_",
+                "gold_function": "_"
+            },
+            {
+                "token_id": "2",
                 "form": "앤",
                 "morph": "애/NNG + ㄴ/JX",
                 "p": "ㄴ",
@@ -11306,7 +11314,7 @@
                 "gold_function": "topical"
             },
             {
-                "token_id": "2",
+                "token_id": "3",
                 "form": "나이가",
                 "morph": "나이/NNG + 가/JKS",
                 "p": "가",
@@ -11314,7 +11322,7 @@
                 "gold_function": "theme"
             },
             {
-                "token_id": "3",
+                "token_id": "4",
                 "form": "몇이지?",
                 "morph": "몇/NR + 이/VCP + 지/EF + ?/SF",
                 "p": "_",
@@ -12011,16 +12019,24 @@
             },
             {
                 "token_id": "11",
-                "form": "증거이다.\"라고",
-                "morph": "증거/NNG + 이/VCP + 다/EF + ./SF + \"/SS + 라고/JKQ",
-                "p": "라고",
-                "gold_scene": "topic",
-                "gold_function": "quote"
+                "form": "증거이다.\"",
+                "morph": "증거/NNG + 이/VCP + 다/EF + ./SF + \"/SS",
+                "p": "_",
+                "gold_scene": "_",
+                "gold_function": "_"
             }
         ],
         [
             {
                 "token_id": "1",
+                "form": "라고",
+                "morph": "라고/JKQ",
+                "p": "라고",
+                "gold_scene": "topic",
+                "gold_function": "quote"
+            },
+            {
+                "token_id": "2",
                 "form": "어른들에게",
                 "morph": "어른/NNG + 들/XSN + 에게/JKB",
                 "p": "에게",
@@ -12028,7 +12044,7 @@
                 "gold_function": "goal"
             },
             {
-                "token_id": "2",
+                "token_id": "3",
                 "form": "말한다면,",
                 "morph": "말/NNG + 하/XSV + ㄴ다면/EC + ,/SP",
                 "p": "_",
@@ -12036,7 +12052,7 @@
                 "gold_function": "_"
             },
             {
-                "token_id": "3",
+                "token_id": "4",
                 "form": "그들은",
                 "morph": "그/NP + 들/XSN + 은/JX",
                 "p": "은",
@@ -12044,7 +12060,7 @@
                 "gold_function": "topical"
             },
             {
-                "token_id": "4",
+                "token_id": "5",
                 "form": "어깨를",
                 "morph": "어깨/NNG + 를/JKO",
                 "p": "를",
@@ -12052,7 +12068,7 @@
                 "gold_function": "theme"
             },
             {
-                "token_id": "5",
+                "token_id": "6",
                 "form": "으쓱하며",
                 "morph": "으쓱/MAG + 하/XSV + 며/EC",
                 "p": "_",
@@ -12060,7 +12076,7 @@
                 "gold_function": "_"
             },
             {
-                "token_id": "6",
+                "token_id": "7",
                 "form": "여러분들을",
                 "morph": "여러분/NP + 들/XSN + 을/JKO",
                 "p": "을",
@@ -12068,7 +12084,7 @@
                 "gold_function": "theme"
             },
             {
-                "token_id": "7",
+                "token_id": "8",
                 "form": "어린아이로",
                 "morph": "어린아이/NNG + 로/JKB",
                 "p": "로",
@@ -12076,7 +12092,7 @@
                 "gold_function": "manner"
             },
             {
-                "token_id": "8",
+                "token_id": "9",
                 "form": "취급할",
                 "morph": "취급/NNG + 하/XSV + ㄹ/ETM",
                 "p": "_",
@@ -12084,7 +12100,7 @@
                 "gold_function": "_"
             },
             {
-                "token_id": "9",
+                "token_id": "10",
                 "form": "것이다.",
                 "morph": "것/NNB + 이/VCP + 다/EF + ./SF",
                 "p": "_",
@@ -12127,16 +12143,24 @@
             },
             {
                 "token_id": "5",
-                "form": "왔다.\"고",
-                "morph": "오/VV + 았/EP + 다/EF + ./SF + \"/SS + 고/JKQ",
-                "p": "고",
-                "gold_scene": "topic",
-                "gold_function": "quote"
+                "form": "왔다.\"",
+                "morph": "오/VV + 았/EP + 다/EF + ./SF + \"/SS",
+                "p": "_",
+                "gold_scene": "_",
+                "gold_function": "_"
             }
         ],
         [
             {
                 "token_id": "1",
+                "form": "고",
+                "morph": "고/JKQ",
+                "p": "고",
+                "gold_scene": "topic",
+                "gold_function": "quote"
+            },
+            {
+                "token_id": "2",
                 "form": "말하면",
                 "morph": "말/NNG + 하/XSV + 면/EC",
                 "p": "_",
@@ -12144,7 +12168,7 @@
                 "gold_function": "_"
             },
             {
-                "token_id": "2",
+                "token_id": "3",
                 "form": "어른들은",
                 "morph": "어른/NNG + 들/XSN + 은/JX",
                 "p": "은",
@@ -12152,7 +12176,7 @@
                 "gold_function": "topical"
             },
             {
-                "token_id": "3",
+                "token_id": "4",
                 "form": "곧",
                 "morph": "곧/MAG",
                 "p": "_",
@@ -12160,7 +12184,7 @@
                 "gold_function": "_"
             },
             {
-                "token_id": "4",
+                "token_id": "5",
                 "form": "알아듣고,",
                 "morph": "알아듣/VV + 고/EC + ,/SP",
                 "p": "_",
@@ -12168,7 +12192,7 @@
                 "gold_function": "_"
             },
             {
-                "token_id": "5",
+                "token_id": "6",
                 "form": "질문",
                 "morph": "질문/NNG",
                 "p": "_",
@@ -12176,7 +12200,7 @@
                 "gold_function": "_"
             },
             {
-                "token_id": "6",
+                "token_id": "7",
                 "form": "따위를",
                 "morph": "따위/NNB + 를/JKO",
                 "p": "를",
@@ -12184,7 +12208,7 @@
                 "gold_function": "theme"
             },
             {
-                "token_id": "7",
+                "token_id": "8",
                 "form": "늘어",
                 "morph": "늘/VV + 어/EC",
                 "p": "_",
@@ -12192,7 +12216,7 @@
                 "gold_function": "_"
             },
             {
-                "token_id": "8",
+                "token_id": "9",
                 "form": "놓아",
                 "morph": "놓/VX + 아/EC",
                 "p": "_",
@@ -12200,7 +12224,7 @@
                 "gold_function": "_"
             },
             {
-                "token_id": "9",
+                "token_id": "10",
                 "form": "여러분들은",
                 "morph": "여러분/NP + 들/XSN + 은/JX",
                 "p": "은",
@@ -12208,7 +12232,7 @@
                 "gold_function": "topical"
             },
             {
-                "token_id": "10",
+                "token_id": "12",
                 "form": "귀찮게",
                 "morph": "귀찮/VA + 게/EC",
                 "p": "_",
@@ -12216,7 +12240,7 @@
                 "gold_function": "_"
             },
             {
-                "token_id": "11",
+                "token_id": "12",
                 "form": "하지",
                 "morph": "하/VV + 지/EC",
                 "p": "_",
@@ -12224,7 +12248,7 @@
                 "gold_function": "_"
             },
             {
-                "token_id": "12",
+                "token_id": "13",
                 "form": "않을",
                 "morph": "않/VX + 을/ETM",
                 "p": "_",
@@ -12232,7 +12256,7 @@
                 "gold_function": "_"
             },
             {
-                "token_id": "13",
+                "token_id": "14",
                 "form": "것이다.",
                 "morph": "것/NNB + 이/VCP + 다/EF + ./SF",
                 "p": "_",
@@ -17985,8 +18009,8 @@
             },
             {
                 "token_id": "27",
-                "form": "한다.\"어린이들이여!",
-                "morph": "하/VX + ㄴ다/EF + ./SF + \"/SS + 어린이/NNG + 들/XSN + 이/VCP + 여/EF + !/SF",
+                "form": "한다.",
+                "morph": "하/VX + ㄴ다/EF + ./SF",
                 "p": "_",
                 "gold_scene": "_",
                 "gold_function": "_"
@@ -17995,6 +18019,14 @@
         [
             {
                 "token_id": "1",
+                "form": "\"어린이들이여!",
+                "morph": "\"/SS + 어린이/NNG + 들/XSN + 이/VCP + 여/EF + !/SF",
+                "p": "_",
+                "gold_scene": "_",
+                "gold_function": "_"
+            },
+            {
+                "token_id": "2",
                 "form": "바오밥나무를",
                 "morph": "바오밥/NNP + 나무/NNG + 를/JKO",
                 "p": "를",
@@ -18002,7 +18034,7 @@
                 "gold_function": "theme"
             },
             {
-                "token_id": "2",
+                "token_id": "3",
                 "form": "주의하라!\"",
                 "morph": "주의/NNG + 하/XSV + 라/EF + !/SF + \"/SS",
                 "p": "_",
@@ -22471,14 +22503,22 @@
             },
             {
                 "token_id": "4",
-                "form": "사람이야>라고",
-                "morph": "사람/NNG + 이/VCP + 야/EF + >/SS + 라고/JKQ",
-                "p": "라고",
-                "gold_scene": "topic",
-                "gold_function": "quote"
+                "form": "사람이야>",
+                "morph": "사람/NNG + 이/VCP + 야/EF + >/SS",
+                "p": "_",
+                "gold_scene": "_",
+                "gold_function": "_"
             }
         ],
         [
+            {
+                "token_id": "1",
+                "form": "라고",
+                "morph": "라고/JKQ",
+                "p": "라고",
+                "gold_scene": "topic",
+                "gold_function": "quote"
+            },
             {
                 "token_id": "1",
                 "form": "되뇌고",
@@ -23515,14 +23555,22 @@
             },
             {
                 "token_id": "7",
-                "form": "있겠지......>하고",
-                "morph": "있/VV + 겠/EP + 지/EC + ....../SE + >/SS + 하고/JKQ",
+                "form": "있겠지......>",
+                "morph": "있/VV + 겠/EP + 지/EC + ....../SE + >/SS",
+                "p": "_",
+                "gold_scene": "_",
+                "gold_function": "_"
+            },
+            {
+                "token_id": "8",
+                "form": "하고",
+                "morph": "하고/JKQ",
                 "p": "하고",
                 "gold_scene": "topic",
                 "gold_function": "quote"
             },
             {
-                "token_id": "8",
+                "token_id": "9",
                 "form": "생각할",
                 "morph": "생각/NNG + 하/XSV + ㄹ/ETM",
                 "p": "_",
@@ -23530,7 +23578,7 @@
                 "gold_function": "_"
             },
             {
-                "token_id": "9",
+                "token_id": "10",
                 "form": "수",
                 "morph": "수/NNB",
                 "p": "_",
@@ -23538,7 +23586,7 @@
                 "gold_function": "_"
             },
             {
-                "token_id": "10",
+                "token_id": "11",
                 "form": "있거든.",
                 "morph": "있/VV + 거든/EF + ./SF",
                 "p": "_",

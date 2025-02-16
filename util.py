@@ -284,7 +284,6 @@ xpos_error_fix = {
 
 def syntactic_features(t: TokenObject) -> TokenObject:
     feats = []
-
     # case
     # -을/를 (jco): Case=Acc
     # -은/는 (jxt), -이/가 (jcs): Case=Nom

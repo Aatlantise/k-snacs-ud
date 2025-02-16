@@ -1,4 +1,6 @@
 import csv
+import os
+
 import stanza
 import json
 import re
@@ -81,7 +83,7 @@ def get_stanza_annotation(og_anno):
     :param og_anno: original annotations
     :return: stanza annotations
     """
-    nlp = stanza.Pipeline(lang="ko", processors="tokenize,pos,lemma,depparse")
+    nlp = stanza.Pipeline(lang="ko", processors="tokenize,pos,lemma,depparse", tokenize_no_ssplit=True)
 
     sentences_in_raw_text = []
     dd = []
@@ -167,7 +169,7 @@ def align_original_with_stanza(og_book, stanza_book):
                     else:
                         o += 1
                         s += 1
-                else: # only partial match
+                elif stanza_token["text"] in og_token["form"]: # only partial match
                     og_token_form = og_token["form"]
                     partial_s_tokens_together = ""
                     local_stanza_tokens_list = []
@@ -204,11 +206,16 @@ def align_original_with_stanza(og_book, stanza_book):
                         # Nothing to do if no stacked postposition
                         pass
 
-
                     # add to merged_sent, move to next og and stanza tokens
                     merged_sent += local_stanza_tokens_list
                     # advnace just o since s has been advanced in the while loop parsing through local stanza tokens
                     o += 1
+
+                else: # no match
+                    print(json.dumps(og_token, indent=4, ensure_ascii=False))
+                    print(json.dumps(stanza_token, indent=4, ensure_ascii=False))
+                    print("Something's wrong, man!")
+                    s += 1
             merged_chapter.append(merged_sent)
         merged_book.append(merged_chapter)
 
@@ -422,20 +429,20 @@ def adjust_token_boundaries(merged_anno):
 
     print(f"Encountered {xpos_errors} xpos_errors, {match_errors} match_errors.")
 
-    with open("little_prince_annotation_ready.json", "w", encoding="utf-8") as f:
-        json.dump(adjusted_doc, f, ensure_ascii=False, indent=4)
+    with open("little_prince_annotation_ready.json", "w", encoding="utf-8") as _f:
+        json.dump(adjusted_doc, _f, ensure_ascii=False, indent=4)
 
     return adjusted_doc
 
 
 if __name__ == "__main__":
-    # original_annotations = read_original_annotation()
-    # stanza_annotations = get_stanza_annotation(original_annotations)
+    original_annotations = read_original_annotation()
+    stanza_annotations = get_stanza_annotation(original_annotations)
 
-    with open("little_prince_ko.json", encoding='utf-8') as f:
-        original_annotations = json.load(f)
-    with open("little_prince_stanza.json", encoding='utf-8') as f:
-        stanza_annotations = json.load(f)
+    # with open("little_prince_ko.json", encoding='utf-8') as f:
+    #     original_annotations = json.load(f)
+    # with open("little_prince_stanza.json", encoding='utf-8') as f:
+    #     stanza_annotations = json.load(f)
 
     merged_annotations = align_original_with_stanza(original_annotations, stanza_annotations)
 

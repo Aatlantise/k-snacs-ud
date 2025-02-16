@@ -1399,10 +1399,11 @@ doc_id	sent_id	token_id	form	morph	p	gold_scene	gold_function
 4	20	2	이렇게	이렇/VA + 게/EC	_	_	_
 4	20	3	묻는	묻/VV + 는/ETM	_	_	_
 4	20	4	법이	법/NNB + 이/JKS	이	theme	theme
-4	20	5	"없다.""그"	"없/VA + 다/EF + ./SF + ""/SS + 그/MM"	_	_	_
-4	21	1	앤	애/NNG + ㄴ/JX	ㄴ	topical	topical
-4	21	2	나이가	나이/NNG + 가/JKS	가	theme	theme
-4	21	3	몇이지?	몇/NR + 이/VCP + 지/EF + ?/SF	_	_	_
+4	20	5	없다.	없/VA + 다/EF + ./SF 	_	_	_
+4	21	1	"""그"	"""/SS + 그/MM"	_	_	_
+4	21	2	앤	애/NNG + ㄴ/JX	ㄴ	topical	topical
+4	21	3	나이가	나이/NNG + 가/JKS	가	theme	theme
+4	21	4	몇이지?	몇/NR + 이/VCP + 지/EF + ?/SF	_	_	_
 4	22	1	형제들은	형제/NNG + 들/XSN + 은/JX	은	topical	topical
 4	22	2	몇이나	몇/NR + 이나/JX	이나	focus	focus
 4	22	3	되고?	되/VV + 고/EF + ?/SF	_	_	_
@@ -1486,34 +1487,36 @@ doc_id	sent_id	token_id	form	morph	p	gold_scene	gold_function
 4	33	8	사람이	사람/NNG + 이/JKS	이	theme	theme
 4	33	9	살아	살/VV + 아/EC	_	_	_
 4	33	10	있다는	있/VX + 다는/ETM	_	_	_
-4	33	11	"증거이다.""라고"	"증거/NNG + 이/VCP + 다/EF + ./SF + ""/SS + 라고/JKQ"	라고	topic	quote
-4	34	1	어른들에게	어른/NNG + 들/XSN + 에게/JKB	에게	recipient	goal
-4	34	2	말한다면,	말/NNG + 하/XSV + ㄴ다면/EC + ,/SP	_	_	_
-4	34	3	그들은	그/NP + 들/XSN + 은/JX	은	topical	topical
-4	34	4	어깨를	어깨/NNG + 를/JKO	를	theme	theme
-4	34	5	으쓱하며	으쓱/MAG + 하/XSV + 며/EC	_	_	_
-4	34	6	여러분들을	여러분/NP + 들/XSN + 을/JKO	을	theme	theme
-4	34	7	어린아이로	어린아이/NNG + 로/JKB	로	manner	manner
-4	34	8	취급할	취급/NNG + 하/XSV + ㄹ/ETM	_	_	_
-4	34	9	것이다.	것/NNB + 이/VCP + 다/EF + ./SF	_	_	_
+4	33	11	"증거이다."""	"증거/NNG + 이/VCP + 다/EF + ./SF + ""/SS"	_	_	_
+4	34	1	라고	라고/JKQ	라고	topic	quote
+4	34	2	어른들에게	어른/NNG + 들/XSN + 에게/JKB	에게	recipient	goal
+4	34	3	말한다면,	말/NNG + 하/XSV + ㄴ다면/EC + ,/SP	_	_	_
+4	34	4	그들은	그/NP + 들/XSN + 은/JX	은	topical	topical
+4	34	5	어깨를	어깨/NNG + 를/JKO	를	theme	theme
+4	34	6	으쓱하며	으쓱/MAG + 하/XSV + 며/EC	_	_	_
+4	34	7	여러분들을	여러분/NP + 들/XSN + 을/JKO	을	theme	theme
+4	34	8	어린아이로	어린아이/NNG + 로/JKB	로	manner	manner
+4	34	9	취급할	취급/NNG + 하/XSV + ㄹ/ETM	_	_	_
+4	34	10	것이다.	것/NNB + 이/VCP + 다/EF + ./SF	_	_	_
 4	35	1	그러나	그러나/MAJ	_	_	_
 4	35	2	"""그는"	"""/SS + 그/NP + 는/JX"	는	topical	topical
 4	35	3	소행성	소행성/NNG	_	_	_
 4	35	4	비612로부터	비/XPN + 612/SN + 로부터/JKB	로부터	source	source
-4	35	5	"왔다.""고"	"오/VV + 았/EP + 다/EF + ./SF + ""/SS + 고/JKQ"	고	topic	quote
-4	36	1	말하면	말/NNG + 하/XSV + 면/EC	_	_	_
-4	36	2	어른들은	어른/NNG + 들/XSN + 은/JX	은	topical	topical
-4	36	3	곧	곧/MAG	_	_	_
-4	36	4	알아듣고,	알아듣/VV + 고/EC + ,/SP	_	_	_
-4	36	5	질문	질문/NNG	_	_	_
-4	36	6	따위를	따위/NNB + 를/JKO	를	theme	theme
-4	36	7	늘어	늘/VV + 어/EC	_	_	_
-4	36	8	놓아	놓/VX + 아/EC	_	_	_
-4	36	9	여러분들은	여러분/NP + 들/XSN + 은/JX	은	topical	topical
-4	36	10	귀찮게	귀찮/VA + 게/EC	_	_	_
-4	36	11	하지	하/VV + 지/EC	_	_	_
-4	36	12	않을	않/VX + 을/ETM	_	_	_
-4	36	13	것이다.	것/NNB + 이/VCP + 다/EF + ./SF	_	_	_
+4	35	5	"왔다."""	"오/VV + 았/EP + 다/EF + ./SF + ""/SS"	_	_	_
+4	36	1	고	고/JKQ	고	topic	quote
+4	36	2	말하면	말/NNG + 하/XSV + 면/EC	_	_	_
+4	36	3	어른들은	어른/NNG + 들/XSN + 은/JX	은	topical	topical
+4	36	4	곧	곧/MAG	_	_	_
+4	36	5	알아듣고,	알아듣/VV + 고/EC + ,/SP	_	_	_
+4	36	6	질문	질문/NNG	_	_	_
+4	36	7	따위를	따위/NNB + 를/JKO	를	theme	theme
+4	36	8	늘어	늘/VV + 어/EC	_	_	_
+4	36	9	놓아	놓/VX + 아/EC	_	_	_
+4	36	10	여러분들은	여러분/NP + 들/XSN + 은/JX	은	topical	topical
+4	36	12	귀찮게	귀찮/VA + 게/EC	_	_	_
+4	36	12	하지	하/VV + 지/EC	_	_	_
+4	36	13	않을	않/VX + 을/ETM	_	_	_
+4	36	14	것이다.	것/NNB + 이/VCP + 다/EF + ./SF	_	_	_
 4	37	1	어른들은	어른/NNG + 들/XSN + 은/JX	은	theme	theme
 4	37	2	언제나	언제나/MAG	_	_	_
 4	37	3	이렇다.	이렇/VA + 다/EF + ./SF	_	_	_
@@ -2217,9 +2220,10 @@ doc_id	sent_id	token_id	form	morph	p	gold_scene	gold_function
 5	46	24	버리고	버리/VV + 고/EC	_	_	_
 5	46	25	이렇게	이렇/VA + 게/EC	_	_	_
 5	46	26	말하려	말/NNG + 하/XSV + 려/EC	_	_	_
-5	46	27	"한다.""어린이들이여!"	"하/VX + ㄴ다/EF + ./SF + ""/SS + 어린이/NNG + 들/XSN + 이/VCP + 여/EF + !/SF"	_	_	_
-5	47	1	바오밥나무를	바오밥/NNP + 나무/NNG + 를/JKO	를	theme	theme
-5	47	2	"주의하라!"""	"주의/NNG + 하/XSV + 라/EF + !/SF + ""/SS"	_	_	_
+5	46	27	한다.	하/VX + ㄴ다/EF + ./SF	_	_	_
+5	47	1	"""어린이들이여!"	"""/SS + 어린이/NNG + 들/XSN + 이/VCP + 여/EF + !/SF"	_	_	_
+5	47	2	바오밥나무를	바오밥/NNP + 나무/NNG + 를/JKO	를	theme	theme
+5	47	3	"주의하라!"""	"주의/NNG + 하/XSV + 라/EF + !/SF + ""/SS"	_	_	_
 5	48	1	내가	내/NP + 가/JKS	가	agent	agent
 5	48	2	이	이/MM	_	_	_
 5	48	3	그림을	그림/NNG + 을/JKO	을	theme	theme
@@ -2775,7 +2779,8 @@ doc_id	sent_id	token_id	form	morph	p	gold_scene	gold_function
 7	39	1	중대한	중대/XR + 하/XSA + ㄴ/ETM	_	_	_
 7	39	2	일을	일/NNG + 을/JKO	을	theme	theme
 7	39	3	하는	하/VV + 는/ETM	_	_	_
-7	39	4	사람이야>라고	사람/NNG + 이/VCP + 야/EF + >/SS + 라고/JKQ	라고	topic	quote
+7	39	4	사람이야>	사람/NNG + 이/VCP + 야/EF + >/SS	_	_	_
+7	40	1	라고	라고/JKQ	라고	topic	quote
 7	40	1	되뇌고	되뇌/VV + 고/EC	_	_	_
 7	40	2	있고	있/VX + 고/EC	_	_	_
 7	40	3	그래서	그래서/MAJ	_	_	_
@@ -2902,10 +2907,11 @@ doc_id	sent_id	token_id	form	morph	p	gold_scene	gold_function
 7	53	4	꽃이	꽃/NNG + 이/JKS	이	theme	theme
 7	53	5	저기	저기/NP	_	_	_
 7	53	6	어딘가에	어디/NP + 이/VCP + ㄴ가/EC + 에/JKB	에	locus	locus
-7	53	7	있겠지......>하고	있/VV + 겠/EP + 지/EC + ....../SE + >/SS + 하고/JKQ	하고	topic	quote
-7	53	8	생각할	생각/NNG + 하/XSV + ㄹ/ETM	_	_	_
-7	53	9	수	수/NNB	_	_	_
-7	53	10	있거든.	있/VV + 거든/EF + ./SF	_	_	_
+7	53	7	있겠지......>	있/VV + 겠/EP + 지/EC + ....../SE + >/SS	_	_	_
+7	53	8	하고	하고/JKQ	하고	topic	quote
+7	53	9	생각할	생각/NNG + 하/XSV + ㄹ/ETM	_	_	_
+7	53	10	수	수/NNB	_	_	_
+7	53	11	있거든.	있/VV + 거든/EF + ./SF	_	_	_
 7	54	1	하지만	하지만/MAJ	_	_	_
 7	54	2	양이	양/NNG + 이/JKS	이	agent	agent
 7	54	3	그	그/MM	_	_	_
