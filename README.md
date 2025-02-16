@@ -8,6 +8,27 @@ and publish as an addition to Universal Dependencies in the CoNLL-U format,
 as well as to [Xposition](http://flat.nert.georgetown.edu/) in the augmented CoNLL-U-Lex
 format complete with adposition annotation.
 
+## Codebase
+In addition to the dataset, as described below, we also share publicly code that results in the published dataset,
+starting from our previously published dataset. 
+In the code, we rely on Stanza parsers (Qi et al. 2020) to generate much of the syntactic and morphological analyses.
+We share the code so that our dataset is replicable, flexible to new models, and transparent with linguistic decisions.
+
+Running `run.sh` will produce `little_prince_ko.conllu` as well as all other byproducts:
+
+`little_prince_ko.tsv` is our previously published dataset.
+`little_prince_ko.json` is the same content, in json format.
+`little_prince_raw_sentences.json` is a list of sentences, as inputs to Stanza parsers.
+`little_prince_stanza.json` holds analyses from Stanza parsers.
+`little_prince_merged.json` is the result of alignment between tokens from original annotations and Stanza tokens.
+`little_prince_annotation_ready.json` is the UD-compliant version of k-SNACS, and
+`little_prince_ko.conllu` is the same dataset in CoNLL-U form.
+
+The UD-Compliant version is "annotation-ready" for multi-word-expression annotations, which we plan to release in
+the CoNLL-U-LEX format.
+
+
+
 ## Dataset
 **File:** [little_prince_ko.conllu](./little_prince_ko.conllu)
 
@@ -46,6 +67,11 @@ This dataset's supersense annotations are licensed under CC BY 4.0 ([Creative Co
 * Compatible with [English SNACS v2.5](https://arxiv.org/abs/1704.02134)
 * Please note that this document is an appendix to the above English SNACS guidelines, including only language-specific information that merits further detailing. For full definitions of labels and use cases, please refer to [English guidelines](https://arxiv.org/abs/1704.02134).
 
+Here, we note that while UD datasets in Japanese and Hindi (where adpositions add to head words to form orthographic word)
+separate adposition as separate, free-standing tokens, we annotate them under a special node in the enhance graph.
+Each node is a separate line, so can receive annotations, and is consistent (adpositions receive ADP). This is due to
+the highly agglutinative nature of Korean, and the consequent agreement among Korean linguists that we will not separate
+adpositions (or other meaning-carrying sub-orthographic-word elements) as free-standing tokens for UD and similar projects.
 
 ## Paper
 Please cite the following when using this data:
