@@ -288,11 +288,11 @@ def syntactic_features(t: TokenObject) -> TokenObject:
     # -을/를 (jco): Case=Acc
     # -은/는 (jxt), -이/가 (jcs): Case=Nom
     # -의 (jcm): Case=Gen
-    if type(t.id) == int and t.upos not in ["ADP", "CCONJ", "NUM", "AUX"]:
+    if type(t.id) == int and t.upos not in ["ADP", "CCONJ", "NUM", "AUX", "ADV"]:
         if "jxt" in t.xpos or "jcs" in t.xpos:
             feats.append("Case=Nom")
 
-    if type(t.id) == int and t.upos not in ["ADP", "CCONJ", "NUM"]:
+    if type(t.id) == int and t.upos not in ["ADP", "CCONJ", "NUM", "ADV"]:
         if "jco" in t.xpos:
             feats.append("Case=Acc")
         elif "jcm" in t.xpos:

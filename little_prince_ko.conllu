@@ -7222,7 +7222,7 @@
 1	나비가	나비+가	NOUN	ncn+jcs	Case=Nom	2	nsubj	2:nsubj	_
 1.1	가	가	ADP	jcs	_	_	_	1:case	_
 2	아니라면	아니+라면	SCONJ	paa+ecs	_	5	xcomp	5:xcomp	_
-3	누가	누가	ADV	npp+jcs	Case=Nom	5	advmod	5:advmod	_
+3	누가	누가	ADV	npp+jcs	_	5	advmod	5:advmod	_
 3.1	가	가	ADP	jcs	_	_	_	3:case	_
 4	나를	나+를	PRON	npp+jco	Case=Acc	5	obj	5:obj	_
 4.1	를	를	ADP	jco	_	_	_	4:case	_
@@ -20496,7 +20496,7 @@
 1	그	그	DET	mmd	_	2	det	2:det	_
 2	웃음소리를	웃음+소리+를	NOUN	ncn+ncn+jco	Case=Acc	4	obj	4:obj	_
 2.1	를	를	ADP	jco	_	_	_	2:case	_
-3	다시는	다시+는	ADV	ncn+jxt	Case=Nom	4	advmod	4:advmod	_
+3	다시는	다시+는	ADV	ncn+jxt	_	4	advmod	4:advmod	_
 3.1	는	는	ADP	jxt	_	_	_	3:case	_
 4	들을	듣+ㄹ	VERB	pvg+etm	Tense=Fut	8	acl	8:acl	_
 5	수	수	NOUN	nbn	_	4	obl	4:obl	_
