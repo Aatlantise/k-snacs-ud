@@ -199,7 +199,7 @@
 3	모자를	모자+를	NOUN	ncn+jco	Case=Acc	4	obj	4:obj	_
 3.1	를	를	ADP	jco	_	_	_	3:case	_
 4	그린게	그리+ㄴ게	VERB	pvg+ecx	_	10	ccomp	10:ccomp	_
-5	아니라	아니+라	AUX	px+ecs	_	4	conj	4:conj	_
+5	아니라	아니+라	ADJ	px+ecs	_	4	conj	4:conj	_
 6	코끼리를	코끼리+를	NOUN	ncn+jco	Case=Acc	7	obj	7:obj	_
 6.1	를	를	ADP	jco	_	_	_	6:case	_
 7	소화시키고	소화+시키+고	VERB	ncpa+xsv+ecx	_	9	acl	9:acl	_
@@ -1060,7 +1060,7 @@
 8	줘	주+어	VERB	px+ef	_	7	compound	7:compound	SpaceAfter=No
 9	.....	.....	PUNCT	sf	_	8	punct	8:punct	_
 10	"	"	PUNCT	sr	_	8	punct	8:punct	_
-11	수수께끼같은	수	AUX	jp+etm	_	12	acl	12:acl	_
+11	수수께끼같은	수수께끼	NOUN	jp+etm	_	12	acl	12:acl	_
 12	일을	일+을	NOUN	ncn+jco	Case=Acc	13	obj	13:obj	_
 12.1	을	을	ADP	jco	_	_	_	12:case	_
 13	만나	만나+아	SCONJ	pvg+ecs	_	15	ccomp	15:ccomp	_
@@ -3293,11 +3293,11 @@
 1	그래서	그래서	CCONJ	maj	_	13	cc	13:cc	_
 2	나는	나+는	PRON	npp+jxt	Case=Nom	13	dislocated	13:dislocated	_
 2.1	는	는	ADP	jxt	_	_	_	2:case	_
-3	이렇게도	이렇+게+도	ADV	paa+ecs+jxc	_	4	amod	4:amod	_
+3	이렇게도	이렇+게+도	ADV	paa+ecs+jxc	_	4	advmod	4:advmod	_
 3.1	도	도	ADP	jxc	_	_	_	3:case	_
 4	해	하+어	VERB	pvg+ecx	_	13	ccomp	13:ccomp	_
 5	보고	보+고	VERB	px+ecx	_	4	compound	4:compound	_
-6	저렇게도	저렇+게+도	AUX	px+ecs+jxc	_	7	amod	7:amod	_
+6	저렇게도	저렇+게+도	ADV	px+ecs+jxc	_	7	advmod	7:advmod	_
 6.1	도	도	ADP	jxc	_	_	_	6:case	_
 7	해	하+어	VERB	pvg+ecx	_	13	ccomp	13:ccomp	_
 8	보고	보+고	CCONJ	px+ecc	_	7	cc	7:cc	_
@@ -4096,7 +4096,7 @@
 6	나는	나+는	PRON	npp+jxt	Case=Nom	7	dislocated	7:dislocated	_
 6.1	는	는	ADP	jxt	_	_	_	6:case	_
 7	알고	알+고	VERB	pvg+ecx	_	0	root	0:root	_
-8	있었어	있+었+어	AUX	px+ep+ef	_	7	compound	7:compound	SpaceAfter=No
+8	있었어	있+었+어	VERB	px+ep+ef	_	7	compound	7:compound	SpaceAfter=No
 9	.	.	PUNCT	sf	_	8	punct	8:punct	SpaceAfter=No
 
 # sent_id = lpp.ko05-044
@@ -5679,7 +5679,7 @@
 19	더이상	더이상	ADV	mag	_	21	advmod	21:advmod	_
 20	무어라	들+어라	VERB	ncn+jp+ef	Mood=Imp|VerbForm=Fin	21	ccomp	21:ccomp	_
 21	말해야	말하+어야	VERB	pvg+ecx	_	23	ccomp	23:ccomp	_
-22	좋을지	좋+ㄹ지	AUX	px+ecs	_	23	ccomp	23:ccomp	_
+22	좋을지	좋+ㄹ지	NOUN	px+ecs	_	23	ccomp	23:ccomp	_
 23	알	알+ㄹ	VERB	pvg+etm	Tense=Fut	13	conj	13:conj	_
 24	수	수	NOUN	nbn	_	23	obl	23:obl	_
 25	없었다	없+었+다	ADJ	paa+ep+ef	_	24	fixed	24:fixed	SpaceAfter=No
@@ -5957,7 +5957,7 @@
 6.2	야	야	ADP	jxc	_	_	_	6:case	_
 7	비로소	비로소	ADV	mag	_	8	advmod	8:advmod	_
 8	나타나고	나타나+고	VERB	pvg+ecx	_	0	root	0:root	_
-9	싶어했다	싶어하+었+다	AUX	px+ep+ef	_	8	compound	8:compound	SpaceAfter=No
+9	싶어했다	싶어하+었+다	VERB	px+ep+ef	_	8	compound	8:compound	SpaceAfter=No
 10	.	.	PUNCT	sf	_	9	punct	9:punct	SpaceAfter=No
 
 # sent_id = lpp.ko08-015
@@ -6600,7 +6600,7 @@
 6	실은	실은	ADV	mag	_	7	advmod	7:advmod	_
 7	측은해	측은+하+어	VERB	ncpa+xsv+ecx	_	9	ccomp	9:ccomp	_
 8	했어야	하+었+어야	VERB	px+ep+ef	_	7	compound	7:compound	_
-9	옳았던거야	옳	AUX	px+ep+ef	_	0	root	0:root	SpaceAfter=No
+9	옳았던거야	옳	VERB	px+ep+ef	_	0	root	0:root	SpaceAfter=No
 10	......	......	PUNCT	sf	_	9	punct	9:punct	_
 11	"	"	PUNCT	sr	_	9	punct	9:punct	SpaceAfter=No
 
@@ -7236,7 +7236,7 @@
 2	멀리에	멀리+에	ADV	ncn+jca	_	3	obl	3:obl	_
 2.1	에	에	ADP	jca	_	_	_	2:case	_
 3	가	가+아	VERB	pvg+ecx	_	0	root	0:root	_
-4	있겠지	있+겠+지	AUX	px+ep+ef	_	3	compound	3:compound	SpaceAfter=No
+4	있겠지	있	ADJ	px+ep+ef	_	3	compound	3:compound	SpaceAfter=No
 5	.	.	PUNCT	sf	_	4	punct	4:punct	SpaceAfter=No
 
 # sent_id = lpp.ko09-044
@@ -13150,9 +13150,9 @@
 2	어디를	어디+를	PRON	npd+jco	Case=Acc	4	obj	4:obj	_
 2.1	를	를	ADP	jco	_	_	_	2:case	_
 3	가	가	NOUN	ncn	_	4	dep	4:dep	_
-4	보는게	보+는게	VERB	pvg+ecx	_	5	ccomp	5:ccomp	_
+4	보는게	보+는게	NOUN	pvg+ecx	_	5	ccomp	5:ccomp	_
 4.1	이	이	ADP	jcs	_	_	_	4:case	_
-5	좋을까요	좋+ㄹ까+요	AUX	px+ef+jxf	_	0	root	0:root	SpaceAfter=No
+5	좋을까요	좋+ㄹ까+요	VERB	px+ef+jxf	_	0	root	0:root	SpaceAfter=No
 6	?	?	PUNCT	sf	_	5	punct	5:punct	SpaceAfter=No
 7	"	"	PUNCT	sr	_	5	punct	5:punct	SpaceAfter=No
 
@@ -13734,7 +13734,7 @@
 4	별로	별로	ADV	mag	_	5	advmod	5:advmod	_
 5	찾아온게	찾+아+온+게	VERB	pvg+ecx+px+ecx	_	6	ccomp	6:ccomp	_
 5.1	이	이	ADP	jcs	_	_	_	5:case	_
-6	아닌가	아니+ㄴ가	AUX	px+ef	_	8	ccomp	8:ccomp	_
+6	아닌가	아니+ㄴ가	ADJ	px+ef	_	8	ccomp	8:ccomp	_
 7	겁이	겁+이	NOUN	ncn+jcs	Case=Nom	8	nsubj	8:nsubj	_
 7.1	이	이	ADP	jcs	_	_	_	7:case	_
 8	나	나+아	VERB	pvg+ecx	_	17	ccomp	17:ccomp	_
@@ -14530,7 +14530,7 @@
 3	걸상으로	걸상+으로	ADV	ncn+jca	_	4	advcl	4:advcl	_
 3.1	으로	으로	ADP	jca	_	_	_	3:case	_
 4	이용하곤	이용+하+곤	VERB	ncpa+xsv+ecx	_	5	ccomp	5:ccomp	_
-5	했었다	하+었었+다	AUX	px+ep+ef	_	0	root	0:root	SpaceAfter=No
+5	했었다	하+었었+다	VERB	px+ep+ef	_	0	root	0:root	SpaceAfter=No
 6	.	.	PUNCT	sf	_	5	punct	5:punct	SpaceAfter=No
 
 # sent_id = lpp.ko19-004
@@ -15239,7 +15239,7 @@
 2	무얼	무엇+을	PRON	npd+jco	Case=Acc	3	obj	3:obj	_
 2.1	ㄹ	ㄹ	ADP	jco	_	_	_	2:case	_
 3	찾고	찾+고	VERB	pvg+ecx	_	0	root	0:root	_
-4	있니	있+니	AUX	px+ef	_	3	compound	3:compound	SpaceAfter=No
+4	있니	있	AUX	px+ef	_	3	compound	3:compound	SpaceAfter=No
 5	?	?	PUNCT	sf	_	4	punct	4:punct	SpaceAfter=No
 6	"	"	PUNCT	sr	_	4	punct	4:punct	SpaceAfter=No
 
@@ -16233,7 +16233,7 @@
 8	단장을	단장+을	NOUN	ncn+jco	Case=Acc	9	obj	9:obj	_
 8.1	을	을	ADP	jco	_	_	_	8:case	_
 9	해야	하+어야	VERB	pvg+ecx	_	11	ccomp	11:ccomp	_
-10	하는지	하+는지	AUX	px+ef	_	11	ccomp	11:ccomp	_
+10	하는지	하+는지	NOUN	px+ef	_	11	ccomp	11:ccomp	_
 11	모르잖아	모르잖+아	VERB	pvg+ecx+px+ef	_	0	root	0:root	SpaceAfter=No
 12	.	.	PUNCT	sf	_	11	punct	11:punct	SpaceAfter=No
 
@@ -18953,7 +18953,7 @@
 5	무엇을	무엇+을	PRON	npd+jco	Case=Acc	6	obj	6:obj	_
 5.1	을	을	ADP	jco	_	_	_	5:case	_
 6	찾고	찾+고	VERB	pvg+ecx	_	8	ccomp	8:ccomp	_
-7	있었는지	있+었+는지	AUX	px+ep+ecs	_	6	conj	6:conj	_
+7	있었는지	있+었+는지	NOUN	px+ep+ecs	_	6	conj	6:conj	_
 8	깨달았다	깨닫+았+다	VERB	pvg+ep+ef	Mood=Ind|VerbForm=Fin	0	root	0:root	SpaceAfter=No
 9	.	.	PUNCT	sf	_	8	punct	8:punct	SpaceAfter=No
 
@@ -19415,7 +19415,7 @@
 6	아이들은	아이+들+은	NOUN	ncn+xsn+jxt	Case=Nom	7	dislocated	7:dislocated	_
 6.1	은	은	ADP	jxt	_	_	_	6:case	_
 7	알고	알+고	VERB	pvg+ecx	_	0	root	0:root	_
-8	있으니까	있+으니까	AUX	px+ef	_	7	conj	7:conj	SpaceAfter=No
+8	있으니까	있+으니까	SCONJ	px+ef	_	7	conj	7:conj	SpaceAfter=No
 9	.	.	PUNCT	sf	_	8	punct	8:punct	_
 10	"	"	PUNCT	sr	_	7	punct	7:punct	SpaceAfter=No
 
