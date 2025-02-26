@@ -838,7 +838,7 @@
 4	그	그	DET	mmd	_	5	det	5:det	_
 5	모델만큼	모델+만큼	ADV	ncn+jca	_	7	advcl	7:advcl	_
 5.1	만큼	만큼	ADP	jca	_	_	_	5:case	_
-6	멋이	멋+이	NOUN	ncn+jcs	Case=Nom	7	nsubj	7:nsubj	_
+6	멋이	멋+이	NOUN	ncn+jcs	Case=Nom	7	compound:lvc	7:compound:lvc	_
 6.1	이	이	ADP	jcs	_	_	_	6:case	_
 7	있으려면	있+으려면	SCONJ	paa+ecs	_	9	xcomp	9:xcomp	_
 8	아직	아직	ADV	mag	_	9	advmod	9:advmod	_
@@ -951,7 +951,7 @@
 8	같지도	같+지+도	ADV	paa+ecx+jxc	_	7	fixed	7:fixed	_
 8.1	도	도	ADP	jxc	_	_	_	8:case	_
 9	않았고	않	AUX	px+ep+ecc	_	6	aux	6:aux	SpaceAfter=No
-10	,	,	PUNCT	sp	_	16	punct	16:punct	_
+10	,	,	PUNCT	sp	_	6	punct	6:punct	_
 11	피곤이나	피곤+이나	CCONJ	ncn+jcj	_	14	obl	14:obl	_
 11.1	이나	이나	ADP	jxc	_	_	_	11:case	_
 12	굶주림이나	굶주림+이나	CCONJ	ncn+jcj	_	11	conj	11:conj	_
@@ -966,7 +966,7 @@
 18	같지도	같+지+도	ADV	paa+ecx+jxc	_	17	fixed	17:fixed	_
 18.1	도	도	ADP	jxc	_	_	_	18:case	_
 19	않았으며	않	AUX	px+ep+ecs	_	16	aux	16:aux	SpaceAfter=No
-20	,	,	PUNCT	sp	_	17	punct	17:punct	_
+20	,	,	PUNCT	sp	_	16	punct	16:punct	_
 21	겁에질려	겁에질리+어	VERB	pvg+ecx	_	6	conj	6:conj	_
 21.1	에	에	ADP	jca	_	_	_	21:case	_
 22	있는	있	AUX	px+etm	_	21	aux	21:aux	_
@@ -974,7 +974,7 @@
 24	같지도	같+지+도	ADV	paa+ecx+jxc	_	23	fixed	23:fixed	_
 24.1	도	도	ADP	jxc	_	_	_	24:case	_
 25	않았다	않	AUX	px+ep+ef	_	21	aux	21:aux	SpaceAfter=No
-26	.	.	PUNCT	sf	_	25	punct	25:punct	SpaceAfter=No
+26	.	.	PUNCT	sf	_	6	punct	6:punct	SpaceAfter=No
 
 # sent_id = lpp.ko02-023
 # text = 사람이 사는 곳에서 수천 마일 떨어진사막 한가운데서 길을 잃은 어린아이의 모습이 전혀 아니었다.
@@ -1912,7 +1912,7 @@
 # text = "그럼 넌 다른 별에서 왔구나?"
 1	"	"	PUNCT	sl	_	6	punct	6:punct	SpaceAfter=No
 2	그럼	그럼	CCONJ	maj	_	6	cc	6:cc	_
-3	넌	너+ㄴ	PRON	npp+jxt	Case=Nom	6	punct	6:punct	_
+3	넌	너+ㄴ	PRON	npp+jxt	Case=Nom	6	nsubj	6:nsubj	_
 3.1	ㄴ	ㄴ	ADP	jxt	_	_	_	3:case	_
 4	다른	다르+ㄴ	ADJ	paa+etm	_	5	amod	5:amod	_
 5	별에서	별+에서	ADV	ncn+jca	_	6	advcl	6:advcl	_
@@ -2321,7 +2321,7 @@
 
 # sent_id = lpp.ko04-004
 # text = 지구,목성,화성,금성, 이렇게 이름이 붙은 큰 떠돌이 별들 외에도 아주 작아서 망원경으로도 잘 보이지 않는 다른 별들이 수백 개도 더 있다는 것을 나는 알고 있었다.
-1	지구	지구	NOUN	ncn	_	11	nsubj	11:nsubj	SpaceAfter=No
+1	지구	지구	NOUN	ncn	_	11	nsubj	11:csubj	SpaceAfter=No
 2	,	,	PUNCT	sp	_	3	punct	3:punct	SpaceAfter=No
 3	목성	목성	PROPN	nq	_	1	conj	1:conj	SpaceAfter=No
 4	,	,	PUNCT	sp	_	3	punct	3:punct	SpaceAfter=No
@@ -2330,12 +2330,12 @@
 7	금성	금성	PROPN	nq	_	1	conj	1:conj	SpaceAfter=No
 8	,	,	PUNCT	sp	_	7	punct	7:punct	_
 9	이렇게	이렇+게	SCONJ	pad+ecs	_	11	xcomp	11:xcomp	_
-10	이름이	이름+이	NOUN	ncn+jcs	Case=Nom	11	nsubj	11:nsubj	_
+10	이름이	이름+이	NOUN	ncn+jcs	Case=Nom	11	compound:lvc	11:compound:lvc	_
 10.1	이	이	ADP	jcs	_	_	_	10:case	_
 11	붙은	붙+ㄴ	VERB	pvg+etm	_	13	acl	13:acl	_
 12	큰	크+ㄴ	ADJ	paa+etm	_	13	amod	13:amod	_
-13	떠돌이	떠돌+이	NOUN	ncn+jcs	Case=Nom	17	nsubj	17:nsubj	_
-14	별들	별+들	NOUN	ncn+xsn	_	16	compound	16:compound	_
+13	떠돌이	떠돌+이	NOUN	ncn	_	14	compound	17:compound	_
+14	별들	별+들	NOUN	ncn+xsn	_	15	compound	15:compound	_
 15	외에도	외+에+도	ADV	ncn+jca+jxc	_	20	advcl	20:advcl	_
 15.1	에	에	ADP	jca	_	_	_	15:case	_
 15.2	도	도	ADP	jxc	_	_	_	15:case	_
@@ -2788,9 +2788,9 @@
 # sent_id = lpp.ko04-032
 # text = 그러니 여러분들이 "어린 왕자가 있었다는 증거는 그애가 멋있었다는 것이고, 그애가 웃었다는 것이고, 그애가 양을 갖고 싶어 했다는 것이다.
 1	그러니	그러니	CCONJ	maj	_	18	cc	18:cc	_
-2	여러분들이	여러분+들+이	PRON	npp+xsn+jcs	Case=Nom	6	nsubj	6:nsubj	_
+2	여러분들이	여러분+들+이	PRON	npp+xsn+jcs	Case=Nom	10	dislocated	10:dislocated	_
 2.1	이	이	ADP	jcs	_	_	_	2:case	_
-3	"	"	PUNCT	sl	_	9	punct	9:punct	SpaceAfter=No
+3	"	"	PUNCT	sl	_	10	punct	10:punct	SpaceAfter=No
 4	어린	어리+ㄴ	ADJ	paa+etm	_	5	amod	5:amod	_
 5	왕자가	왕자+가	NOUN	ncn+jcs	Case=Nom	6	nsubj	6:nsubj	_
 5.1	가	가	ADP	jcs	_	_	_	5:case	_
@@ -2801,12 +2801,12 @@
 8.1	가	가	ADP	jcs	_	_	_	8:case	_
 9	멋있었다는	멋있+었+다는	ADJ	paa+ep+etm	_	10	amod	10:amod	_
 10	것이고	것+이+고	CCONJ	nbn+jp+ecc	_	0	root	0:root	SpaceAfter=No
-11	,	,	PUNCT	sp	_	18	punct	18:punct	_
+11	,	,	PUNCT	sp	_	10	punct	10:punct	_
 12	그애가	그애+가	NOUN	ncn+jcs	Case=Nom	13	nsubj	13:nsubj	_
 12.1	가	가	ADP	jcs	_	_	_	12:case	_
 13	웃었다는	웃+었+다는	VERB	pvg+ep+etm	Mood=Ind|VerbForm=Fin	14	ccomp	14:ccomp	_
 14	것이고	것+이+고	CCONJ	nbn+jp+ecc	_	10	conj	10:conj	SpaceAfter=No
-15	,	,	PUNCT	sp	_	18	punct	18:punct	_
+15	,	,	PUNCT	sp	_	14	punct	14:punct	_
 16	그애가	그애+가	NOUN	ncn+jcs	Case=Nom	18	nsubj	18:nsubj	_
 16.1	가	가	ADP	jcs	_	_	_	16:case	_
 17	양을	양+을	NOUN	ncn+jco	Case=Acc	18	obj	18:obj	_
@@ -2815,7 +2815,7 @@
 19	싶어	싶	AUX	px+ecx	_	18	aux	18:aux	_
 20	했다는	하	AUX	px+ep+etm	_	18	aux	18:aux	_
 21	것이다	것+이+다	VERB	nbn+jp+ef	Mood=Ind|VerbForm=Fin	18	advcl	18:advcl	SpaceAfter=No
-22	.	.	PUNCT	sf	_	21	punct	21:punct	SpaceAfter=No
+22	.	.	PUNCT	sf	_	10	punct	10:punct	SpaceAfter=No
 
 # sent_id = lpp.ko04-033
 # text = 누군가가 양을 갖고 싶어 한다면 그것은 그 사람이 살아 있다는 증거이다. "
@@ -3324,7 +3324,7 @@
 8	것만	것+만	ADV	nbn+jxc	_	9	advcl	9:advcl	_
 8.1	만	만	ADP	jxc	_	_	_	8:case	_
 9	같다	같+다	ADJ	paa+ef	_	0	root	0:root	SpaceAfter=No
-10	.	.	PUNCT	sf	_	8	punct	8:punct	SpaceAfter=No
+10	.	.	PUNCT	sf	_	9	punct	9:punct	SpaceAfter=No
 
 # sent_id = lpp.ko04-061
 # text = 그래도 나를 용서해 주어야 한다.
@@ -3902,17 +3902,17 @@
 # sent_id = lpp.ko05-033
 # text = 게다가 별이 너무 작은데 바오밥나무가 너무 많으면 별이 산산조각이 나버리고 마는 것이다.
 1	게다가	게다가	ADV	mag	_	4	advmod	4:advmod	_
-2	별이	별+이	NOUN	ncn+jcs	Case=Nom	4	nsubj	4:nsubj	_
+2	별이	별+이	NOUN	ncn+jcs	Case=Nom	4	csubj	4:csubj	_
 2.1	이	이	ADP	jcs	_	_	_	2:case	_
 3	너무	너무	ADV	mag	_	4	advmod	4:advmod	_
 4	작은데	작+ㄴ데	SCONJ	paa+ecs	_	7	xcomp	7:xcomp	_
-5	바오밥나무가	바오밥나무+가	NOUN	ncn+jcs	Case=Nom	7	nsubj	7:nsubj	_
+5	바오밥나무가	바오밥나무+가	NOUN	ncn+jcs	Case=Nom	7	csubj	7:csubj	_
 5.1	가	가	ADP	jcs	_	_	_	5:case	_
 6	너무	너무	ADV	mag	_	7	advmod	7:advmod	_
 7	많으면	많+으면	SCONJ	paa+ecs	_	10	xcomp	10:xcomp	_
 8	별이	별+이	NOUN	ncn+jcs	Case=Nom	10	nsubj	10:nsubj	_
 8.1	이	이	ADP	jcs	_	_	_	8:case	_
-9	산산조각이	산산조각+이	NOUN	ncn+ncn+jcs	Case=Nom	10	nsubj	10:nsubj	_
+9	산산조각이	산산조각+이	ADV	ncn+ncn+jcs	_	10	compound:lvc	10:compound:lvc	_
 9.1	이	이	ADP	jcs	_	_	_	9:case	_
 10	나버리고	나버리+고	VERB	pvg+ecx+px+ecx	_	0	root	0:root	_
 11	마는	말+는	VERB	px+etm	_	10	compound	10:compound	_
@@ -4031,7 +4031,7 @@
 1	"	"	PUNCT	sl	_	6	punct	6:punct	SpaceAfter=No
 2	그들이	그+들+이	PRON	npp+xsn+jcs	Case=Nom	5	nsubj	5:nsubj	_
 2.1	이	이	ADP	jcs	_	_	_	2:case	_
-3	언젠가	언젠가	NOUN	ncn+jcs	Case=Nom	5	nsubj	5:nsubj	_
+3	언젠가	언젠가	ADV	ncn+jcs	_	5	advmod	5:advmod	_
 4	여행을	여행+을	NOUN	ncpa+jco	Case=Acc	5	obj	5:obj	_
 4.1	을	을	ADP	jco	_	_	_	4:case	_
 5	할	하+ㄹ	VERB	pvg+etm	Tense=Fut	6	acl	6:acl	_
@@ -4039,7 +4039,7 @@
 7	,	,	PUNCT	sp	_	6	punct	6:punct	_
 8	이것이	이것+이	PRON	npd+jcs	Case=Nom	10	nsubj	10:nsubj	_
 8.1	이	이	ADP	jcs	_	_	_	8:case	_
-9	도움이	도움+이	NOUN	ncn+jcs	Case=Nom	10	csubj	10:csubj	_
+9	도움이	도움+이	NOUN	ncn+jcs	Case=Nom	10	compound:lvc	10:compound:lvc	_
 9.1	이	이	ADP	jcs	_	_	_	9:case	_
 10	될	되+ㄹ	VERB	pvg+etm	Tense=Fut	0	root	0:root	_
 11	수도	수+도	ADV	nbn+jxc	_	10	advmod	10:advmod	_
@@ -4790,7 +4790,7 @@
 8	먹을	먹+ㄹ	VERB	pvg+etm	Tense=Fut	9	acl	9:acl	_
 9	물이	물+이	NOUN	ncn+jcs	Case=Nom	11	nsubj	11:nsubj	_
 9.1	이	이	ADP	jcs	_	_	_	9:case	_
-10	바닥이	바닥+이	NOUN	ncn+jcs	Case=Nom	11	nsubj	11:nsubj	_
+10	바닥이	바닥+이	NOUN	ncn+jcs	Case=Nom	11	compound:lvc	11:compound:lvc	_
 10.1	이	이	ADP	jcs	_	_	_	10:case	_
 11	드러나고	드러나+고	VERB	pvg+ecx	_	7	conj	7:conj	_
 12	있어	있	AUX	px+ecs	_	11	aux	11:aux	_
@@ -4887,7 +4887,7 @@
 # sent_id = lpp.ko07-014
 # text = "그래!" 그러나 잠시 아무 말이 없다가 어린 왕자는 원망스럽다는 듯 나에게 이렇게 톡 쏘아 붙였다.
 1	"	"	PUNCT	sl	_	2	punct	2:punct	SpaceAfter=No
-2	그래	그렇+어	PRON	npp	_	9	nsubj	9:nsubj	SpaceAfter=No
+2	그래	그렇+어	PRON	npp	_	9	parataxis	9:parataxis	SpaceAfter=No
 3	!	!	PUNCT	sf	_	2	punct	2:punct	SpaceAfter=No
 4	"	"	PUNCT	sr	_	2	punct	2:punct	_
 5	그러나	그러나	ADV	maj	_	9	advmod	9:advmod	_
@@ -5010,16 +5010,16 @@
 # sent_id = lpp.ko07-021
 # text = "그럼 아저씨 생각으로는 꽃들이...... " "그만해 둬!
 1	"	"	PUNCT	sl	_	5	punct	5:punct	SpaceAfter=No
-2	그럼	그럼	CCONJ	maj	_	10	cc	10:cc	_
+2	그럼	그럼	ADV	maj	_	5	advmod	5:advmod	_
 3	아저씨	아저+씨	NOUN	ncn+xsn	_	5	compound	5:compound	_
 4	생각으로는	생각+으로+는	NOUN	ncpa+jca+jxt	Case=Nom	5	dislocated	5:dislocated	_
 4.1	으로	으로	ADP	jca	_	_	_	4:case	_
 4.2	는	는	ADP	jxt	_	_	_	4:case	_
-5	꽃들이	꽃+들+이	NOUN	ncn+xsn+jcs	Case=Nom	10	obl	10:obl	SpaceAfter=No
+5	꽃들이	꽃+들+이	NOUN	ncn+xsn+jcs	Case=Nom	10	parataxis	10:parataxis	SpaceAfter=No
 5.1	이	이	ADP	jcs	_	_	_	5:case	_
 6	......	......	PUNCT	sf	_	5	punct	5:punct	_
-7	"	"	PUNCT	sr	_	9	punct	9:punct	_
-8	"	"	PUNCT	sr	_	9	punct	9:punct	SpaceAfter=No
+7	"	"	PUNCT	sr	_	5	punct	5:punct	_
+8	"	"	PUNCT	sr	_	10	punct	10:punct	SpaceAfter=No
 9	그만해	그만해	ADP	jcs	_	10	case	10:case	_
 10	둬	두+ㄴ	VERB	pvg+ef	_	0	root	0:root	SpaceAfter=No
 11	!	!	PUNCT	sf	_	10	punct	10:punct	SpaceAfter=No
@@ -5652,7 +5652,7 @@
 
 # sent_id = lpp.ko07-063
 # text = "네가 사랑하는 꽃은 위험에 처해 있지 않아...... 너의 양에게 굴레를 그려 줄께...... 그리고...... " 더이상 무어라 말해야 좋을지 알 수 없었다.
-1	"	"	PUNCT	sl	_	6	punct	6:punct	SpaceAfter=No
+1	"	"	PUNCT	sl	_	13	punct	13:punct	SpaceAfter=No
 2	네가	네+가	PRON	npp+jcs	Case=Nom	3	nsubj	3:nsubj	_
 2.1	가	가	ADP	jcs	_	_	_	2:case	_
 3	사랑하는	사랑+하+는	VERB	ncpa+xsv+etm	_	4	acl	4:acl	_
@@ -5673,9 +5673,9 @@
 13	그려	그리+어	VERB	pvg+ecx	_	0	root	0:root	_
 14	줄께	줄+ㄴ	VERB	px+ef	_	13	compound	13:compound	SpaceAfter=No
 15	......	......	PUNCT	sf	_	14	punct	14:punct	_
-16	그리고	그리고	CCONJ	maj	_	23	cc	23:cc	SpaceAfter=No
+16	그리고	그리고	CCONJ	maj	_	13	cc	13:cc	SpaceAfter=No
 17	......	......	PUNCT	sf	_	16	punct	16:punct	_
-18	"	"	PUNCT	sr	_	20	punct	20:punct	_
+18	"	"	PUNCT	sr	_	13	punct	13:punct	_
 19	더이상	더이상	ADV	mag	_	21	advmod	21:advmod	_
 20	무어라	들+어라	VERB	ncn+jp+ef	Mood=Imp|VerbForm=Fin	21	ccomp	21:ccomp	_
 21	말해야	말하+어야	VERB	pvg+ecx	_	23	ccomp	23:ccomp	_
@@ -7190,8 +7190,8 @@
 # sent_id = lpp.ko09-040
 # text = "하지만 짐승이...... " "나비를 알고 싶으면 두세 마리의 쐐기벌레는 견뎌야지.
 1	"	"	PUNCT	sl	_	3	punct	3:punct	SpaceAfter=No
-2	하지만	하+지만	SCONJ	pvg+ecs	_	13	ccomp	13:ccomp	_
-3	짐승이	짐승+이	NOUN	ncn+jcs	Case=Nom	8	obl	8:obl	SpaceAfter=No
+2	하지만	하+지만	SCONJ	pvg+ecs	_	3	ccomp	3:ccomp	_
+3	짐승이	짐승+이	NOUN	ncn+jcs	Case=Nom	8	parataxis	8:parataxis	SpaceAfter=No
 3.1	이	이	ADP	jcs	_	_	_	3:case	_
 4	......	......	PUNCT	sf	_	3	punct	3:punct	_
 5	"	"	PUNCT	sr	_	3	punct	3:punct	_
@@ -7710,15 +7710,15 @@
 # sent_id = lpp.ko10-029
 # text = "어흠! 어흠! 그렇다면 짐이...... 짐이 명하노니 어떤 때는 하품을 하고 또 어떤 때는 ...... " 하고 왕이 말했다.
 1	"	"	PUNCT	sl	_	2	punct	2:punct	SpaceAfter=No
-2	어흠	어흠	NOUN	ncn	_	7	compound	7:compound	SpaceAfter=No
+2	어흠	어흠	INTJ	ncn	_	14	discourse	14:discourse	SpaceAfter=No
 3	!	!	PUNCT	sf	_	2	punct	2:punct	_
-4	어흠	어	AUX	jp+ef	_	2	case	2:case	SpaceAfter=No
-5	!	!	PUNCT	sf	_	7	punct	7:punct	_
+4	어흠	어흠	INTJ	ncn	_	14	discourse	14:discourse	SpaceAfter=No
+5	!	!	PUNCT	sf	_	4	punct	4:punct	_
 6	그렇다면	그렇다면	ADV	mag	_	7	cc	7:cc	_
 7	짐이	짐+이	NOUN	ncn+jcs	Case=Nom	10	nsubj	10:nsubj	SpaceAfter=No
 7.1	이	이	ADP	jcs	_	_	_	7:case	_
 8	......	......	PUNCT	sf	_	7	punct	7:punct	_
-9	짐이	짐+이	NOUN	ncn+jcs	Case=Nom	10	nsubj	10:nsubj	_
+9	짐이	짐+이	NOUN	ncn+jcs	Case=Nom	7	reparandum	7:reparandum	_
 9.1	이	이	ADP	jcs	_	_	_	9:case	_
 10	명하노니	명하+노니	SCONJ	pvg+ecs	_	14	ccomp	14:ccomp	_
 11	어떤	어떻+ㄴ	VERB	pad+etm	_	12	amod	12:amod	_
@@ -7860,11 +7860,11 @@
 
 # sent_id = lpp.ko10-038
 # text = "앉아도 좋을까요?"
-1	"	"	PUNCT	sl	_	3	punct	3:punct	SpaceAfter=No
+1	"	"	PUNCT	sl	_	2	punct	2:punct	SpaceAfter=No
 2	앉아도	앉+아+도	ADV	pvg+ecx+jxc	_	0	root	0:root	_
 3	좋을까요	좋+ㄹ까+요	VERB	paa+ef+jxf	Tense=Fut	2	conj	2:conj	SpaceAfter=No
-4	?	?	PUNCT	sf	_	3	punct	3:punct	SpaceAfter=No
-5	"	"	PUNCT	sr	_	3	punct	3:punct	SpaceAfter=No
+4	?	?	PUNCT	sf	_	2	punct	2:punct	SpaceAfter=No
+5	"	"	PUNCT	sr	_	2	punct	2:punct	SpaceAfter=No
 
 # sent_id = lpp.ko10-039
 # text = 어린 왕자가 조심스럽게 물었다.
@@ -7993,9 +7993,9 @@
 
 # sent_id = lpp.ko10-050
 # text = 퍽이나 간단이 왕이 대답했다.
-1	퍽이나	퍽+이나	CCONJ	ncn+jcj	_	4	nsubj	4:nsubj	_
+1	퍽이나	퍽+이나	ADV	ncn+jcj	_	4	advmod	2:advmod	_
 1.1	이나	이나	ADP	jxc	_	_	_	1:case	_
-2	간단이	간단+이	NOUN	ncn+jcs	Case=Nom	1	conj	1:conj	_
+2	간단이	간단+이	ADV	ncn+jcs	_	4	advmod	4:advmod	_
 3	왕이	왕+이	NOUN	ncn+jcs	Case=Nom	4	nsubj	4:nsubj	_
 3.1	이	이	ADP	jcs	_	_	_	3:case	_
 4	대답했다	대답+하+었+다	VERB	ncpa+xsv+ep+ef	Mood=Ind|VerbForm=Fin	0	root	0:root	SpaceAfter=No
@@ -8175,7 +8175,7 @@
 26	수	수	NOUN	nbn	_	25	obl	25:obl	_
 27	있을게	있+ㄹ게	ADJ	paa+ecx	_	26	fixed	26:fixed	_
 27.1	이	이	ADP	jcs	_	_	_	27:case	_
-28	아닌가	아니+ㄴ가	AUX	px+ef	_	0	root	0:root	SpaceAfter=No
+28	아닌가	아니+ㄴ가	VERB	px+ef	_	0	root	0:root	SpaceAfter=No
 29	!	!	PUNCT	sf	_	28	punct	28:punct	SpaceAfter=No
 
 # sent_id = lpp.ko10-064
@@ -8608,7 +8608,7 @@
 3	사람	사람	NOUN	ncn	_	4	dep	4:dep	_
 4	있게	있+게	ADJ	paa+ecx	_	6	amod	6:amod	_
 5	된	되+ㄴ	VERB	px+etm	_	4	advcl	4:advcl	_
-6	것이	것+이	NOUN	nbn+jcs	Case=Nom	10	nsubj	10:nsubj	_
+6	것이	것+이	NOUN	nbn+jcs	Case=Nom	8	nsubj	8:nsubj	_
 6.1	이	이	ADP	jcs	_	_	_	6:case	_
 7	몹시	몹시	ADV	mag	_	8	advmod	8:advmod	_
 8	자랑스러운	자랑+스럽+ㄴ	VERB	ncps+xsm+etm	_	9	amod	9:amod	_
@@ -8637,13 +8637,13 @@
 # sent_id = lpp.ko10-096
 # text = "하지만 재판받을 사람이 아무도 없는데요!"
 1	"	"	PUNCT	sl	_	6	punct	6:punct	SpaceAfter=No
-2	하지만	하+지만	SCONJ	pvg+ecs	_	0	root	0:root	_
+2	하지만	하+지만	SCONJ	pvg+ecs	_	6	cc	6:cc	_
 3	재판받을	재판받+ㄹ	VERB	pvg+etm	Tense=Fut	4	acl	4:acl	_
 4	사람이	사람+이	NOUN	ncn+jcs	Case=Nom	6	nsubj	6:nsubj	_
 4.1	이	이	ADP	jcs	_	_	_	4:case	_
 5	아무도	아무+도	ADV	npd+jxc	_	6	advcl	6:advcl	_
 5.1	도	도	ADP	jxc	_	_	_	5:case	_
-6	없는데요	없+는데요	VERB	paa+ef+jxf	_	2	conj	2:conj	SpaceAfter=No
+6	없는데요	없+는데요	VERB	paa+ef+jxf	_	0	root	0:root	SpaceAfter=No
 7	!	!	PUNCT	sf	_	6	punct	6:punct	SpaceAfter=No
 8	"	"	PUNCT	sr	_	6	punct	6:punct	SpaceAfter=No
 
@@ -8683,7 +8683,7 @@
 7	자리도	자리+도	ADV	ncn+jxc	_	8	advcl	8:advcl	_
 7.1	도	도	ADP	jxc	_	_	_	7:case	_
 8	없고	없+고	CCONJ	paa+ecc	_	3	conj	3:conj	SpaceAfter=No
-9	,	,	PUNCT	sp	_	12	punct	12:punct	_
+9	,	,	PUNCT	sp	_	8	punct	8:punct	_
 10	걸어	걷+어	VERB	pvg+ecx	_	8	conj	8:conj	_
 11	다니자니	다니+자니	SCONJ	pvg+ecs	_	10	mark	10:mark	_
 12	피곤해지거든	피곤+하+어+지+거든	VERB	ncpa+xsv+ecx+px+ef	_	8	conj	8:conj	SpaceAfter=No
@@ -9426,7 +9426,7 @@
 
 # sent_id = lpp.ko11-028
 # text = "찬양한다는건 내가 이 별에서 가장 잘생겼고, 가장 옷을 잘입고, 가장 부자이고, 가장 똑똑하다고 인정해 주는 거지. "
-1	"	"	PUNCT	sl	_	7	punct	7:punct	SpaceAfter=No
+1	"	"	PUNCT	sl	_	20	punct	20:punct	SpaceAfter=No
 2	찬양한다는건	찬양+하+ㄴ다는건	SCONJ	ncpa+xsv+ecs	_	20	ccomp	20:ccomp	_
 3	내가	내+가	PRON	npp+jcs	Case=Nom	7	nsubj	7:nsubj	_
 3.1	가	가	ADP	jcs	_	_	_	3:case	_
@@ -9501,7 +9501,7 @@
 3	아저씨에게	아저씨+에게	ADV	ncn+xsn+jca	_	6	iobj	6:iobj	_
 3.1	에게	에게	ADP	jca	_	_	_	3:case	_
 4	무슨	무슨	DET	mmd	_	5	det	5:det	_
-5	상관이	상관+이	NOUN	ncpa+jcs	Case=Nom	6	nsubj	6:nsubj	_
+5	상관이	상관+이	NOUN	ncpa+jcs	Case=Nom	6	compound:lvc	6:compound:lvc	_
 5.1	이	이	ADP	jcs	_	_	_	5:case	_
 6	있지	있+지	ADJ	paa+ef	_	0	root	0:root	SpaceAfter=No
 7	?	?	PUNCT	sf	_	6	punct	6:punct	SpaceAfter=No
@@ -9577,15 +9577,15 @@
 # text = 빈 병 한무더기와 술이 가득차 있는 병 한 무더기를 앞에 놓고 말없이 앉아 있는 술꾼을 보고 어린 왕자가 말했다.
 1	빈	비+ㄴ	ADJ	paa+etm	_	2	amod	2:amod	_
 2	병	병	NOUN	ncn	_	3	compound	3:compound	_
-3	한무더기와	한무더기+와	CCONJ	ncn+jcj	_	19	nsubj	19:nsubj	_
-3.1	와	와	ADP	jcj	_	_	_	3:case	_
-4	술이	술+이	NOUN	ncn+jcs	Case=Nom	3	conj	3:conj	_
+3	한무더기와	한무더기+와	CCONJ	ncn+jcj	_	11	obj	11:obj	_
+3.1	와	와	ADP	jcj	_	_	_	3:mark	_
+4	술이	술+이	NOUN	ncn+jcs	Case=Nom	5	nsubj	5:nsubj	_
 4.1	이	이	ADP	jcs	_	_	_	4:case	_
 5	가득차	가득차	ADV	mag+jxc	_	6	advmod	6:advmod	_
 6	있는	있+는	ADJ	paa+etm	_	9	amod	9:amod	_
 7	병	병	NOUN	ncn	_	9	compound	9:compound	_
 8	한	한	NUM	nnc	_	9	nummod	9:nummod	_
-9	무더기를	무더기+를	NOUN	ncn+jco	Case=Acc	11	obj	11:obj	_
+9	무더기를	무더기+를	NOUN	ncn+jco	Case=Acc	3	conj	3:conj	_
 9.1	를	를	ADP	jco	_	_	_	9:case	_
 10	앞에	앞+에	ADV	ncn+jca	_	11	obl	11:obl	_
 10.1	에	에	ADP	jca	_	_	_	10:case	_
@@ -10586,7 +10586,7 @@
 2.1	이	이	ADP	jcs	_	_	_	2:case	_
 3	네	네	NUM	nnc	_	4	nummod	4:nummod	_
 3.1	의	의	ADP	jcm	_	_	_	3:case	_
-4	소유가	소유+가	NOUN	ncn+jcc	_	5	csubj	5:csubj	_
+4	소유가	소유+가	NOUN	ncn+jcc	_	5	compound:lvc	5:compound:lvc	_
 4.1	가	가	ADP	jcs	_	_	_	4:case	_
 5	되는	되+는	VERB	pvg+etm	_	6	ccomp	6:ccomp	_
 6	거야	거+이+야	VERB	nbn+jp+ef	_	0	root	0:root	SpaceAfter=No
@@ -10789,7 +10789,7 @@
 
 # sent_id = lpp.ko13-079
 # text = "조그만 종이 조각에다 내 별들의 숫자를 적어 그것을 서랍에 넣고 잠근단 말이야. "
-1	"	"	PUNCT	sl	_	13	punct	13:punct	SpaceAfter=No
+1	"	"	PUNCT	sl	_	11	punct	11:punct	SpaceAfter=No
 2	조그만	조그맣+ㄴ	ADJ	paa+etm	_	4	amod	4:amod	_
 3	종이	종이	NOUN	ncn	_	4	compound	4:compound	_
 4	조각에다	조각+에다	ADV	ncn+jca	_	13	advcl	13:advcl	_
@@ -10808,8 +10808,8 @@
 11	넣고	넣+고	CCONJ	pvg+ecc	_	0	root	0:root	_
 12	잠근단	잠근단	NOUN	ncn	_	13	compound	13:compound	_
 13	말이야	말+이+야	VERB	ncn+jp+ef	_	11	conj	11:conj	SpaceAfter=No
-14	.	.	PUNCT	sf	_	13	punct	13:punct	_
-15	"	"	PUNCT	sr	_	13	punct	13:punct	SpaceAfter=No
+14	.	.	PUNCT	sf	_	11	punct	11:punct	_
+15	"	"	PUNCT	sr	_	11	punct	11:punct	SpaceAfter=No
 
 # sent_id = lpp.ko13-080
 # text = "그리고 그뿐이야?"
@@ -10874,7 +10874,7 @@
 
 # sent_id = lpp.ko13-085
 # text = "나는 말이야 꽃을 한 송이 소유하고 있는데 매일 물을 줘.
-1	"	"	PUNCT	sl	_	7	punct	7:punct	SpaceAfter=No
+1	"	"	PUNCT	sl	_	11	punct	11:punct	SpaceAfter=No
 2	나는	나+는	PRON	npp+jxt	Case=Nom	11	dislocated	11:dislocated	_
 2.1	는	는	ADP	jxt	_	_	_	2:case	_
 3	말이야	말+이+야	ADV	ncn+jxc	_	7	advcl	7:advcl	_
@@ -11050,7 +11050,7 @@
 14	사람이	사람+이	NOUN	ncn+jcs	Case=Nom	17	nsubj	17:nsubj	_
 14.1	이	이	ADP	jcs	_	_	_	14:case	_
 15	무슨	무슨	DET	mmd	_	16	det	16:det	_
-16	소용이	소용+이	NOUN	ncn+jcs	Case=Nom	17	nsubj	17:nsubj	_
+16	소용이	소용+이	NOUN	ncn+jcs	Case=Nom	17	compound:lvc	17:compound:lvc	_
 16.1	이	이	ADP	jcs	_	_	_	16:case	_
 17	있는지	있+는지	SCONJ	paa+ecs	_	21	xcomp	21:xcomp	_
 18	어린	어리+ㄴ	ADJ	paa+etm	_	19	amod	19:amod	_
@@ -11854,7 +11854,7 @@
 
 # sent_id = lpp.ko14-070
 # text = '저 사람은 다른 사람들, 왕이나 허영심 많은 사람이나 술꾼, 혹은 장사꾼 같은 사람들에게 멸시받을 테지.
-1	'	'	PUNCT	sl	_	5	punct	5:punct	SpaceAfter=No
+1	'	'	PUNCT	sl	_	17	punct	17:punct	SpaceAfter=No
 2	저	저	DET	mmd	_	3	det	3:det	_
 3	사람은	사람+은	NOUN	ncn+jxt	Case=Nom	17	dislocated	17:dislocated	_
 3.1	은	은	ADP	jxt	_	_	_	3:case	_
@@ -11868,7 +11868,7 @@
 10	사람이나	사람+이나	CCONJ	ncn+jcj	_	17	obj	17:obj	_
 10.1	이나	이나	ADP	jcj	_	_	_	10:case	_
 11	술꾼	술꾼	NOUN	ncn	_	10	conj	10:conj	SpaceAfter=No
-12	,	,	PUNCT	sp	_	14	punct	14:punct	_
+12	,	,	PUNCT	sp	_	13	punct	13:punct	_
 13	혹은	혹은	CCONJ	maj	_	16	cc	16:cc	_
 14	장사꾼	장사꾼	NOUN	ncn	_	10	conj	10:conj	_
 15	같은	같+ㄴ	ADJ	paa+etm	_	16	amod	16:amod	_
@@ -11876,7 +11876,7 @@
 16.1	에게	에게	ADP	jca	_	_	_	16:case	_
 17	멸시받을	멸시받+ㄹ	VERB	pvg+etm	Tense=Fut	0	root	0:root	_
 18	테지	테+지	VERB	nbn+jp+ef	_	17	advcl	17:advcl	SpaceAfter=No
-19	.	.	PUNCT	sf	_	18	punct	18:punct	SpaceAfter=No
+19	.	.	PUNCT	sf	_	17	punct	17:punct	SpaceAfter=No
 
 # sent_id = lpp.ko14-071
 # text = 하지만 우스꽝스럽게 보이지 않는 사람은 저 사람뿐이야.
@@ -12973,10 +12973,10 @@
 1	"	"	PUNCT	sl	_	3	punct	3:punct	SpaceAfter=No
 2	화산이	화산+이	NOUN	ncn+jcs	Case=Nom	3	nsubj	3:nsubj	_
 2.1	이	이	ADP	jcs	_	_	_	2:case	_
-3	꺼져	꺼지+어	VERB	pvg+ecx	_	5	ccomp	5:ccomp	_
-4	있든	있+든	AUX	px+ecs	_	3	mark	3:mark	_
-5	깨어	깨+어	VERB	pvg+ecx	_	6	ccomp	6:ccomp	_
-6	있든	있+든	AUX	px+ecs	_	8	xcomp	8:xcomp	_
+3	꺼져	꺼지+어	VERB	pvg+ecx	_	8	ccomp	5:ccomp	_
+4	있든	있+든	CCONJ	px+ecs	_	3	mark	3:mark	_
+5	깨어	깨+어	VERB	pvg+ecx	_	3	conj	6:conj	_
+6	있든	있+든	CCONJ	px+ecs	_	5	mark	8:mark	_
 7	우리에게는	우리+에게+는	PRON	npp+jca+jxt	Case=Nom	8	dislocated	8:dislocated	_
 7.1	에게	에게	ADP	jca	_	_	_	7:case	_
 7.2	는	는	ADP	jxt	_	_	_	7:case	_
@@ -13396,8 +13396,8 @@
 4.1	의	의	ADP	jcm	_	_	_	4:case	_
 5	가로등	가로등	NOUN	ncn	_	6	dep	6:dep	_
 6	켜는	켜+는	VERB	pvg+etm	_	7	acl	7:acl	_
-7	사람들	사람+들	NOUN	ncn+xsn	_	24	dislocated	24:dislocated	SpaceAfter=No
-8	,	,	PUNCT	sp	_	15	punct	15:punct	_
+7	사람들	사람+들	NOUN	ncn+xsn	_	24	nsubj	24:nsubj	SpaceAfter=No
+8	,	,	PUNCT	sp	_	7	punct	7:punct	_
 9	또	또	CCONJ	maj	_	15	cc	15:cc	_
 10	그	그	DET	mmd	_	12	det	12:det	_
 11	다음에는	다음+에+는	NOUN	ncn+jca+jxt	Case=Nom	15	dislocated	15:dislocated	_
@@ -13408,7 +13408,7 @@
 13	가로등	가로등	NOUN	ncn	_	14	dep	14:dep	_
 14	켜는	켜+는	VERB	pvg+etm	_	15	acl	15:acl	_
 15	사람들	사람+들	NOUN	ncn+xsn	_	7	conj	7:conj	SpaceAfter=No
-16	,	,	PUNCT	sp	_	22	punct	22:punct	_
+16	,	,	PUNCT	sp	_	15	punct	15:punct	_
 17	또	또	CCONJ	maj	_	19	cc	19:cc	_
 18	그다음에는	그+다+를+에+는	NOUN	ncn+jca+jxt	Case=Nom	15	conj	15:conj	_
 18.1	에	에	ADP	jca	_	_	_	18:case	_
@@ -13417,7 +13417,7 @@
 19.1	의	의	ADP	jcm	_	_	_	19:case	_
 20	가로등	가로등	NOUN	ncn	_	21	dep	21:dep	_
 21	켜는	켜+는	VERB	pvg+etm	_	22	acl	22:acl	_
-22	사람들이	사람+들+이	NOUN	ncn+xsn+jcs	Case=Nom	24	nsubj	24:nsubj	_
+22	사람들이	사람+들+이	NOUN	ncn+xsn+jcs	Case=Nom	7	conj	7:conj	_
 22.1	이	이	ADP	jcs	_	_	_	22:case	_
 23	차례로	차례+로	ADV	ncn+jca	_	24	advcl	24:advcl	_
 23.1	로	로	ADP	jca	_	_	_	23:case	_
@@ -13953,15 +13953,15 @@
 # sent_id = lpp.ko17-035
 # text = "난 어떤 꽃하고 골치 아픈 일이 있단다. "
 1	"	"	PUNCT	sl	_	8	punct	8:punct	SpaceAfter=No
-2	난	나+ㄴ	PRON	npp+jxt	Case=Nom	8	dislocated	8:dislocated	_
+2	난	나+ㄴ	PRON	npp+jxt	Case=Nom	8	nsubj	8:nsubj	_
 2.1	ㄴ	ㄴ	ADP	jxt	_	_	_	2:case	_
 3	어떤	어떻+ㄴ	VERB	pad+etm	_	4	amod	4:amod	_
-4	꽃하고	꽃+하+고	CCONJ	ncn+ecc+ecc	_	0	root	0:root	_
+4	꽃하고	꽃+하+고	CCONJ	ncn+ecc+ecc	_	8	obl	8:obl	_
 5	골치	골치	NOUN	ncn	_	6	dep	6:dep	_
 6	아픈	아프+ㄴ	ADJ	paa+etm	_	4	conj	4:conj	_
-7	일이	일+이	NOUN	ncn+jcs	Case=Nom	8	nsubj	8:nsubj	_
+7	일이	일+이	NOUN	ncn+jcs	Case=Nom	8	compound:lvc	8:compound:lvc	_
 7.1	이	이	ADP	jcs	_	_	_	7:case	_
-8	있단다	있+단다	ADJ	paa+ef	_	4	conj	4:conj	SpaceAfter=No
+8	있단다	있+단다	ADJ	paa+ef	_	0	root	0:root	SpaceAfter=No
 9	.	.	PUNCT	sf	_	8	punct	8:punct	_
 10	"	"	PUNCT	sr	_	8	punct	8:punct	SpaceAfter=No
 
@@ -14204,8 +14204,8 @@
 
 # sent_id = lpp.ko17-057
 # text = 하지만 넌 순진하고 또 다른 별에서 왔으니까. "
-1	하지만	하지만	CCONJ	maj	_	7	cc	7:cc	_
-2	넌	너+ㄴ	PRON	npp+jxt	Case=Nom	7	punct	7:punct	_
+1	하지만	하지만	CCONJ	maj	_	3	cc	3:cc	_
+2	넌	너+ㄴ	PRON	npp+jxt	Case=Nom	3	nsubj	3:nsubj	_
 2.1	ㄴ	ㄴ	ADP	jxt	_	_	_	2:case	_
 3	순진하고	순진+하+고	CCONJ	ncps+xsm+ecc	_	0	root	0:root	_
 4	또	또	ADV	mag	_	5	advmod	5:advmod	_
@@ -14213,8 +14213,8 @@
 6	별에서	별+에서	ADV	ncn+jca	_	7	advcl	7:advcl	_
 6.1	에서	에서	ADP	jca	_	_	_	6:case	_
 7	왔으니까	오+았+으니까	VERB	pvg+ep+ef	_	3	conj	3:conj	SpaceAfter=No
-8	.	.	PUNCT	sf	_	7	punct	7:punct	_
-9	"	"	PUNCT	sr	_	7	punct	7:punct	SpaceAfter=No
+8	.	.	PUNCT	sf	_	3	punct	7:punct	_
+9	"	"	PUNCT	sr	_	3	punct	7:punct	SpaceAfter=No
 
 # sent_id = lpp.ko17-058
 # text = 어린 왕자는 아무 대꾸도 하지 않았다.
@@ -14399,7 +14399,7 @@
 1	그	그	DET	mmd	_	2	det	2:det	_
 2	꽃은	꽃+은	NOUN	ncn+jxt	Case=Nom	9	dislocated	9:dislocated	_
 2.1	은	은	ADP	jxt	_	_	_	2:case	_
-3	언젠가	언젠가	NOUN	ncn+jcs	Case=Nom	6	nsubj	6:nsubj	_
+3	언젠가	언젠가	ADV	ncn+jcs	_	6	advmod	6:advmod	_
 4	여행자단의	여행+자단+의	NOUN	ncn+ncn+jcm	Case=Gen	5	nmod	5:nmod	_
 4.1	의	의	ADP	jcm	_	_	_	4:case	_
 5	무리가	무리+가	NOUN	ncn+jcs	Case=Nom	6	nsubj	6:nsubj	_
@@ -14539,11 +14539,11 @@
 2	이	이	DET	mmd	_	3	det	3:det	_
 3	산처럼	산+처럼	ADV	ncn+jca	_	4	advcl	4:advcl	_
 3.1	처럼	처럼	ADP	jca	_	_	_	3:case	_
-4	높은	높+ㄴ	ADJ	paa+etm	_	6	amod	6:amod	_
+4	높은	높+ㄴ	ADJ	paa+etm	_	5	amod	5:amod	_
 5	산에서는	산+에서+는	NOUN	ncn+jca+jxt	Case=Nom	21	dislocated	21:dislocated	_
 5.1	에서	에서	ADP	jca	_	_	_	5:case	_
 5.2	는	는	ADP	jxt	_	_	_	5:case	_
-6	이	이	DET	mmd	_	8	det	8:det	_
+6	이	이	DET	mmd	_	7	det	7:det	_
 7	별과	별+과	CCONJ	ncn+jcj	_	9	compound	9:compound	_
 7.1	과	과	ADP	jcj	_	_	_	7:case	_
 8	사람들	사람+들	NOUN	ncn+xsn	_	7	conj	7:conj	_
@@ -14585,13 +14585,13 @@
 # sent_id = lpp.ko19-006
 # text = "안녕...... 안녕...... 안녕...... " 메아리가 대답했다.
 1	"	"	PUNCT	sl	_	2	punct	2:punct	SpaceAfter=No
-2	안녕	안녕	NOUN	ncn	_	9	compound	9:compound	SpaceAfter=No
+2	안녕	안녕	INTJ	ncn	_	10	ccomp	10:ccomp	SpaceAfter=No
 3	......	......	PUNCT	sf	_	2	punct	2:punct	_
-4	안녕	안녕	AUX	jp+ef	_	2	case	2:case	SpaceAfter=No
-5	......	......	PUNCT	sf	_	2	punct	2:punct	_
-6	안녕	안녕	AUX	jp+ef	_	9	compound	9:compound	SpaceAfter=No
+4	안녕	안녕	INTJ	jp+ef	_	2	flat	2:flat	SpaceAfter=No
+5	......	......	PUNCT	sf	_	4	punct	4:punct	_
+6	안녕	안녕	INTJ	jp+ef	_	2	flat	2:flat	SpaceAfter=No
 7	......	......	PUNCT	sf	_	6	punct	6:punct	_
-8	"	"	PUNCT	sr	_	9	punct	9:punct	_
+8	"	"	PUNCT	sr	_	2	punct	2:punct	_
 9	메아리가	메아리+가	NOUN	ncn+jcs	Case=Nom	10	nsubj	10:nsubj	_
 9.1	가	가	ADP	jcs	_	_	_	9:case	_
 10	대답했다	대답+하+었+다	VERB	ncpa+xsv+ep+ef	Mood=Ind|VerbForm=Fin	0	root	0:root	SpaceAfter=No
@@ -14873,24 +14873,24 @@
 
 # sent_id = lpp.ko20-015
 # text = '내 꽃이 이걸 보면 몹시 상심할 꺼야' 하고 어린 왕자는 생각했다.
-1	'	'	PUNCT	sl	_	8	punct	8:punct	SpaceAfter=No
+1	'	'	PUNCT	sl	_	7	punct	7:punct	SpaceAfter=No
 2	내	내	PRON	npp	_	3	compound	3:compound	_
 2.1	의	의	ADP	jcm	_	_	_	2:case	_
-3	꽃이	꽃+이	NOUN	ncn+jcs	Case=Nom	5	nsubj	5:nsubj	_
+3	꽃이	꽃+이	NOUN	ncn+jcs	Case=Nom	7	nsubj	7:nsubj	_
 3.1	이	이	ADP	jcs	_	_	_	3:case	_
 4	이걸	이+걸	ADV	mag	_	5	advmod	5:advmod	_
 4.1	ㄹ	ㄹ	ADP	jco	_	_	_	4:case	_
-5	보면	보+면	SCONJ	pvg+ecs	_	10	ccomp	10:ccomp	_
+5	보면	보+면	SCONJ	pvg+ecs	_	7	ccomp	7:ccomp	_
 6	몹시	몹시	ADV	mag	_	7	advmod	7:advmod	_
-7	상심할	상심+하+ㄹ	VERB	ncpa+xsv+etm	Tense=Fut	10	ccomp	10:ccomp	_
-8	꺼야	끄+어야	VERB	pvg+ef	_	10	ccomp	10:ccomp	SpaceAfter=No
-9	'	'	PUNCT	sr	_	8	punct	8:punct	_
-10	하고	하+고	CCONJ	pvg+ecc	_	0	root	0:root	_
+7	상심할	상심+하+ㄹ	VERB	ncpa+xsv+etm	Tense=Fut	13	ccomp	13:ccomp	_
+8	꺼야	끄+어야	VERB	pvg+ef	_	7	ccomp	7:ccomp	SpaceAfter=No
+9	'	'	PUNCT	sr	_	7	punct	7:punct	_
+10	하고	하고	ADP	jcr	_	7	case	7:case	_
 10.1	하고	하고	ADP	jcr	_	_	_	10:case	_
 11	어린	어리+ㄴ	ADJ	paa+etm	_	12	amod	12:amod	_
 12	왕자는	왕자+는	NOUN	ncn+jxt	Case=Nom	13	dislocated	13:dislocated	_
 12.1	는	는	ADP	jxt	_	_	_	12:case	_
-13	생각했다	생각+하+었+다	VERB	ncpa+xsv+ep+ef	Mood=Ind|VerbForm=Fin	10	conj	10:conj	SpaceAfter=No
+13	생각했다	생각+하+었+다	VERB	ncpa+xsv+ep+ef	Mood=Ind|VerbForm=Fin	0	root	0:root	SpaceAfter=No
 14	.	.	PUNCT	sf	_	13	punct	13:punct	SpaceAfter=No
 
 # sent_id = lpp.ko20-016
@@ -15006,7 +15006,7 @@
 16.1	으로	으로	ADP	jca	_	_	_	16:case	_
 17	나는	나+는	PRON	npp+jxt	Case=Nom	18	acl	18:acl	_
 17.1	는	는	ADP	jxt	_	_	_	17:case	_
-18	굉장이	굉장+이	NOUN	ncn+jcs	Case=Nom	21	nsubj	21:nsubj	_
+18	굉장이	굉장+이	ADV	ncn+jcs	_	21	advmod	21:advmod	_
 19	위대한	위대+하+ㄴ	VERB	ncps+xsm+etm	_	20	amod	20:amod	_
 20	왕자가	왕자+가	NOUN	ncn+jcc	_	21	csubj	21:csubj	_
 20.1	가	가	ADP	jcs	_	_	_	20:case	_
@@ -15093,7 +15093,7 @@
 
 # sent_id = lpp.ko21-007
 # text = 넌 참 예쁘구나. "
-1	넌	너+ㄴ	PRON	npp+jxt	Case=Nom	3	punct	3:punct	_
+1	넌	너+ㄴ	PRON	npp+jxt	Case=Nom	3	nsubj	3:nsubj	_
 1.1	ㄴ	ㄴ	ADP	jxt	_	_	_	1:case	_
 2	참	참	ADV	mag	_	3	advmod	3:advmod	_
 3	예쁘구나	예쁘+구나	ADJ	paa+ef	_	0	root	0:root	SpaceAfter=No
@@ -15234,7 +15234,7 @@
 
 # sent_id = lpp.ko21-022
 # text = 넌 무얼 찾고 있니?"
-1	넌	너+ㄴ	PRON	npp+jxt	Case=Nom	3	punct	3:punct	_
+1	넌	너+ㄴ	PRON	npp+jxt	Case=Nom	3	nsubj	3:nsubj	_
 1.1	ㄴ	ㄴ	ADP	jxt	_	_	_	1:case	_
 2	무얼	무엇+을	PRON	npd+jco	Case=Acc	3	obj	3:obj	_
 2.1	ㄹ	ㄹ	ADP	jco	_	_	_	2:case	_
@@ -16491,7 +16491,7 @@
 # text = "그런데 넌 울려고 그러잖아!"
 1	"	"	PUNCT	sl	_	5	punct	5:punct	SpaceAfter=No
 2	그런데	그런데	CCONJ	maj	_	5	cc	5:cc	_
-3	넌	너+ㄴ	PRON	npp+jxt	Case=Nom	5	punct	5:punct	_
+3	넌	너+ㄴ	PRON	npp+jxt	Case=Nom	5	nsubj	5:nsubj	_
 3.1	ㄴ	ㄴ	ADP	jxt	_	_	_	3:case	_
 4	울려고	울+려고	SCONJ	pvg+ecs	_	5	ccomp	5:ccomp	_
 5	그러잖아	그러잖+않+아	VERB	pvg+ef	_	0	root	0:root	SpaceAfter=No
@@ -16527,7 +16527,7 @@
 # text = "그러니 넌 이익 본게 아무것도 없잖아!"
 1	"	"	PUNCT	sl	_	7	punct	7:punct	SpaceAfter=No
 2	그러니	그러니	ADV	mag	_	7	advmod	7:advmod	_
-3	넌	너+ㄴ	PRON	npp+jxt	Case=Nom	7	punct	7:punct	_
+3	넌	너+ㄴ	PRON	npp+jxt	Case=Nom	7	nsubj	7:nsubj	_
 3.1	ㄴ	ㄴ	ADP	jxt	_	_	_	3:case	_
 4	이익	이익	NOUN	ncn	_	5	dep	5:dep	_
 5	본게	본+게	SCONJ	pvg+ecs	_	7	xcomp	7:xcomp	_
@@ -16642,7 +16642,7 @@
 
 # sent_id = lpp.ko21-134
 # text = "너희들은 나의 장미와 조금도 닮지 않았어.
-1	"	"	PUNCT	sl	_	6	punct	6:punct	SpaceAfter=No
+1	"	"	PUNCT	sl	_	4	punct	4:punct	SpaceAfter=No
 2	너희들은	너희+들+은	PRON	npp+xsn+jxt	Case=Nom	6	dislocated	6:dislocated	_
 2.1	은	은	ADP	jxt	_	_	_	2:case	_
 3	나의	나+의	PRON	npp+jcm	Case=Gen	4	nmod	4:nmod	_
@@ -16653,7 +16653,7 @@
 5.1	도	도	ADP	jxc	_	_	_	5:case	_
 6	닮지	닮+지	VERB	pvg+ecx	_	4	conj	4:conj	_
 7	않았어	않	AUX	px+ep+ef	_	6	aux	6:aux	SpaceAfter=No
-8	.	.	PUNCT	sf	_	7	punct	7:punct	SpaceAfter=No
+8	.	.	PUNCT	sf	_	4	punct	4:punct	SpaceAfter=No
 
 # sent_id = lpp.ko21-135
 # text = 너희들은 아직 아무것도 아니야. "
@@ -17470,9 +17470,9 @@
 # sent_id = lpp.ko22-030
 # text = "어린아이들만이 어린아이들만이 자신이 무엇을 찾고 있는지를 알고 있어. "
 1	"	"	PUNCT	sl	_	8	punct	8:punct	SpaceAfter=No
-2	어린아이들만이	어린아이+들+만+이	NOUN	ncn+xsn+jcs+jcs	Case=Nom	6	nsubj	6:nsubj	_
+2	어린아이들만이	어린아이+들+만+이	NOUN	ncn+xsn+jcs+jcs	Case=Nom	8	nsubj	8:nsubj	_
 2.1	만	만	ADP	jxc	_	_	_	2:case	_
-3	어린아이들만이	어린아이+들+만+이	NOUN	ncn+xsn+jcs+jcs	Case=Nom	6	nsubj	6:nsubj	_
+3	어린아이들만이	어린아이+들+만+이	NOUN	ncn+xsn+jcs+jcs	Case=Nom	2	reparandum	2:reparandum	_
 3.1	만	만	ADP	jxc	_	_	_	3:case	_
 4	자신이	자신+이	NOUN	ncn+jcs	Case=Nom	6	nsubj	6:nsubj	_
 4.1	이	이	ADP	jcs	_	_	_	4:case	_
@@ -17483,7 +17483,7 @@
 7.1	를	를	ADP	jco	_	_	_	7:case	_
 8	알고	알+고	VERB	pvg+ecx	_	0	root	0:root	_
 9	있어	있	AUX	px+ef	_	8	aux	8:aux	SpaceAfter=No
-10	.	.	PUNCT	sf	_	9	punct	9:punct	_
+10	.	.	PUNCT	sf	_	8	punct	8:punct	_
 11	"	"	PUNCT	sr	_	8	punct	8:punct	SpaceAfter=No
 
 # sent_id = lpp.ko22-031
@@ -18142,15 +18142,15 @@
 3	한	한	NUM	nnc	_	5	nummod	5:nummod	_
 4	송이	송+이	NOUN	ncn	_	5	compound	5:compound	_
 5	꽃	꽃	NOUN	ncn	_	6	compound	6:compound	_
-6	때문에	때문+에	ADV	nbn+jca	_	23	obl	23:obl	SpaceAfter=No
+6	때문에	때문+에	ADV	nbn+jca	_	23	parataxis	23:parataxis	SpaceAfter=No
 6.1	에	에	ADP	jca	_	_	_	6:case	_
 7	......	......	PUNCT	sf	_	6	punct	6:punct	_
-8	"	"	PUNCT	sr	_	11	punct	11:punct	_
-9	나는	나+는	PRON	npp+jxt	Case=Nom	23	dislocated	23:dislocated	_
+8	"	"	PUNCT	sr	_	6	punct	6:punct	_
+9	나는	나+는	PRON	npp+jxt	Case=Nom	14	nsubj	14:nsubj	_
 9.1	는	는	ADP	jxt	_	_	_	9:case	_
-10	"	"	PUNCT	sl	_	11	punct	11:punct	SpaceAfter=No
+10	"	"	PUNCT	sl	_	13	punct	13:punct	SpaceAfter=No
 11	그렇지	그렇+지	VERB	pad+ef	_	13	dep	13:dep	SpaceAfter=No
-12	"	"	PUNCT	sr	_	11	punct	11:punct	SpaceAfter=No
+12	"	"	PUNCT	sr	_	13	punct	13:punct	SpaceAfter=No
 13	하고	하+고	CCONJ	pvg+ecc	_	23	ccomp	23:ccomp	_
 13.1	하고	하고	ADP	jcr	_	_	_	13:case	_
 14	대답하고는	대답+하+고는	NOUN	ncpa+xsv+ecs+jxt	Case=Nom	13	conj	13:conj	_
@@ -18245,11 +18245,11 @@
 
 # sent_id = lpp.ko24-039
 # text = "사막이 아름다운 것은 그것이 어딘가에 샘을 숨기고 있기 때문이지...... " 어린 왕자가 말했다.
-1	"	"	PUNCT	sl	_	8	punct	8:punct	SpaceAfter=No
+1	"	"	PUNCT	sl	_	10	punct	10:punct	SpaceAfter=No
 2	사막이	사막+이	NOUN	ncn+jcs	Case=Nom	3	nsubj	3:nsubj	_
 2.1	이	이	ADP	jcs	_	_	_	2:case	_
 3	아름다운	아름답+ㄴ	ADJ	paa+etm	_	4	amod	4:amod	_
-4	것은	것+은	NOUN	nbn+jxt	Case=Nom	15	dislocated	15:dislocated	_
+4	것은	것+은	NOUN	nbn+jxt	Case=Nom	5	acl	5:acl	_
 4.1	은	은	ADP	jxt	_	_	_	4:case	_
 5	그것이	그것+이	PRON	npd+jcs	Case=Nom	8	nsubj	8:nsubj	_
 5.1	이	이	ADP	jcs	_	_	_	5:case	_
@@ -18261,7 +18261,7 @@
 9	있기	있	AUX	px+etn	_	8	aux	8:aux	_
 10	때문이지	때문+이+지	VERB	nbn+jp+ef	_	15	ccomp	15:ccomp	SpaceAfter=No
 11	......	......	PUNCT	sf	_	10	punct	10:punct	_
-12	"	"	PUNCT	sr	_	14	punct	14:punct	_
+12	"	"	PUNCT	sr	_	10	punct	10:punct	_
 13	어린	어리+ㄴ	ADJ	paa+etm	_	14	amod	14:amod	_
 14	왕자가	왕자+가	NOUN	ncn+jcs	Case=Nom	15	nsubj	15:nsubj	_
 14.1	가	가	ADP	jcs	_	_	_	14:case	_
@@ -18418,7 +18418,7 @@
 1	어린	어리+ㄴ	ADJ	paa+etm	_	2	amod	2:amod	_
 2	왕자가	왕자+가	NOUN	ncn+jcs	Case=Nom	4	nsubj	4:nsubj	_
 2.1	가	가	ADP	jcs	_	_	_	2:case	_
-3	잠이	잠+이	NOUN	ncn+jcs	Case=Nom	4	nsubj	4:nsubj	_
+3	잠이	잠+이	NOUN	ncn+jcs	Case=Nom	4	compound:lvc	4:compound:lvc	_
 3.1	이	이	ADP	jcs	_	_	_	3:case	_
 4	들었으므로	들+었+으므로	SCONJ	pvg+ep+ecs	_	10	ccomp	10:ccomp	_
 5	나는	나+는	PRON	npp+jxt	Case=Nom	10	dislocated	10:dislocated	_
@@ -19095,9 +19095,9 @@
 7.1	에	에	ADP	jca	_	_	_	7:case	_
 8	장미꽃을	장미꽃+을	NOUN	ncn+jco	Case=Acc	10	obj	10:obj	_
 8.1	을	을	ADP	jco	_	_	_	8:case	_
-9	오천송이나	오천송+이나	CCONJ	nq+jct	_	14	acl	14:acl	_
+9	오천송이나	오천송+이나	NUM	nq+jct	_	8	nummod	8:nummod	_
 9.1	나	나	ADP	jxc	_	_	_	9:case	_
-10	가꾸지만	가꾸+지+만	VERB	pvg+ef	_	9	conj	9:conj	SpaceAfter=No
+10	가꾸지만	가꾸+지+만	VERB	pvg+ef	_	22	ccomp	22:ccomp	SpaceAfter=No
 11	......	......	PUNCT	sf	_	10	punct	10:punct	_
 12	그들이	그+들+이	PRON	npp+xsn+jcs	Case=Nom	13	nsubj	13:nsubj	_
 12.1	이	이	ADP	jcs	_	_	_	12:case	_
@@ -19106,11 +19106,11 @@
 14.1	을	을	ADP	jco	_	_	_	14:case	_
 15	거기서	거기+서	ADV	npd+jca	_	16	advcl	16:advcl	_
 15.1	서	서	ADP	jca	_	_	_	15:case	_
-16	발견하지는	발견+하+지+는	NOUN	ncpa+xsv+ecx+jxt	Case=Nom	22	ccomp	22:ccomp	_
+16	발견하지는	발견+하+지+는	NOUN	ncpa+xsv+ecx+jxt	Case=Nom	10	conj	10:conj	_
 16.1	는	는	ADP	jxt	_	_	_	16:case	_
 17	못해	못하+어	VERB	px+ef	_	16	compound	16:compound	SpaceAfter=No
-18	......	......	PUNCT	sf	_	17	punct	17:punct	_
-19	"	"	PUNCT	sr	_	21	punct	21:punct	_
+18	......	......	PUNCT	sf	_	16	punct	16:punct	_
+19	"	"	PUNCT	sr	_	16	punct	16:punct	_
 20	어린	어리+ㄴ	ADJ	paa+etm	_	21	amod	21:amod	_
 21	왕자가	왕자+가	NOUN	ncn+jcs	Case=Nom	22	nsubj	22:nsubj	_
 21.1	가	가	ADP	jcs	_	_	_	21:case	_
@@ -19333,13 +19333,13 @@
 4.1	은	은	ADP	jxt	_	_	_	4:case	_
 5	뿔	뿔	NOUN	ncn	_	6	dep	6:dep	_
 6	비슷하게	비슷하+게	SCONJ	ncps+xsm+ecs	_	7	xcomp	7:xcomp	_
-7	생겼어	생기+었+어	VERB	pvg+ep+ef	_	11	acl	11:acl	SpaceAfter=No
+7	생겼어	생기+었+어	VERB	pvg+ep+ef	_	23	parataxis	23:parataxis	SpaceAfter=No
 8	......	......	PUNCT	sf	_	7	punct	7:punct	_
-9	"	"	PUNCT	sr	_	11	punct	11:punct	_
+9	"	"	PUNCT	sr	_	7	punct	7:punct	_
 10	"	"	PUNCT	sr	_	13	punct	13:punct	SpaceAfter=No
-11	아	아	NOUN	ncn	_	23	obl	23:obl	SpaceAfter=No
+11	아	아	INTJ	ncn	_	13	discourse	13:discourse	SpaceAfter=No
 12	,	,	PUNCT	sp	_	13	punct	13:punct	_
-13	그래	그렇+어	VERB	pad+ef	_	23	ccomp	23:ccomp	SpaceAfter=No
+13	그래	그렇+어	VERB	pad+ef	_	23	parataxis	23:parataxis	SpaceAfter=No
 14	!	!	PUNCT	sf	_	13	punct	13:punct	SpaceAfter=No
 15	"	"	PUNCT	sr	_	13	punct	13:punct	SpaceAfter=No
 16	"	"	PUNCT	sr	_	13	punct	13:punct	_
@@ -20239,15 +20239,15 @@
 
 # sent_id = lpp.ko26-034
 # text = 아저씬 이제 집에 돌아가게 됐지...... " "그걸 어떻게 알지?"
-1	아저씬	아저씬	NOUN	ncn	_	4	obl	4:obl	_
+1	아저씬	아저씬	NOUN	ncn	_	4	nsubj	4:nsubj	_
 1.1	ㄴ	ㄴ	ADP	jxt	_	_	_	1:case	_
 2	이제	이제	ADV	mag	_	4	advmod	4:advmod	_
 3	집에	집+에	ADV	ncn+jca	_	4	obl	4:obl	_
 3.1	에	에	ADP	jca	_	_	_	3:case	_
-4	돌아가게	돌아가+게	VERB	pvg+ecx+px+ecx	_	9	acl	9:acl	_
+4	돌아가게	돌아가+게	VERB	pvg+ecx+px+ecx	_	11	parataxis	11:parataxis	_
 5	됐지	되+었+지	VERB	px+ep+ef	_	4	compound	4:compound	SpaceAfter=No
-6	......	......	PUNCT	sf	_	5	punct	5:punct	_
-7	"	"	PUNCT	sr	_	11	punct	11:punct	_
+6	......	......	PUNCT	sf	_	4	punct	4:punct	_
+7	"	"	PUNCT	sr	_	4	punct	4:punct	_
 8	"	"	PUNCT	sr	_	11	punct	11:punct	SpaceAfter=No
 9	그걸	그거+ㄹ	PRON	npd+jco	Case=Acc	11	obj	11:obj	_
 9.1	ㄹ	ㄹ	ADP	jco	_	_	_	9:case	_
@@ -20436,9 +20436,9 @@
 2	꼬마야	꼬마야	PROPN	nq	_	13	dislocated	13:dislocated	SpaceAfter=No
 2.1	야	야	ADP	jxc	_	_	_	2:case	_
 3	,	,	PUNCT	sp	_	2	punct	2:punct	_
-4	넌	너+ㄴ	PRON	npp+jxt	Case=Nom	6	punct	6:punct	_
+4	넌	너+ㄴ	PRON	npp+jxt	Case=Nom	6	nsubj	6:nsubj	_
 4.1	ㄴ	ㄴ	ADP	jxt	_	_	_	4:case	_
-5	겁이	겁+이	NOUN	ncn+jcs	Case=Nom	6	nsubj	6:nsubj	_
+5	겁이	겁+이	NOUN	ncn+jcs	Case=Nom	6	compound:lvc	6:compound:lvc	_
 5.1	이	이	ADP	jcs	_	_	_	5:case	_
 6	났었지	나+ㅆ었+지	VERB	pvg+ep+ef	Tense=Past	2	conj	2:conj	SpaceAfter=No
 7	......	......	PUNCT	sf	_	6	punct	6:punct	_
@@ -20568,27 +20568,27 @@
 11	위쪽에	위+쪽+에	ADV	ncn+xsn+jca	_	12	obl	12:obl	_
 11.1	에	에	ADP	jca	_	_	_	11:case	_
 12	있게	있+게	ADJ	paa+ecx	_	13	ccomp	13:ccomp	_
-13	될거야	되+ㄹ거야	VERB	px+ef	Tense=Fut	17	acl	17:acl	SpaceAfter=No
+13	될거야	되+ㄹ거야	VERB	px+ef	Tense=Fut	39	parataxis	39:parataxis	SpaceAfter=No
 14	......	......	PUNCT	sf	_	13	punct	13:punct	_
 15	"	"	PUNCT	sr	_	13	punct	13:punct	_
-16	"	"	PUNCT	sr	_	20	punct	20:punct	SpaceAfter=No
-17	얘	얘	NOUN	ncn	_	23	obl	23:obl	SpaceAfter=No
+16	"	"	PUNCT	sr	_	32	punct	32:punct	SpaceAfter=No
+17	얘	얘	NOUN	ncn	_	32	vocative	32:vocative	SpaceAfter=No
 18	,	,	PUNCT	sp	_	17	punct	17:punct	_
 19	그	그	DET	mmd	_	20	det	20:det	_
-20	뱀이니	뱀+이+니	SCONJ	ncn+jp+ecs	_	0	root	0:root	SpaceAfter=No
+20	뱀이니	뱀+이+니	SCONJ	ncn+jp+ecs	_	26	ccomp	26:ccomp	SpaceAfter=No
 21	,	,	PUNCT	sp	_	20	punct	20:punct	_
-22	만날	만나+ㄹ	VERB	pvg+etm	Tense=Fut	23	ccomp	23:ccomp	_
-23	약속이니	약속+이+니	SCONJ	ncn+jp+ecs	_	32	ccomp	32:ccomp	SpaceAfter=No
+22	만날	만나+ㄹ	VERB	pvg+etm	Tense=Fut	23	amod	23:amod	_
+23	약속이니	약속+이+니	SCONJ	ncn+jp+ecs	_	20	conj	20:conj	SpaceAfter=No
 24	,	,	PUNCT	sp	_	23	punct	23:punct	_
-25	별이니	별+이+니	VERB	ncn+jp+ef	_	26	ccomp	26:ccomp	_
+25	별이니	별+이+니	VERB	ncn+jp+ef	_	20	conj	20:conj	_
 26	하는	하+는	VERB	pvg+etm	_	27	acl	27:acl	_
-27	이야기는	이야기+는	NOUN	ncpa+jxt	Case=Nom	32	dislocated	32:dislocated	_
+27	이야기는	이야기+는	NOUN	ncpa+jxt	Case=Nom	32	nsubj	32:nsubj	_
 27.1	는	는	ADP	jxt	_	_	_	27:case	_
 28	모두	모두	ADV	mag	_	32	advmod	32:advmod	_
 29	못된	못되+ㄴ	ADJ	paa+etm	_	31	amod	31:amod	_
 30	꿈같은	꿈같+ㄴ	ADJ	paa+etm	_	31	amod	31:amod	_
 31	거	거	NOUN	nbn	_	32	obl	32:obl	_
-32	아니니	아니+니	ADJ	paa+ef	_	20	conj	20:conj	SpaceAfter=No
+32	아니니	아니+니	ADJ	paa+ef	_	39	parataxis	39:parataxis	SpaceAfter=No
 33	......	......	PUNCT	sf	_	32	punct	32:punct	_
 34	"	"	PUNCT	sr	_	32	punct	32:punct	_
 35	그러나	그러나	ADV	maj	_	39	advmod	39:advmod	_
@@ -20598,7 +20598,7 @@
 37.1	의	의	ADP	jcm	_	_	_	37:case	_
 38	물음에	물음+에	ADV	ncn+jca	_	39	obl	39:obl	_
 38.1	에	에	ADP	jca	_	_	_	38:case	_
-39	대답하지	대답+하+지	VERB	ncpa+xsv+ecx	_	32	conj	32:conj	_
+39	대답하지	대답+하+지	VERB	ncpa+xsv+ecx	_	0	root	0:root	_
 40	않았다	않	AUX	px+ep+ef	_	39	aux	39:aux	SpaceAfter=No
 41	.	.	PUNCT	sf	_	40	punct	40:punct	SpaceAfter=No
 
@@ -20827,7 +20827,7 @@
 3	바로	바로	ADV	mag	_	6	advmod	6:advmod	_
 4	내	내	PRON	npp	_	5	compound	5:compound	_
 4.1	의	의	ADP	jcm	_	_	_	4:case	_
-5	선물이	선물+이	NOUN	ncn+jcs	Case=Nom	6	nsubj	6:nsubj	_
+5	선물이	선물+이	NOUN	ncn+jcs	Case=Nom	6	obl	6:obl	_
 5.1	이	이	ADP	jcs	_	_	_	5:case	_
 6	될꺼야	되+ㄹ꺼+야	VERB	pvg+ef	Tense=Fut	10	ccomp	10:ccomp	SpaceAfter=No
 7	......	......	PUNCT	sf	_	6	punct	6:punct	_
@@ -21211,12 +21211,12 @@
 # sent_id = lpp.ko26-091
 # text = "난 아픈 것 같이 보일거야...... 꼭 죽는 것처럼 보일거야.
 1	"	"	PUNCT	sl	_	6	punct	6:punct	SpaceAfter=No
-2	난	나+ㄴ	PRON	npp+jxt	Case=Nom	11	dislocated	11:dislocated	_
+2	난	나+ㄴ	PRON	npp+jxt	Case=Nom	6	nsubj	6:nsubj	_
 2.1	ㄴ	ㄴ	ADP	jxt	_	_	_	2:case	_
 3	아픈	아프+ㄴ	ADJ	paa+etm	_	6	amod	6:amod	_
 4	것	것	NOUN	nbn	_	3	obl	3:obl	_
 5	같이	같+이	SCONJ	paa+ecs	_	4	fixed	4:fixed	_
-6	보일거야	보일+거야	VERB	pvg+ef	_	11	ccomp	11:ccomp	SpaceAfter=No
+6	보일거야	보일+거야	VERB	pvg+ef	_	11	parataxis	11:parataxis	SpaceAfter=No
 7	......	......	PUNCT	sf	_	6	punct	6:punct	_
 8	꼭	꼭	ADV	mag	_	9	advmod	9:advmod	_
 9	죽는	죽+는	VERB	pvg+etm	_	10	acl	10:acl	_
@@ -21323,7 +21323,7 @@
 2	무슨	무슨	DET	mmd	_	3	det	3:det	_
 3	생각을	생각+을	NOUN	ncpa+jco	Case=Acc	8	obj	8:obj	_
 3.1	을	을	ADP	jco	_	_	_	3:case	_
-4	했는지	하	SCONJ	pvg+ep+ecs	_	3	aux	3:aux	_
+4	했는지	하	AUX	pvg+ep+ecs	_	3	aux	3:aux	_
 5	그는	그+는	PRON	npp+jxt	Case=Nom	8	dislocated	8:dislocated	_
 5.1	는	는	ADP	jxt	_	_	_	5:case	_
 6	안심하는	안심+하+는	VERB	ncpa+xsv+etm	_	7	acl	7:acl	_
@@ -21664,19 +21664,19 @@
 6.1	의	의	ADP	jcm	_	_	_	6:case	_
 7	가시를	가시+를	NOUN	ncn+jco	Case=Acc	8	obj	8:obj	_
 7.1	를	를	ADP	jco	_	_	_	7:case	_
-8	가지고	가지+고	CCONJ	pvg+ecc	_	2	conj	2:conj	_
+8	가지고	가지+고	CCONJ	pvg+ecc	_	14	advcl	14:advcl	_
 9	외부	외부	NOUN	ncn	_	10	compound	10:compound	_
 10	세계에	세계+에	ADV	ncn+jca	_	11	obl	11:obl	_
 10.1	에	에	ADP	jca	_	_	_	10:case	_
-11	대해	대하+어	SCONJ	pvg+ecs	_	14	ccomp	14:ccomp	_
+11	대해	대하+어	SCONJ	pvg+ecs	_	14	mark	14:mark	_
 12	자기	자기	PRON	npp	_	13	compound	13:compound	_
 13	몸을	몸+을	NOUN	ncn+jco	Case=Acc	14	obj	14:obj	_
 13.1	을	을	ADP	jco	_	_	_	13:case	_
-14	방어하려고	방어+하+려고	VERB	ncpa+xsv+ecx	_	8	conj	8:conj	_
+14	방어하려고	방어+하+려고	VERB	ncpa+xsv+ecx	_	2	conj	2:conj	_
 15	하고	하	AUX	px+ef	_	14	aux	14:aux	SpaceAfter=No
-16	......	......	PUNCT	sf	_	14	punct	14:punct	_
-17	"	"	PUNCT	sr	_	21	punct	21:punct	_
-18	나는	나+는	PRON	npp+jxt	Case=Nom	26	dislocated	26:dislocated	_
+16	......	......	PUNCT	sf	_	2	punct	2:punct	_
+17	"	"	PUNCT	sr	_	2	punct	2:punct	_
+18	나는	나+는	PRON	npp+jxt	Case=Nom	26	nsubj	26:nsubj	_
 18.1	는	는	ADP	jxt	_	_	_	18:case	_
 19	더	더	ADV	mag	_	20	advmod	20:advmod	_
 20	이상	이상	NOUN	ncn	_	21	dep	21:dep	_
@@ -21686,7 +21686,7 @@
 23.1	가	가	ADP	jcs	_	_	_	23:case	_
 24	없어	없+어	SCONJ	paa+ecs	_	23	fixed	23:fixed	_
 25	주저	주저	ADV	mag	_	26	advmod	26:advmod	_
-26	앉았다	앉+았+다	VERB	pvg+ep+ef	Mood=Ind|VerbForm=Fin	8	conj	8:conj	SpaceAfter=No
+26	앉았다	앉+았+다	VERB	pvg+ep+ef	Mood=Ind|VerbForm=Fin	2	parataxis	2:parataxis	SpaceAfter=No
 27	.	.	PUNCT	sf	_	26	punct	26:punct	SpaceAfter=No
 
 # sent_id = lpp.ko26-125
@@ -22308,7 +22308,7 @@
 6	두었다가	두+었+다가	SCONJ	px+ep+ecs	_	5	mark	5:mark	_
 7	여러분이	여러분+이	PRON	npp+jcs	Case=Nom	11	nsubj	11:nsubj	_
 7.1	이	이	ADP	jcs	_	_	_	7:case	_
-8	언젠가	언젠가	PRON	npp+jcs	Case=Nom	11	nsubj	11:nsubj	_
+8	언젠가	언젠가	ADV	npp+jcs	_	11	advmod	11:advmod	_
 9	아프리카	아프리카	PROPN	nq	_	10	compound	10:compound	_
 10	사막을	사막+을	NOUN	ncn+jco	Case=Acc	11	obj	11:obj	_
 10.1	을	을	ADP	jco	_	_	_	10:case	_
