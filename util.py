@@ -1,6 +1,70 @@
-import unicodedata
 import json
 from test import TokenObject
+import string
+import re
+import unicodedata
+
+class Romanizer:
+    def __init__(self):
+
+        self.onset = {
+            'ㄱ': 'g', 'ㄲ': 'gg', 'ㄴ': 'n', 'ㄷ': 'd', 'ㄸ': 'dd',
+            'ㄹ': 'r', 'ㅁ': 'm', 'ㅂ': 'b', 'ㅃ': 'bb', 'ㅅ': 's',
+            'ㅆ': 'ss', 'ㅇ': '', 'ㅈ': 'j', 'ㅉ': 'jj', 'ㅊ': 'ch',
+            'ㅋ': 'k', 'ㅌ': 't', 'ㅍ': 'p', 'ㅎ': 'h'
+        }
+
+        self.nucleus = {
+            'ㅏ': 'a', 'ㅐ': 'ae', 'ㅑ': 'ya', 'ㅒ': 'yae', 'ㅓ': 'eo',
+            'ㅔ': 'e', 'ㅕ': 'yeo', 'ㅖ': 'ye', 'ㅗ': 'o', 'ㅘ': 'wa',
+            'ㅙ': 'wae', 'ㅚ': 'oe', 'ㅛ': 'yo', 'ㅜ': 'u', 'ㅝ': 'weo',
+            'ㅞ': 'we', 'ㅟ': 'wi', 'ㅠ': 'yu', 'ㅡ': 'eu', 'ㅢ': 'yi', 'ㅣ': 'i'
+        }
+
+        self.coda = {
+            '': '', 'ㄱ': 'g', 'ㄲ': 'gg', 'ㄳ': 'gs', 'ㄴ': 'n',
+            'ㄵ': 'nj', 'ㄶ': 'nh', 'ㄷ': 't', 'ㄹ': 'l', 'ㄺ': 'rg',
+            'ㄻ': 'rm', 'ㄼ': 'rb', 'ㄽ': 'rs', 'ㄾ': 'rt', 'ㄿ': 'rp',
+            'ㅀ': 'rh', 'ㅁ': 'm', 'ㅂ': 'b', 'ㅄ': 'bs', 'ㅅ': 's',
+            'ㅆ': 'ss', 'ㅇ': 'ng', 'ㅈ': 'j', 'ㅊ': 'ch', 'ㅋ': 'k',
+            'ㅌ': 't', 'ㅍ': 'p', 'ㅎ': 'h'
+        }
+
+    def __call__(self, tok: TokenObject) -> TokenObject:
+        text = tok.text
+        lemmas = tok.lemma
+
+        translit = self.transliterate_hangul(text)
+        ltranslit = "+".join([self.transliterate_hangul(lemma) for lemma in lemmas])
+
+        misc = [] if tok.misc == "_" else tok.misc.split("|")
+        misc.append(f"LTranslit={ltranslit}")
+        misc.append(f"Translit={translit}")
+        misc = sorted(misc)
+
+
+        tok.misc = "|".join(misc) if misc else "_"
+        return tok
+
+        # Transliteration function
+    def transliterate_hangul(self, text):
+
+        result = []
+        for char in text:
+
+            if char in self.onset:
+                result.append(self.onset[char])
+            elif char.isnumeric():
+                result.append(char)
+            elif re.fullmatch(r'[a-zA-Z]+', char):
+                result.append(char)
+            elif char in string.punctuation:
+                result.append(char)
+            else:
+                onset, nucleus, coda = decompose_hangul(char)
+                roman = self.onset.get(onset, '') + self.nucleus.get(nucleus, '') + self.coda.get(coda, '')
+                result.append(roman)
+        return "." + '.'.join(result)
 
 
 def json2conllu(annotation_json_obj):
@@ -11,6 +75,7 @@ def json2conllu(annotation_json_obj):
     :return: None. Saves little_prince_ko.conllu to root folder.
     """
     conll_file_name = "little_prince_ko.conllu"
+    r = Romanizer()
     with open(conll_file_name, "w", encoding="utf-8") as f:
         for c, chapter in enumerate(annotation_json_obj):
             for s, sent in enumerate(chapter):
@@ -26,6 +91,8 @@ def json2conllu(annotation_json_obj):
                         tok.misc = "_"
                         tok.head = "_"
                         tok.deprel = "_"
+                    if tok.upos != "PUNCT":
+                        tok = r(tok)
                     token_lines.append(tok.conllu_line())
                 f.write("# sent_id = lpp.ko" + str(c+1).zfill(2) + "-" + str(s+1).zfill(3) + "\n") # index starts at 1
                 f.write(f"# text = {sentence_text.strip()}\n")
