@@ -5,6 +5,9 @@ import re
 import unicodedata
 
 class Romanizer:
+    """
+    Add Transliteration, Ltranslation, and Mseg. Extract core lemma and replace lemma with it.
+    """
     def __init__(self):
 
         self.onset = {
@@ -35,16 +38,53 @@ class Romanizer:
         lemmas = tok.lemma
 
         translit = self.transliterate_hangul(text)
-        ltranslit = "+".join([self.transliterate_hangul(lemma) for lemma in lemmas])
+        # ltranslit = "+".join([self.transliterate_hangul(lemma) for lemma in lemmas])
+        mseg = "-".join(lemmas)
 
+        core_lemma = self.extract_core_lemma(tok)
+        ltranslit = self.transliterate_hangul(core_lemma)
         misc = [] if tok.misc == "_" else tok.misc.split("|")
         misc.append(f"LTranslit={ltranslit}")
         misc.append(f"Translit={translit}")
+        misc.append(f"MSeg={mseg}")
         misc = sorted(misc)
 
 
         tok.misc = "|".join(misc) if misc else "_"
+
+        tok.lemma = core_lemma
         return tok
+
+    @staticmethod
+    def extract_core_lemma(tok: TokenObject):
+        xpos = tok.xpos
+        lemma = tok.lemma
+        upos = tok.upos
+
+        n__ = [n for n, xpo in enumerate(xpos) if xpo[0] == "n"]
+        p__ = [n for n, xpo in enumerate(xpos) if xpo[0] == "p"]
+        # if text == lemma, return _
+        if len(lemma) == 1:
+            return "_"
+        # if NUM and nbu exists, return that lemma
+        elif upos == "NUM":
+            if "nbu" in xpos:
+                return lemma[xpos.index("nbu")]
+            else:
+                return lemma[n__[0]]
+        # elif pvg exists, return that lemma
+        else:
+            if "pvg" in xpos:
+                return lemma[xpos.index("pvg")]
+            # elif return n*
+            elif n__:
+                return lemma[n__[0]]
+            # elif return p*
+            elif p__:
+                return lemma[p__[0]]
+            # elif return 0
+            else:
+                return lemma[0]
 
         # Transliteration function
     def transliterate_hangul(self, text):
