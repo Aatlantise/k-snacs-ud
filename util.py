@@ -341,11 +341,16 @@ def conllu2json(conllu_file_path):
     current_sentence = []
 
     with open(conllu_file_path, 'r', encoding='utf-8') as f:
+        ch = 1
         for line in f:
             line = line.strip()
             if line.startswith("# sent_id"):
                 # Optional: Use sent_id to organize by chapters, if structured
-                pass
+                new_sent_ch = int(line[-6:-4])
+                if new_sent_ch > ch:
+                    chapters.append(current_chapter)
+                    current_chapter = []
+                    ch = new_sent_ch
             elif line.startswith("# text"):
                 # Skip, as we're reconstructing text from tokens
                 pass
@@ -356,7 +361,7 @@ def conllu2json(conllu_file_path):
             else:
                 parts = line.split("\t")
                 if len(parts) != 10:
-                    continue  # Skip malformed lines
+                    assert False, "Unexpected format"
 
                 id_, form, lemma, upos, xpos, feats, head, deprel, deps, misc = parts
 
@@ -390,10 +395,9 @@ def conllu2json(conllu_file_path):
     return chapters
 
 if __name__ == "__main__":
-    with open("little_prince_annotation_ready.json", encoding="utf-8") as f:
-        annotation_json = json.load(f)
-    json2conllu(annotation_json)
-    # handcorrected_json = conllu2json("little_prince_ko.conllu")
-    # with open("little_prince_hand_corrected.json", "w", encoding="utf-8") as f:
-    #     json.dump(handcorrected_json, f, ensure_ascii=False, indent=4)
-
+    # with open("little_prince_annotation_ready.json", encoding="utf-8") as f:
+    #     annotation_json = json.load(f)
+    # json2conllu(annotation_json)
+    handcorrected_json = conllu2json("little_prince_ko.conllu")
+    with open("little_prince_hand_corrected.json", "w", encoding="utf-8") as f:
+        json.dump(handcorrected_json, f, ensure_ascii=False, indent=4)
