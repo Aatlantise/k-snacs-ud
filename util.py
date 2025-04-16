@@ -42,9 +42,10 @@ class Romanizer:
         mseg = "-".join(lemmas)
 
         core_lemma = self.extract_core_lemma(tok)
-        ltranslit = self.transliterate_hangul(core_lemma)
+        ltranslit = self.transliterate_hangul(core_lemma) if core_lemma != "_" else ""
         misc = [] if tok.misc == "_" else tok.misc.split("|")
-        misc.append(f"LTranslit={ltranslit}")
+        if ltranslit:
+            misc.append(f"LTranslit={ltranslit}")
         misc.append(f"Translit={translit}")
         misc.append(f"MSeg={mseg}")
         misc = sorted(misc)
@@ -501,10 +502,13 @@ def conllu2json(conllu_file_path):
 
     return chapters
 
-if __name__ == "__main__":
-    # with open("little_prince_annotation_ready.json", encoding="utf-8") as f:
-    #     annotation_json = json.load(f)
-    # json2conllu(annotation_json)
+def main_create_json_from_conllu():
     handcorrected_json = conllu2json("little_prince_ko.conllu")
-    with open("little_prince_hand_corrected.json", "w", encoding="utf-8") as f:
-        json.dump(handcorrected_json, f, ensure_ascii=False, indent=4)
+    with open("little_prince_hand_corrected.json", "w", encoding="utf-8") as g:
+        json.dump(handcorrected_json, g, ensure_ascii=False, indent=4)
+
+if __name__ == "__main__":
+    with open("little_prince_hand_corrected.json", encoding="utf-8") as f:
+        annotation_json = json.load(f)
+    json2conllu(annotation_json)
+
