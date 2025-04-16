@@ -328,7 +328,72 @@ def syntactic_features(t: TokenObject) -> TokenObject:
     
     return t
 
+
+def conllu2json(conllu_file_path):
+    """
+    Converts a conllu file to a JSON object compatible with json2conllu.
+
+    :param conllu_file_path: Path to the .conllu file
+    :return: JSON-style list of chapters, where each chapter is a list of sentences, each sentence a list of token dicts
+    """
+    chapters = []
+    current_chapter = []
+    current_sentence = []
+
+    with open(conllu_file_path, 'r', encoding='utf-8') as f:
+        for line in f:
+            line = line.strip()
+            if line.startswith("# sent_id"):
+                # Optional: Use sent_id to organize by chapters, if structured
+                pass
+            elif line.startswith("# text"):
+                # Skip, as we're reconstructing text from tokens
+                pass
+            elif line == "":
+                if current_sentence:
+                    current_chapter.append(current_sentence)
+                    current_sentence = []
+            else:
+                parts = line.split("\t")
+                if len(parts) != 10:
+                    continue  # Skip malformed lines
+
+                id_, form, lemma, upos, xpos, feats, head, deprel, deps, misc = parts
+
+                # Normalize fields
+                token_dict = {
+                    "id": id_ if '-' in id_ or '.' in id_ else int(id_),
+                    "text": form,
+                    "lemma": lemma,
+                    "upos": upos,
+                    "xpos": xpos,
+                    "feats": feats,
+                    "head": "_" if head == "_" else int(head),
+                    "deprel": deprel,
+                    "deps": deps,
+                    "misc": misc,
+                    "start_char": -1,
+                    "end_char": -1,
+                    "p": None,
+                    "gold_scene": None,
+                    "gold_function": None,
+                }
+
+                current_sentence.append(token_dict)
+
+    # Finalize last sentence and chapter
+    if current_sentence:
+        current_chapter.append(current_sentence)
+    if current_chapter:
+        chapters.append(current_chapter)
+
+    return chapters
+
 if __name__ == "__main__":
     with open("little_prince_annotation_ready.json", encoding="utf-8") as f:
         annotation_json = json.load(f)
     json2conllu(annotation_json)
+    # handcorrected_json = conllu2json("little_prince_ko.conllu")
+    # with open("little_prince_hand_corrected.json", "w", encoding="utf-8") as f:
+    #     json.dump(handcorrected_json, f, ensure_ascii=False, indent=4)
+
