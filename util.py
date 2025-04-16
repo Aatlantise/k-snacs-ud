@@ -1,4 +1,6 @@
 import json
+from typing import List
+
 from test import TokenObject
 import string
 import re
@@ -134,12 +136,35 @@ def json2conllu(annotation_json_obj):
                         tok.deprel = "_"
                     if tok.upos != "PUNCT":
                         tok = r(tok)
-                    token_lines.append(tok.conllu_line())
+                    if tok.deprel == "fixed":
+                        fixed_head_tok, n = find_fixed_head(token_lines)
+                        token_lines[n] = add_extpos_aux(fixed_head_tok)
+                    token_lines.append(tok)
+                conllu_lines = [t.conllu_line() for t in token_lines]
                 f.write("# sent_id = lpp.ko" + str(c+1).zfill(2) + "-" + str(s+1).zfill(3) + "\n") # index starts at 1
                 f.write(f"# text = {sentence_text.strip()}\n")
-                for token_line in token_lines:
+                for token_line in conllu_lines:
                     f.write(token_line + "\n")
                 f.write("\n")
+
+def find_fixed_head(tok_list: List[TokenObject]):
+    n = -1
+    while type(tok_list[n].id) != int:
+        n -= 1
+    return tok_list[n], n
+
+def add_extpos_aux(tok: TokenObject):
+    if tok.feats == "_":
+        tok.feats = "ExtPos=AUX"
+    else:
+        feats = tok.feats.split("|")
+        feats.append("ExtPos=AUX")
+        tok.feats = "|".join(sorted(feats)) if feats else "_"
+    tok.upos = "NOUN"
+    if tok.deprel == "advmod":
+        tok.deprel = "obl"
+        tok.deps = f"{tok.head}:obl"
+    return tok
 
 
 def p2xpos(p, function):

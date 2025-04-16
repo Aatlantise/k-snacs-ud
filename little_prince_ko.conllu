@@ -83,7 +83,7 @@
 3	몸을	몸	NOUN	ncn+jco	Case=Acc	4	obj	4:obj	LTranslit=.mom|MSeg=몸-을|Translit=.mom.eul
 3.1	을	_	ADP	jco	_	_	_	3:case	MSeg=을|Translit=.eul
 4	움직일	움직이	VERB	pvg+etm	Tense=Fut	15	ccomp	15:ccomp	LTranslit=.um.jig.i|MSeg=움직이-ㄹ|Translit=.um.jig.il
-5	수가	수	NOUN	nbn+jcs	Case=Nom	4	obl	4:obl	LTranslit=.su|MSeg=수-가|Translit=.su.ga
+5	수가	수	NOUN	nbn+jcs	Case=Nom|ExtPos=AUX	4	obl	4:obl	LTranslit=.su|MSeg=수-가|Translit=.su.ga
 5.1	가	_	ADP	jcs	_	_	_	5:case	MSeg=가|Translit=.ga
 6	없게	없	ADJ	paa+ecx	_	5	fixed	5:fixed	LTranslit=.eobs|MSeg=없-게|Translit=.eobs.ge
 7	되어	되	SCONJ	px+ecs	_	4	mark	4:mark	LTranslit=.doe|MSeg=되-어|Translit=.doe.eo
@@ -218,7 +218,7 @@
 3	어른들이	어른	NOUN	ncn+xsn+jcs	Case=Nom	4	nsubj	4:nsubj	LTranslit=.eo.reun|MSeg=어른-들-이|Translit=.eo.reun.deul.i
 3.1	이	_	ADP	jcs	_	_	_	3:case	MSeg=이|Translit=.i
 4	알아볼	알	VERB	pvg+ecx+px+etm	Tense=Fut	9	ccomp	9:ccomp	LTranslit=.al|MSeg=알-아-보-ㄹ|Translit=.al.a.bol
-5	수	_	NOUN	nbn	_	4	obl	4:obl	MSeg=수|Translit=.su
+5	수	_	NOUN	nbn	ExtPos=AUX	4	obl	4:obl	MSeg=수|Translit=.su
 6	있도록	있	SCONJ	paa+ecs	_	5	fixed	5:fixed	LTranslit=.iss|MSeg=있-도록|Translit=.iss.do.rog
 7	보아뱀의	보아뱀	NOUN	ncn+jcm	Case=Gen	8	nmod	8:nmod	LTranslit=.bo.a.baem|MSeg=보아뱀-의|Translit=.bo.a.baem.yi
 7.1	의	_	ADP	jcm	_	_	_	7:case	MSeg=의|Translit=.yi
@@ -407,7 +407,7 @@
 9	아리조나를	아리조나	PROPN	nq+jco	Case=Acc	8	conj	8:conj	LTranslit=.a.ri.jo.na|MSeg=아리조나-를|Translit=.a.ri.jo.na.reul
 9.1	를	_	ADP	jco	_	_	_	9:case	MSeg=를|Translit=.reul
 10	구별할	구별	VERB	ncpa+xsv+etm	Tense=Fut	0	root	0:root	LTranslit=.gu.byeol|MSeg=구별-하-ㄹ|Translit=.gu.byeol.hal
-11	수	_	NOUN	nbn	_	10	obl	10:obl	MSeg=수|Translit=.su
+11	수	_	NOUN	nbn	ExtPos=AUX	10	obl	10:obl	MSeg=수|Translit=.su
 12	있었다	있	ADJ	paa+ep+ef	_	11	fixed	11:fixed	LTranslit=.iss|MSeg=있-었-다|SpaceAfter=No|Translit=.iss.eoss.da
 13	.	.	PUNCT	sf	_	11	punct	11:punct	SpaceAfter=No
 
@@ -563,7 +563,7 @@
 2.1	가	_	ADP	jcs	_	_	_	2:case	MSeg=가|Translit=.ga
 3	알아	알	SCONJ	pvg+ecs	_	4	ccomp	4:ccomp	LTranslit=.al|MSeg=알-아|Translit=.al.a
 4	들을	듣	VERB	pvg+etm	Tense=Fut	8	acl	8:acl	LTranslit=.deut|MSeg=듣-ㄹ|Translit=.deul.eul
-5	수	_	NOUN	nbn	_	4	obl	4:obl	MSeg=수|Translit=.su
+5	수	_	NOUN	nbn	ExtPos=AUX	4	obl	4:obl	MSeg=수|Translit=.su
 6	있는	있	ADJ	paa+etm	_	5	fixed	5:fixed	LTranslit=.iss|MSeg=있-는|Translit=.iss.neun
 7	트럼프	_	NOUN	ncn	_	8	compound	8:compound	MSeg=트럼프|Translit=.teu.reom.peu
 8	이야기	_	NOUN	ncn	_	13	compound	13:compound	MSeg=이야기|SpaceAfter=No|Translit=.i.ya.gi
@@ -947,7 +947,7 @@
 5	길을	길	NOUN	ncn+jco	Case=Acc	6	obj	6:obj	LTranslit=.gil|MSeg=길-을|Translit=.gil.eul
 5.1	을	_	ADP	jco	_	_	_	5:case	MSeg=을|Translit=.eul
 6	잃은	잃	VERB	pvg+etm	_	0	root	0:root	LTranslit=.irh|MSeg=잃-ㄴ|Translit=.irh.eun
-7	것	_	NOUN	nbn	_	6	obl	6:obl	MSeg=것|Translit=.geos
+7	것	_	NOUN	nbn	ExtPos=AUX	6	obl	6:obl	MSeg=것|Translit=.geos
 8	같지도	같	ADV	paa+ecx+jxc	_	7	fixed	7:fixed	LTranslit=.gat|MSeg=같-지-도|Translit=.gat.ji.do
 8.1	도	_	ADP	jxc	_	_	_	8:case	MSeg=도|Translit=.do
 9	않았고	_	AUX	px+ep+ecc	_	6	aux	6:aux	MSeg=않|SpaceAfter=No|Translit=.anh.ass.go
@@ -962,7 +962,7 @@
 15	녹초가	녹초	NOUN	ncn+jcc	_	16	csubj	16:csubj	LTranslit=.nog.cho|MSeg=녹초-가|Translit=.nog.cho.ga
 15.1	가	_	ADP	jcs	_	_	_	15:case	MSeg=가|Translit=.ga
 16	된	되	VERB	pvg+etm	_	6	conj	6:conj	LTranslit=.doe|MSeg=되-ㄴ|Translit=.doen
-17	것	_	NOUN	nbn	_	16	obl	16:obl	MSeg=것|Translit=.geos
+17	것	_	NOUN	nbn	ExtPos=AUX	16	obl	16:obl	MSeg=것|Translit=.geos
 18	같지도	같	ADV	paa+ecx+jxc	_	17	fixed	17:fixed	LTranslit=.gat|MSeg=같-지-도|Translit=.gat.ji.do
 18.1	도	_	ADP	jxc	_	_	_	18:case	MSeg=도|Translit=.do
 19	않았으며	_	AUX	px+ep+ecs	_	16	aux	16:aux	MSeg=않|SpaceAfter=No|Translit=.anh.ass.eu.myeo
@@ -970,7 +970,7 @@
 21	겁에질려	겁에질리	VERB	pvg+ecx	_	6	conj	6:conj	LTranslit=.geob.e.jil.ri|MSeg=겁에질리-어|Translit=.geob.e.jil.ryeo
 21.1	에	_	ADP	jca	_	_	_	21:case	MSeg=에|Translit=.e
 22	있는	_	AUX	px+etm	_	21	aux	21:aux	MSeg=있|Translit=.iss.neun
-23	것	_	NOUN	nbn	_	21	obl	21:obl	MSeg=것|Translit=.geos
+23	것	_	NOUN	nbn	ExtPos=AUX	21	obl	21:obl	MSeg=것|Translit=.geos
 24	같지도	같	ADV	paa+ecx+jxc	_	23	fixed	23:fixed	LTranslit=.gat|MSeg=같-지-도|Translit=.gat.ji.do
 24.1	도	_	ADP	jxc	_	_	_	24:case	MSeg=도|Translit=.do
 25	않았다	_	AUX	px+ep+ef	_	21	aux	21:aux	MSeg=않|SpaceAfter=No|Translit=.anh.ass.da
@@ -1096,7 +1096,7 @@
 13	그것이	그것	PRON	npd+jcs	Case=Nom	14	nsubj	14:nsubj	LTranslit=.geu.geos|MSeg=그것-이|Translit=.geu.geos.i
 13.1	이	_	ADP	jcs	_	_	_	13:case	MSeg=이|Translit=.i
 14	말할	말하	VERB	pvg+etm	Tense=Fut	18	ccomp	18:ccomp	LTranslit=.mal.ha|MSeg=말하-ㄹ|Translit=.mal.hal
-15	수	_	NOUN	nbn	_	14	obl	14:obl	MSeg=수|Translit=.su
+15	수	_	NOUN	nbn	ExtPos=AUX	14	obl	14:obl	MSeg=수|Translit=.su
 16	없이	없	SCONJ	paa+ecs	_	15	fixed	15:fixed	LTranslit=.eobs|MSeg=없-이|Translit=.eobs.i
 17	터무니없는	터무니없	ADJ	paa+etm	_	18	amod	18:amod	LTranslit=.teo.mu.ni.eobs|MSeg=터무니없-는|Translit=.teo.mu.ni.eobs.neun
 18	일이라고	일	VERB	ncn+jp+ef+jcr	Mood=Imp|VerbForm=Fin	24	ccomp	24:ccomp	LTranslit=.il|MSeg=일-이-라-고|Translit=.il.i.ra.go
@@ -1112,7 +1112,7 @@
 23.1	을	_	ADP	jco	_	_	_	23:case	MSeg=을|Translit=.eul
 24	꺼내지	꺼내	VERB	pvg+ecx	_	11	conj	11:conj	LTranslit=.ggeo.nae|MSeg=꺼내-지|Translit=.ggeo.nae.ji
 25	않을	_	AUX	px+etm	_	24	aux	24:aux	MSeg=않|Translit=.anh.eul
-26	수	_	NOUN	nbn	_	24	obl	24:obl	MSeg=수|Translit=.su
+26	수	_	NOUN	nbn	ExtPos=AUX	24	obl	24:obl	MSeg=수|Translit=.su
 27	없었다	없	ADJ	paa+ep+ef	_	26	fixed	26:fixed	LTranslit=.eobs|MSeg=없-었-다|SpaceAfter=No|Translit=.eobs.eoss.da
 28	.	.	PUNCT	sf	_	26	punct	26:punct	SpaceAfter=No
 
@@ -1205,7 +1205,7 @@
 11	내가	내	PRON	npp+jcs	Case=Nom	12	nsubj	12:nsubj	LTranslit=.nae|MSeg=내-가|Translit=.nae.ga
 11.1	가	_	ADP	jcs	_	_	_	11:case	MSeg=가|Translit=.ga
 12	그릴	그리	VERB	pvg+etm	Tense=Fut	18	acl	18:acl	LTranslit=.geu.ri|MSeg=그리-ㄹ|Translit=.geu.ril
-13	수	_	NOUN	nbn	_	12	obl	12:obl	MSeg=수|Translit=.su
+13	수	_	NOUN	nbn	ExtPos=AUX	12	obl	12:obl	MSeg=수|Translit=.su
 14	있는	있	ADJ	paa+etm	_	13	fixed	13:fixed	LTranslit=.iss|MSeg=있-는|Translit=.iss.neun
 15	단	_	ADJ	mma	_	18	amod	18:amod	MSeg=단|Translit=.dan
 16	두	_	NUM	nnc	_	17	nummod	17:nummod	MSeg=두|Translit=.du
@@ -1424,7 +1424,7 @@
 1.1	는	_	ADP	jxt	_	_	_	1:case	MSeg=는|Translit=.neun
 2	오래	_	ADV	mag	_	3	advmod	3:advmod	MSeg=오래|Translit=.o.rae
 3	살	살	VERB	pvg+etm	Tense=Fut	6	acl	6:acl	LTranslit=.sal|MSeg=살-ㄹ|Translit=.sal
-4	수	_	NOUN	nbn	_	3	obl	3:obl	MSeg=수|Translit=.su
+4	수	_	NOUN	nbn	ExtPos=AUX	3	obl	3:obl	MSeg=수|Translit=.su
 5	있는	있	ADJ	paa+etm	_	4	fixed	4:fixed	LTranslit=.iss|MSeg=있-는|Translit=.iss.neun
 6	양이	양	NOUN	ncn+jcs	Case=Nom	7	nsubj	7:nsubj	LTranslit=.yang|MSeg=양-이|Translit=.yang.i
 6.1	이	_	ADP	jcs	_	_	_	6:case	MSeg=이|Translit=.i
@@ -1448,7 +1448,7 @@
 8.1	는	_	ADP	jxt	_	_	_	8:case	MSeg=는|Translit=.neun
 9	더이상	_	ADV	mag	_	10	advmod	10:advmod	MSeg=더이상|Translit=.deo.i.sang
 10	참을	참	VERB	pvg+etm	Tense=Fut	15	ccomp	15:ccomp	LTranslit=.cham|MSeg=참-ㄹ|Translit=.cham.eul
-11	수가	수	NOUN	nbn+jcs	Case=Nom	10	obl	10:obl	LTranslit=.su|MSeg=수-가|Translit=.su.ga
+11	수가	수	NOUN	nbn+jcs	Case=Nom|ExtPos=AUX	10	obl	10:obl	LTranslit=.su|MSeg=수-가|Translit=.su.ga
 11.1	가	_	ADP	jcs	_	_	_	11:case	MSeg=가|Translit=.ga
 12	없어서	없	SCONJ	paa+ecs	_	11	fixed	11:fixed	LTranslit=.eobs|MSeg=없-어서|Translit=.eobs.eo.seo
 13	아무렇게나	아무렇	ADV	paa+ecs+jxc	_	15	xcomp	15:xcomp	LTranslit=.a.mu.reoh|MSeg=아무렇-게나|Translit=.a.mu.reoh.ge.na
@@ -1640,7 +1640,7 @@
 10	전혀	_	ADV	mag	_	11	advmod	11:advmod	MSeg=전혀|Translit=.jeon.hyeo
 11	귀담아	귀담	SCONJ	pvg+ecs	_	12	ccomp	12:ccomp	LTranslit=.gwi.dam|MSeg=귀담-아|Translit=.gwi.dam.a
 12	듣는	듣	VERB	pvg+etm	_	0	root	0:root	LTranslit=.deut|MSeg=듣-는|Translit=.deut.neun
-13	것	_	NOUN	nbn	_	12	obl	12:obl	MSeg=것|Translit=.geos
+13	것	_	NOUN	nbn	ExtPos=AUX	12	obl	12:obl	MSeg=것|Translit=.geos
 14	같지도	같	ADV	paa+ecx+jxc	_	13	fixed	13:fixed	LTranslit=.gat|MSeg=같-지-도|Translit=.gat.ji.do
 14.1	도	_	ADP	jxc	_	_	_	14:case	MSeg=도|Translit=.do
 15	않았다	_	AUX	px+ep+ef	_	12	aux	12:aux	MSeg=않|SpaceAfter=No|Translit=.anh.ass.da
@@ -1961,7 +1961,7 @@
 4	먼곳에서	먼곳	ADV	ncn+jca	_	5	advcl	5:advcl	LTranslit=.meon.gos|MSeg=먼곳-에서|Translit=.meon.gos.e.seo
 4.1	에서	_	ADP	jca	_	_	_	4:case	MSeg=에서|Translit=.e.seo
 5	올	오	VERB	pvg+etm	Tense=Fut	2	conj	2:conj	LTranslit=.o|MSeg=오-ㄹ|Translit=.ol
-6	수는	수	NOUN	nbn+jxt	Case=Nom	5	obl	5:obl	LTranslit=.su|MSeg=수-는|Translit=.su.neun
+6	수는	수	NOUN	nbn+jxt	Case=Nom|ExtPos=AUX	5	obl	5:obl	LTranslit=.su|MSeg=수-는|Translit=.su.neun
 6.1	는	_	ADP	jxt	_	_	_	6:case	MSeg=는|Translit=.neun
 7	없었겠다	없	ADJ	paa+ep+ef	_	6	fixed	6:fixed	LTranslit=.eobs|MSeg=없-었겠-다|SpaceAfter=No|Translit=.eobs.eoss.gess.da
 8	.....	.....	PUNCT	sf	_	6	punct	6:punct	_
@@ -2112,7 +2112,7 @@
 6	집으로	집	ADV	ncn+jca	_	7	advcl	7:advcl	LTranslit=.jib|MSeg=집-으로|Translit=.jib.eu.ro
 6.1	으로	_	ADP	jca	_	_	_	6:case	MSeg=으로|Translit=.eu.ro
 7	쓸	쓰	VERB	pvg+etm	Tense=Fut	0	root	0:root	LTranslit=.sseu|MSeg=쓰-ㄹ|Translit=.sseul
-8	수도	수	ADV	nbn+jxc	_	7	advmod	7:advmod	LTranslit=.su|MSeg=수-도|Translit=.su.do
+8	수도	수	NOUN	nbn+jxc	ExtPos=AUX	7	obl	7:obl	LTranslit=.su|MSeg=수-도|Translit=.su.do
 8.1	도	_	ADP	jxc	_	_	_	8:case	MSeg=도|Translit=.do
 9	있겠는데	있	ADJ	paa+ep+ef	_	8	fixed	8:fixed	LTranslit=.iss|MSeg=있-겠-는데|SpaceAfter=No|Translit=.iss.gess.neun.de
 10	.	.	PUNCT	sf	_	8	punct	8:punct	_
@@ -2137,7 +2137,7 @@
 6.1	을	_	ADP	jco	_	_	_	6:case	MSeg=을|Translit=.eul
 7	묶어	묶	VERB	pvg+ecx	_	11	acl	11:acl	LTranslit=.mugg|MSeg=묶-어|Translit=.mugg.eo
 8	둘	두	VERB	px+etm	Tense=Fut	7	compound	7:compound	LTranslit=.du|MSeg=두-ㄹ|Translit=.dul
-9	수	_	NOUN	nbn	_	7	obl	7:obl	MSeg=수|Translit=.su
+9	수	_	NOUN	nbn	ExtPos=AUX	7	obl	7:obl	MSeg=수|Translit=.su
 10	있는	있	ADJ	paa+etm	_	9	fixed	9:fixed	LTranslit=.iss|MSeg=있-는|Translit=.iss.neun
 11	고삐도	고삐	ADV	ncn+jxc	_	13	advcl	13:advcl	LTranslit=.go.bbi|MSeg=고삐-도|Translit=.go.bbi.do
 11.1	도	_	ADP	jxc	_	_	_	11:case	MSeg=도|Translit=.do
@@ -2165,7 +2165,7 @@
 5	마음을	마음	NOUN	ncn+jco	Case=Acc	6	obj	6:obj	LTranslit=.ma.eum|MSeg=마음-을|Translit=.ma.eum.eul
 5.1	을	_	ADP	jco	_	_	_	5:case	MSeg=을|Translit=.eul
 6	거슬린	거슬리	VERB	pvg+etm	_	0	root	0:root	LTranslit=.geo.seul.ri|MSeg=거슬리-ㄴ|Translit=.geo.seul.rin
-7	것	_	NOUN	nbn	_	6	obl	6:obl	MSeg=것|Translit=.geos
+7	것	_	NOUN	nbn	ExtPos=AUX	6	obl	6:obl	MSeg=것|Translit=.geos
 8	같았다	같	ADJ	paa+ep+ef	_	7	fixed	7:fixed	LTranslit=.gat|MSeg=같-았-다|SpaceAfter=No|Translit=.gat.ass.da
 9	.	.	PUNCT	sf	_	7	punct	7:punct	SpaceAfter=No
 
@@ -3226,7 +3226,7 @@
 # text = 그러나 성공할 수 있을는지 정말 자신이 없다.
 1	그러나	_	CCONJ	maj	_	7	cc	7:cc	MSeg=그러나|Translit=.geu.reo.na
 2	성공할	성공	VERB	ncpa+xsv+etm	Tense=Fut	7	dep	7:dep	LTranslit=.seong.gong|MSeg=성공-하-ㄹ|Translit=.seong.gong.hal
-3	수	_	NOUN	nbn	_	2	obl	2:obl	MSeg=수|Translit=.su
+3	수	_	NOUN	nbn	ExtPos=AUX	2	obl	2:obl	MSeg=수|Translit=.su
 4	있을는지	있	SCONJ	paa+ecs	_	3	fixed	3:fixed	LTranslit=.iss|MSeg=있-ㄹ는지|Translit=.iss.eul.neun.ji
 5	정말	_	ADV	mag	_	7	advmod	7:advmod	MSeg=정말|Translit=.jeong.mal
 6	자신이	자신	NOUN	ncn+jcs	Case=Nom	7	nsubj	7:nsubj	LTranslit=.ja.sin|MSeg=자신-이|Translit=.ja.sin.i
@@ -3395,7 +3395,7 @@
 4.1	처럼	_	ADP	jca	_	_	_	4:case	MSeg=처럼|Translit=.cheo.reom
 5	되어	되	VERB	pvg+ecx	_	0	root	0:root	LTranslit=.doe|MSeg=되-어|Translit=.doe.eo
 6	버린	버리	VERB	px+etm	_	5	compound	5:compound	LTranslit=.beo.ri|MSeg=버리-ㄴ|Translit=.beo.rin
-7	것	_	NOUN	nbn	_	5	obl	5:obl	MSeg=것|Translit=.geos
+7	것	_	NOUN	nbn	ExtPos=AUX	5	obl	5:obl	MSeg=것|Translit=.geos
 8	같다	같	ADJ	paa+ef	_	7	fixed	7:fixed	LTranslit=.gat|MSeg=같-다|SpaceAfter=No|Translit=.gat.da
 9	.	.	PUNCT	sf	_	7	punct	7:punct	SpaceAfter=No
 
@@ -3524,7 +3524,7 @@
 9	나는	나	PRON	npp+jxt	Case=Nom	10	dislocated	10:dislocated	LTranslit=.na|MSeg=나-는|Translit=.na.neun
 9.1	는	_	ADP	jxt	_	_	_	9:case	MSeg=는|Translit=.neun
 10	이해할	이해	VERB	ncpa+xsv+etm	Tense=Fut	0	root	0:root	LTranslit=.i.hae|MSeg=이해-하-ㄹ|Translit=.i.hae.hal
-11	수	_	NOUN	nbn	_	10	obl	10:obl	MSeg=수|Translit=.su
+11	수	_	NOUN	nbn	ExtPos=AUX	10	obl	10:obl	MSeg=수|Translit=.su
 12	없었다	없	ADJ	paa+ep+ef	_	11	fixed	11:fixed	LTranslit=.eobs|MSeg=없-었-다|SpaceAfter=No|Translit=.eobs.eoss.da
 13	.	.	PUNCT	sf	_	11	punct	11:punct	SpaceAfter=No
 
@@ -3871,7 +3871,7 @@
 7.1	ㄴ	_	ADP	jxt	_	_	_	7:case	MSeg=ㄴ|Translit=.n
 8	정말	_	ADV	mag	_	9	advmod	9:advmod	MSeg=정말|Translit=.jeong.mal
 9	처치할	처치	VERB	ncpa+xsv+etm	Tense=Fut	0	root	0:root	LTranslit=.cheo.chi|MSeg=처치-하-ㄹ|Translit=.cheo.chi.hal
-10	수	_	NOUN	nbn	_	9	obl	9:obl	MSeg=수|Translit=.su
+10	수	_	NOUN	nbn	ExtPos=AUX	9	obl	9:obl	MSeg=수|Translit=.su
 11	없게	없	ADJ	paa+ecx	_	10	fixed	10:fixed	LTranslit=.eobs|MSeg=없-게|Translit=.eobs.ge
 12	된다	되	VERB	px+ef	Mood=Ind|VerbForm=Fin	9	compound	9:compound	LTranslit=.doe|MSeg=되-ㄴ다|SpaceAfter=No|Translit=.doen.da
 13	.	.	PUNCT	sf	_	12	punct	12:punct	SpaceAfter=No
@@ -3963,7 +3963,7 @@
 4	장미와	장미	CCONJ	ncn+jct	_	9	acl	9:acl	LTranslit=.jang.mi|MSeg=장미-와|Translit=.jang.mi.wa
 4.1	와	_	ADP	jct	_	_	_	4:case	MSeg=와|Translit=.wa
 5	구별할	구별	VERB	ncpa+xsv+etm	Tense=Fut	4	conj	4:conj	LTranslit=.gu.byeol|MSeg=구별-하-ㄹ|Translit=.gu.byeol.hal
-6	수	_	NOUN	nbn	_	5	obl	5:obl	MSeg=수|Translit=.su
+6	수	_	NOUN	nbn	ExtPos=AUX	5	obl	5:obl	MSeg=수|Translit=.su
 7	있게	있	ADJ	paa+ecx	_	6	fixed	6:fixed	LTranslit=.iss|MSeg=있-게|Translit=.iss.ge
 8	되는	되	VERB	px+etm	_	5	compound	5:compound	LTranslit=.doe|MSeg=되-는|Translit=.doe.neun
 9	즉시	_	ADV	mag	_	13	advmod	13:advmod	MSeg=즉시|Translit=.jeug.si
@@ -4042,7 +4042,7 @@
 9	도움이	도움	NOUN	ncn+jcs	Case=Nom	10	compound:lvc	10:compound:lvc	LTranslit=.do.um|MSeg=도움-이|Translit=.do.um.i
 9.1	이	_	ADP	jcs	_	_	_	9:case	MSeg=이|Translit=.i
 10	될	되	VERB	pvg+etm	Tense=Fut	0	root	0:root	LTranslit=.doe|MSeg=되-ㄹ|Translit=.doel
-11	수도	수	ADV	nbn+jxc	_	10	advmod	10:advmod	LTranslit=.su|MSeg=수-도|Translit=.su.do
+11	수도	수	NOUN	nbn+jxc	ExtPos=AUX	10	obl	10:obl	LTranslit=.su|MSeg=수-도|Translit=.su.do
 11.1	도	_	ADP	jxc	_	_	_	11:case	MSeg=도|Translit=.do
 12	있을거야	있	ADJ	paa+ef	_	11	fixed	11:fixed	LTranslit=.iss|MSeg=있-ㄹ거야|SpaceAfter=No|Translit=.iss.eul.geo.ya
 13	.	.	PUNCT	sf	_	11	punct	11:punct	SpaceAfter=No
@@ -4062,7 +4062,7 @@
 7	아무렇지도	아무렇	ADV	pvg+ecx+jxc	_	0	root	0:root	LTranslit=.a.mu.reoh|MSeg=아무렇-지-도|Translit=.a.mu.reoh.ji.do
 7.1	도	_	ADP	jxc	_	_	_	7:case	MSeg=도|Translit=.do
 8	않을	_	AUX	px+etm	_	7	aux	7:aux	MSeg=않|Translit=.anh.eul
-9	수	_	NOUN	nbn	_	7	obl	7:obl	MSeg=수|Translit=.su
+9	수	_	NOUN	nbn	ExtPos=AUX	7	obl	7:obl	MSeg=수|Translit=.su
 10	있지	있	ADJ	paa+ef	_	9	fixed	9:fixed	LTranslit=.iss|MSeg=있-지|SpaceAfter=No|Translit=.iss.ji
 11	.	.	PUNCT	sf	_	9	punct	9:punct	SpaceAfter=No
 
@@ -4478,7 +4478,7 @@
 # text = 실제로 그럴 수도 있는 일이었다.
 1	실제로	_	ADV	mag	_	5	advmod	5:advmod	MSeg=실제로|Translit=.sil.je.ro
 2	그럴	그렇	VERB	pad+etm	Tense=Fut	5	amod	5:amod	LTranslit=.geu.reoh|MSeg=그렇-ㄹ|Translit=.geu.reol
-3	수도	수	ADV	nbn+jxc	_	2	advmod	2:advmod	LTranslit=.su|MSeg=수-도|Translit=.su.do
+3	수도	수	NOUN	nbn+jxc	ExtPos=AUX	2	obl	2:obl	LTranslit=.su|MSeg=수-도|Translit=.su.do
 3.1	도	_	ADP	jxc	_	_	_	3:case	MSeg=도|Translit=.do
 4	있는	있	ADJ	paa+etm	_	3	fixed	3:fixed	LTranslit=.iss|MSeg=있-는|Translit=.iss.neun
 5	일이었다	일	VERB	ncn+jp+ep+ef	Mood=Ind|VerbForm=Fin	0	root	0:root	LTranslit=.il|MSeg=일-이-었-다|SpaceAfter=No|Translit=.il.i.eoss.da
@@ -4514,7 +4514,7 @@
 7	광경을	광경	NOUN	ncn+jco	Case=Acc	8	obj	8:obj	LTranslit=.gwang.gyeong|MSeg=광경-을|Translit=.gwang.gyeong.eul
 7.1	을	_	ADP	jco	_	_	_	7:case	MSeg=을|Translit=.eul
 8	볼	보	VERB	pvg+etm	Tense=Fut	0	root	0:root	LTranslit=.bo|MSeg=보-ㄹ|Translit=.bol
-9	수	_	NOUN	nbn	_	8	obl	8:obl	MSeg=수|Translit=.su
+9	수	_	NOUN	nbn	ExtPos=AUX	8	obl	8:obl	MSeg=수|Translit=.su
 10	있을	있	ADJ	paa+etm	_	9	fixed	9:fixed	LTranslit=.iss|MSeg=있-ㄹ|Translit=.iss.eul
 11	것이다	것	VERB	nbn+jp+ef	Mood=Ind|VerbForm=Fin	8	advcl	8:advcl	LTranslit=.geos|MSeg=것-이-다|SpaceAfter=No|Translit=.geos.i.da
 12	.	.	PUNCT	sf	_	11	punct	11:punct	SpaceAfter=No
@@ -4565,7 +4565,7 @@
 6	석양을	석양	NOUN	ncn+jco	Case=Acc	7	obj	7:obj	LTranslit=.seog.yang|MSeg=석양-을|Translit=.seog.yang.eul
 6.1	을	_	ADP	jco	_	_	_	6:case	MSeg=을|Translit=.eul
 7	바라볼	바라보	VERB	pvg+etm	Tense=Fut	0	root	0:root	LTranslit=.ba.ra.bo|MSeg=바라보-ㄹ|Translit=.ba.ra.bol
-8	수	_	NOUN	nbn	_	7	obl	7:obl	MSeg=수|Translit=.su
+8	수	_	NOUN	nbn	ExtPos=AUX	7	obl	7:obl	MSeg=수|Translit=.su
 9	있었지	있	ADJ	paa+ep+ef	_	8	fixed	8:fixed	LTranslit=.iss|MSeg=있-었-지|SpaceAfter=No|Translit=.iss.eoss.ji
 10	......	......	PUNCT	sf	_	8	punct	8:punct	_
 11	"	"	PUNCT	sr	_	8	punct	8:punct	SpaceAfter=No
@@ -4933,7 +4933,7 @@
 4	그들이	그	PRON	npp+xsn+jcs	Case=Nom	5	nsubj	5:nsubj	LTranslit=.geu|MSeg=그-들-이|Translit=.geu.deul.i
 4.1	이	_	ADP	jcs	_	_	_	4:case	MSeg=이|Translit=.i
 5	할	하	VERB	pvg+etm	Tense=Fut	8	acl	8:acl	LTranslit=.ha|MSeg=하-ㄹ|Translit=.hal
-6	수	_	NOUN	nbn	_	5	obl	5:obl	MSeg=수|Translit=.su
+6	수	_	NOUN	nbn	ExtPos=AUX	5	obl	5:obl	MSeg=수|Translit=.su
 7	있는	있	ADJ	paa+etm	_	6	fixed	6:fixed	LTranslit=.iss|MSeg=있-는|Translit=.iss.neun
 8	방식으로	방식	ADV	ncn+jca	_	10	advcl	10:advcl	LTranslit=.bang.sig|MSeg=방식-으로|Translit=.bang.sig.eu.ro
 8.1	으로	_	ADP	jca	_	_	_	8:case	MSeg=으로|Translit=.eu.ro
@@ -5436,7 +5436,7 @@
 26.1	ㄹ	_	ADP	jco	_	_	_	26:case	MSeg=ㄹ|Translit=.r
 27	먹어	먹	SCONJ	pvg+ecs	_	33	ccomp	33:ccomp	LTranslit=.meog|MSeg=먹-어|Translit=.meog.eo
 28	버릴	버리	VERB	px+etm	Tense=Fut	27	compound	27:compound	LTranslit=.beo.ri|MSeg=버리-ㄹ|Translit=.beo.ril
-29	수도	수	ADV	nbn+jxc	_	28	advmod	28:advmod	LTranslit=.su|MSeg=수-도|Translit=.su.do
+29	수도	수	NOUN	nbn+jxc	ExtPos=AUX	28	obl	28:obl	LTranslit=.su|MSeg=수-도|Translit=.su.do
 29.1	도	_	ADP	jxc	_	_	_	29:case	MSeg=도|Translit=.do
 30	있다는건	있	SCONJ	paa+ecs	_	29	fixed	29:fixed	LTranslit=.iss|MSeg=있-다는건|Translit=.iss.da.neun.geon
 31	중요한	중요	VERB	ncps+xsm+etm	_	32	amod	32:amod	LTranslit=.jung.yo|MSeg=중요-하-ㄴ|Translit=.jung.yo.han
@@ -5488,7 +5488,7 @@
 17.2	으로	_	ADP	jca	_	_	_	17:case	MSeg=으로|Translit=.eu.ro
 17.3	도	_	ADP	jxc	_	_	_	17:case	MSeg=도|Translit=.do
 18	행복할	행복	VERB	ncpa+xsv+etm	Tense=Fut	0	root	0:root	LTranslit=.haeng.bog|MSeg=행복-하-ㄹ|Translit=.haeng.bog.hal
-19	수	_	NOUN	nbn	_	18	obl	18:obl	MSeg=수|Translit=.su
+19	수	_	NOUN	nbn	ExtPos=AUX	18	obl	18:obl	MSeg=수|Translit=.su
 20	있어	있	ADJ	paa+ef	_	19	fixed	19:fixed	LTranslit=.iss|MSeg=있-어|SpaceAfter=No|Translit=.iss.eo
 21	.	.	PUNCT	sf	_	19	punct	19:punct	SpaceAfter=No
 
@@ -5512,7 +5512,7 @@
 11	하고	_	ADP	jcr	_	8	case	8:case	MSeg=하고|Translit=.ha.go
 11.1	하고	_	ADP	jcr	_	_	_	11:case	MSeg=하고|Translit=.ha.go
 12	생각할	생각	VERB	ncpa+xsv+etm	Tense=Fut	8	conj	8:conj	LTranslit=.saeng.gag|MSeg=생각-하-ㄹ|Translit=.saeng.gag.hal
-13	수	_	NOUN	nbn	_	12	obl	12:obl	MSeg=수|Translit=.su
+13	수	_	NOUN	nbn	ExtPos=AUX	12	obl	12:obl	MSeg=수|Translit=.su
 14	있거든	있	ADJ	paa+ef	_	13	fixed	13:fixed	LTranslit=.iss|MSeg=있-거든|SpaceAfter=No|Translit=.iss.geo.deun
 15	.	.	PUNCT	sf	_	13	punct	13:punct	SpaceAfter=No
 
@@ -5681,7 +5681,7 @@
 21	말해야	말하	VERB	pvg+ecx	_	23	ccomp	23:ccomp	LTranslit=.mal.ha|MSeg=말하-어야|Translit=.mal.hae.ya
 22	좋을지	좋	NOUN	px+ecs	_	23	ccomp	23:ccomp	LTranslit=.joh|MSeg=좋-ㄹ지|Translit=.joh.eul.ji
 23	알	알	VERB	pvg+etm	Tense=Fut	13	conj	13:conj	LTranslit=.al|MSeg=알-ㄹ|Translit=.al
-24	수	_	NOUN	nbn	_	23	obl	23:obl	MSeg=수|Translit=.su
+24	수	_	NOUN	nbn	ExtPos=AUX	23	obl	23:obl	MSeg=수|Translit=.su
 25	없었다	없	ADJ	paa+ep+ef	_	24	fixed	24:fixed	LTranslit=.eobs|MSeg=없-었-다|SpaceAfter=No|Translit=.eobs.eoss.da
 26	.	.	PUNCT	sf	_	24	punct	24:punct	SpaceAfter=No
 
@@ -5708,10 +5708,10 @@
 6	마음을	마음	NOUN	ncn+jco	Case=Acc	7	obj	7:obj	LTranslit=.ma.eum|MSeg=마음-을|Translit=.ma.eum.eul
 6.1	을	_	ADP	jco	_	_	_	6:case	MSeg=을|Translit=.eul
 7	붙잡을	붙잡	VERB	pvg+etm	Tense=Fut	4	conj	4:conj	LTranslit=.but.jab|MSeg=붙잡-ㄹ|Translit=.but.jab.eul
-8	수	_	NOUN	nbn	_	7	obl	7:obl	MSeg=수|Translit=.su
+8	수	_	NOUN	nbn	ExtPos=AUX	7	obl	7:obl	MSeg=수|Translit=.su
 9	있을지	있	SCONJ	paa+ecs	_	8	fixed	8:fixed	LTranslit=.iss|MSeg=있-ㄹ지|Translit=.iss.eul.ji
 10	알	알	VERB	pvg+etm	Tense=Fut	0	root	0:root	LTranslit=.al|MSeg=알-ㄹ|Translit=.al
-11	수	_	NOUN	nbn	_	10	obl	10:obl	MSeg=수|Translit=.su
+11	수	_	NOUN	nbn	ExtPos=AUX	10	obl	10:obl	MSeg=수|Translit=.su
 12	없었다	없	ADJ	paa+ep+ef	_	11	fixed	11:fixed	LTranslit=.eobs|MSeg=없-었-다|SpaceAfter=No|Translit=.eobs.eoss.da
 13	.	.	PUNCT	sf	_	11	punct	11:punct	SpaceAfter=No
 
@@ -6055,7 +6055,7 @@
 13	감탄을	감탄	NOUN	ncpa+jco	Case=Acc	14	obj	14:obj	LTranslit=.gam.tan|MSeg=감탄-을|Translit=.gam.tan.eul
 13.1	을	_	ADP	jco	_	_	_	13:case	MSeg=을|Translit=.eul
 14	억누를	억누르	VERB	pvg+etm	Tense=Fut	0	root	0:root	LTranslit=.eog.nu.reu|MSeg=억누르-ㄹ|Translit=.eog.nu.reul
-15	수가	수	NOUN	nbn+jcs	Case=Nom	14	obl	14:obl	LTranslit=.su|MSeg=수-가|Translit=.su.ga
+15	수가	수	NOUN	nbn+jcs	Case=Nom|ExtPos=AUX	14	obl	14:obl	LTranslit=.su|MSeg=수-가|Translit=.su.ga
 15.1	가	_	ADP	jcs	_	_	_	15:case	MSeg=가|Translit=.ga
 16	없었다	없	ADJ	paa+ep+ef	_	15	fixed	15:fixed	LTranslit=.eobs|MSeg=없-었-다|SpaceAfter=No|Translit=.eobs.eoss.da
 17	.	.	PUNCT	sf	_	15	punct	15:punct	SpaceAfter=No
@@ -6131,7 +6131,7 @@
 2	생각을	생각	NOUN	ncpa+jco	Case=Acc	3	obj	3:obj	LTranslit=.saeng.gag|MSeg=생각-을|Translit=.saeng.gag.eul
 2.1	을	_	ADP	jco	_	_	_	2:case	MSeg=을|Translit=.eul
 3	해주실	하	VERB	pvg+ecx+px+etm	Tense=Fut	0	root	0:root	LTranslit=.ha|MSeg=하-어-주-시-ㄹ|Translit=.hae.ju.sil
-4	수	_	NOUN	nbn	_	3	obl	3:obl	MSeg=수|Translit=.su
+4	수	_	NOUN	nbn	ExtPos=AUX	3	obl	3:obl	MSeg=수|Translit=.su
 5	있으실는지요	있	ADJ	paa+ef	_	4	fixed	4:fixed	LTranslit=.iss|MSeg=있-으실실지-요|SpaceAfter=No|Translit=.iss.eu.sil.neun.ji.yo
 6	.	.	PUNCT	sf	_	4	punct	4:punct	_
 7	"	"	PUNCT	sr	_	4	punct	4:punct	SpaceAfter=No
@@ -6795,7 +6795,7 @@
 5	어떻게	어떻	SCONJ	pad+ecs	_	6	xcomp	6:xcomp	LTranslit=.eo.ddeoh|MSeg=어떻-게|Translit=.eo.ddeoh.ge
 6	될지	되	SCONJ	pvg+ecs	_	7	ccomp	7:ccomp	LTranslit=.doe|MSeg=되-ㄹ지|Translit=.doel.ji
 7	알	알	VERB	pvg+etm	Tense=Fut	10	ccomp	10:ccomp	LTranslit=.al|MSeg=알-ㄹ|Translit=.al
-8	수	_	NOUN	nbn	_	7	obl	7:obl	MSeg=수|Translit=.su
+8	수	_	NOUN	nbn	ExtPos=AUX	7	obl	7:obl	MSeg=수|Translit=.su
 9	없는	없	ADJ	paa+etm	_	8	fixed	8:fixed	LTranslit=.eobs|MSeg=없-는|Translit=.eobs.neun
 10	일이야	일	VERB	ncn+jp+ef	_	0	root	0:root	LTranslit=.il|MSeg=일-이-야|SpaceAfter=No|Translit=.il.i.ya
 11	.	.	PUNCT	sf	_	10	punct	10:punct	_
@@ -6859,7 +6859,7 @@
 7	화산을	화산	NOUN	ncn+jco	Case=Acc	8	obj	8:obj	LTranslit=.hwa.san|MSeg=화산-을|Translit=.hwa.san.eul
 7.1	을	_	ADP	jco	_	_	_	7:case	MSeg=을|Translit=.eul
 8	청소할	청소	VERB	ncpa+xsv+etm	Tense=Fut	0	root	0:root	LTranslit=.cheong.so|MSeg=청소-하-ㄹ|Translit=.cheong.so.hal
-9	수가	수	NOUN	nbn+jcs	Case=Nom	8	obl	8:obl	LTranslit=.su|MSeg=수-가|Translit=.su.ga
+9	수가	수	NOUN	nbn+jcs	Case=Nom|ExtPos=AUX	8	obl	8:obl	LTranslit=.su|MSeg=수-가|Translit=.su.ga
 9.1	가	_	ADP	jcs	_	_	_	9:case	MSeg=가|Translit=.ga
 10	없다	없	ADJ	paa+ef	_	9	fixed	9:fixed	LTranslit=.eobs|MSeg=없-다|SpaceAfter=No|Translit=.eobs.da
 11	.	.	PUNCT	sf	_	9	punct	9:punct	SpaceAfter=No
@@ -7048,7 +7048,7 @@
 2	말을	말	NOUN	ncpa+jco	Case=Acc	3	obj	3:obj	LTranslit=.mal|MSeg=말-을|Translit=.mal.eul
 2.1	을	_	ADP	jco	_	_	_	2:case	MSeg=을|Translit=.eul
 3	들을	듣	VERB	pvg+etm	Tense=Fut	6	acl	6:acl	LTranslit=.deut|MSeg=듣-ㄹ|Translit=.deul.eul
-4	수	_	NOUN	nbn	_	3	obl	3:obl	MSeg=수|Translit=.su
+4	수	_	NOUN	nbn	ExtPos=AUX	3	obl	3:obl	MSeg=수|Translit=.su
 5	없게	없	ADJ	paa+ecx	_	4	fixed	4:fixed	LTranslit=.eobs|MSeg=없-게|Translit=.eobs.ge
 6	된것이	된것	NOUN	ncn+jcs	Case=Nom	9	nsubj	9:nsubj	LTranslit=.doen.geos|MSeg=된것-이|Translit=.doen.geos.i
 6.1	이	_	ADP	jcs	_	_	_	6:case	MSeg=이|Translit=.i
@@ -7085,7 +7085,7 @@
 4	다정함을	다정	NOUN	ncps+xsm+etn+jco	Case=Acc	5	obj	5:obj	LTranslit=.da.jeong|MSeg=다정-하-ㅁ-을|Translit=.da.jeong.ham.eul
 4.1	을	_	ADP	jco	_	_	_	4:case	MSeg=을|Translit=.eul
 5	이해할	이해	VERB	ncpa+xsv+etm	Tense=Fut	0	root	0:root	LTranslit=.i.hae|MSeg=이해-하-ㄹ|Translit=.i.hae.hal
-6	수	_	NOUN	nbn	_	5	obl	5:obl	MSeg=수|Translit=.su
+6	수	_	NOUN	nbn	ExtPos=AUX	5	obl	5:obl	MSeg=수|Translit=.su
 7	없었다	없	ADJ	paa+ep+ef	_	6	fixed	6:fixed	LTranslit=.eobs|MSeg=없-었-다|SpaceAfter=No|Translit=.eobs.eoss.da
 8	.	.	PUNCT	sf	_	6	punct	6:punct	SpaceAfter=No
 
@@ -7492,7 +7492,7 @@
 4	더	_	ADV	mag	_	3	advmod	3:advmod	MSeg=더|Translit=.deo
 5	자세히	_	ADV	mag	_	3	advmod	3:advmod	MSeg=자세히|Translit=.ja.se.hi
 6	볼	보	VERB	pvg+etm	Tense=Fut	10	ccomp	10:ccomp	LTranslit=.bo|MSeg=보-ㄹ|Translit=.bol
-7	수	_	NOUN	nbn	_	6	obl	6:obl	MSeg=수|Translit=.su
+7	수	_	NOUN	nbn	ExtPos=AUX	6	obl	6:obl	MSeg=수|Translit=.su
 8	있도록	있	SCONJ	paa+ecs	_	7	fixed	7:fixed	LTranslit=.iss|MSeg=있-도록|Translit=.iss.do.rog
 9	가까이	_	ADV	mag	_	10	advmod	10:advmod	MSeg=가까이|Translit=.ga.gga.i
 10	다가오라	다가오	VERB	pvg+ef	Mood=Imp|VerbForm=Fin	0	root	0:root	LTranslit=.da.ga.o|MSeg=다가오-이-라|SpaceAfter=No|Translit=.da.ga.o.ra
@@ -7780,7 +7780,7 @@
 1	불복종은	불복종	NOUN	ncn+jxt	Case=Nom	2	dislocated	2:dislocated	LTranslit=.bul.bog.jong|MSeg=불복종-은|Translit=.bul.bog.jong.eun
 1.1	은	_	ADP	jxt	_	_	_	1:case	MSeg=은|Translit=.eun
 2	용서할	용서	VERB	ncpa+xsv+etm	Tense=Fut	0	root	0:root	LTranslit=.yong.seo|MSeg=용서-하-ㄹ|Translit=.yong.seo.hal
-3	수	_	NOUN	nbn	_	2	obl	2:obl	MSeg=수|Translit=.su
+3	수	_	NOUN	nbn	ExtPos=AUX	2	obl	2:obl	MSeg=수|Translit=.su
 4	없는	없	ADJ	paa+etm	_	3	fixed	3:fixed	LTranslit=.eobs|MSeg=없-는|Translit=.eobs.neun
 5	것이었다	것	VERB	nbn+jp+ep+ef	Mood=Ind|VerbForm=Fin	2	advcl	2:advcl	LTranslit=.geos|MSeg=것-이-었-다|SpaceAfter=No|Translit=.geos.i.eoss.da
 6	.	.	PUNCT	sf	_	5	punct	5:punct	SpaceAfter=No
@@ -8069,7 +8069,7 @@
 1.1	는	_	ADP	jxt	_	_	_	1:case	MSeg=는|Translit=.neun
 2	절대	_	NOUN	ncn	_	3	compound	3:compound	MSeg=절대|Translit=.jeol.dae
 3	군주였을	군주	VERB	ncn+jp+ep+etm	Tense=Fut	8	ccomp	8:ccomp	LTranslit=.gun.ju|MSeg=군주-이-었-ㄹ|Translit=.gun.ju.yeoss.eul
-4	뿐	_	NOUN	nbn	_	3	obl	3:obl	MSeg=뿐|Translit=.bbun
+4	뿐	_	NOUN	nbn	ExtPos=AUX	3	obl	3:obl	MSeg=뿐|Translit=.bbun
 5	아니라	아니	SCONJ	paa+ecs	_	4	fixed	4:fixed	LTranslit=.a.ni|MSeg=아니-라|Translit=.a.ni.ra
 6	온	_	ADJ	mma	_	7	amod	7:amod	MSeg=온|Translit=.on
 7	우주의	우주	NOUN	ncn+jcm	Case=Gen	8	nmod	8:nmod	LTranslit=.u.ju|MSeg=우주-의|Translit=.u.ju.yi
@@ -8147,7 +8147,7 @@
 4	권능을	권능	NOUN	ncn+jco	Case=Acc	5	obj	5:obj	LTranslit=.gweon.neung|MSeg=권능-을|Translit=.gweon.neung.eul
 4.1	을	_	ADP	jco	_	_	_	4:case	MSeg=을|Translit=.eul
 5	가질	가지	VERB	pvg+etm	Tense=Fut	25	ccomp	25:ccomp	LTranslit=.ga.ji|MSeg=가지-ㄹ|Translit=.ga.jil
-6	수	_	NOUN	nbn	_	5	obl	5:obl	MSeg=수|Translit=.su
+6	수	_	NOUN	nbn	ExtPos=AUX	5	obl	5:obl	MSeg=수|Translit=.su
 7	있다면	있	SCONJ	paa+ecs	_	6	fixed	6:fixed	LTranslit=.iss|MSeg=있-다면|Translit=.iss.da.myeon
 8	의자를	의자	NOUN	ncn+jco	Case=Acc	10	obj	10:obj	LTranslit=.yi.ja|MSeg=의자-를|Translit=.yi.ja.reul
 8.1	를	_	ADP	jco	_	_	_	8:case	MSeg=를|Translit=.reul
@@ -8172,7 +8172,7 @@
 24	것을	것	NOUN	nbn+jco	Case=Acc	25	obj	25:obj	LTranslit=.geos|MSeg=것-을|Translit=.geos.eul
 24.1	을	_	ADP	jco	_	_	_	24:case	MSeg=을|Translit=.eul
 25	볼	보	VERB	pvg+etm	Tense=Fut	28	ccomp	28:ccomp	LTranslit=.bo|MSeg=보-ㄹ|Translit=.bol
-26	수	_	NOUN	nbn	_	25	obl	25:obl	MSeg=수|Translit=.su
+26	수	_	NOUN	nbn	ExtPos=AUX	25	obl	25:obl	MSeg=수|Translit=.su
 27	있을게	있	ADJ	paa+ecx	_	26	fixed	26:fixed	LTranslit=.iss|MSeg=있-ㄹ게|Translit=.iss.eul.ge
 27.1	이	_	ADP	jcs	_	_	_	27:case	MSeg=이|Translit=.i
 28	아닌가	아니	VERB	px+ef	_	0	root	0:root	LTranslit=.a.ni|MSeg=아니-ㄴ가|SpaceAfter=No|Translit=.a.nin.ga
@@ -8316,7 +8316,7 @@
 5	그가	그	PRON	npp+jcs	Case=Nom	6	nsubj	6:nsubj	LTranslit=.geu|MSeg=그-가|Translit=.geu.ga
 5.1	가	_	ADP	jcs	_	_	_	5:case	MSeg=가|Translit=.ga
 6	이해할	이해	VERB	ncpa+xsv+etm	Tense=Fut	9	acl	9:acl	LTranslit=.i.hae|MSeg=이해-하-ㄹ|Translit=.i.hae.hal
-7	수	_	NOUN	nbn	_	6	obl	6:obl	MSeg=수|Translit=.su
+7	수	_	NOUN	nbn	ExtPos=AUX	6	obl	6:obl	MSeg=수|Translit=.su
 8	있는	있	ADJ	paa+etm	_	7	fixed	7:fixed	LTranslit=.iss|MSeg=있-는|Translit=.iss.neun
 9	것을	것	NOUN	nbn+jco	Case=Acc	10	obj	10:obj	LTranslit=.geos|MSeg=것-을|Translit=.geos.eul
 9.1	을	_	ADP	jco	_	_	_	9:case	MSeg=을|Translit=.eul
@@ -8777,7 +8777,7 @@
 3.1	를	_	ADP	jco	_	_	_	3:case	MSeg=를|Translit=.reul
 4	훌륭히	_	ADV	mag+xsa	_	5	advmod	5:advmod	MSeg=훌륭히|Translit=.hul.ryung.hi
 5	심판할	심판	VERB	ncpa+xsv+etm	Tense=Fut	13	ccomp	13:ccomp	LTranslit=.sim.pan|MSeg=심판-하-ㄹ|Translit=.sim.pan.hal
-6	수	_	NOUN	nbn	_	5	obl	5:obl	MSeg=수|Translit=.su
+6	수	_	NOUN	nbn	ExtPos=AUX	5	obl	5:obl	MSeg=수|Translit=.su
 7	있다면	있	SCONJ	paa+ecs	_	6	fixed	6:fixed	LTranslit=.iss|MSeg=있-다면|Translit=.iss.da.myeon
 8	그건	그거	PRON	npd+jxt	Case=Nom	13	dislocated	13:dislocated	LTranslit=.geu.geo|MSeg=그거-ㄴ|Translit=.geu.geon
 8.1	ㄴ	_	ADP	jxt	_	_	_	8:case	MSeg=ㄴ|Translit=.n
@@ -8809,7 +8809,7 @@
 6	저를	저	PRON	npp+jco	Case=Acc	7	obj	7:obj	LTranslit=.jeo|MSeg=저-를|Translit=.jeo.reul
 6.1	를	_	ADP	jco	_	_	_	6:case	MSeg=를|Translit=.reul
 7	심판할	심판	VERB	ncpa+xsv+etm	Tense=Fut	0	root	0:root	LTranslit=.sim.pan|MSeg=심판-하-ㄹ|Translit=.sim.pan.hal
-8	수	_	NOUN	nbn	_	7	obl	7:obl	MSeg=수|Translit=.su
+8	수	_	NOUN	nbn	ExtPos=AUX	7	obl	7:obl	MSeg=수|Translit=.su
 9	있어요	_	ADJ	paa+ef	_	8	fixed	8:fixed	MSeg=있|SpaceAfter=No|Translit=.iss.eo.yo
 10	.	.	PUNCT	sf	_	8	punct	8:punct	SpaceAfter=No
 
@@ -9026,7 +9026,7 @@
 4	제게	_	ADV	mag	_	5	advmod	5:advmod	MSeg=제게|Translit=.je.ge
 4.1	에게	_	ADP	jca	_	_	_	4:case	MSeg=에게|Translit=.e.ge
 5	명령하실	명령	VERB	ncpa+xsv+etm	Tense=Fut	0	root	0:root	LTranslit=.myeong.ryeong|MSeg=명령-하-시-ㄹ|Translit=.myeong.ryeong.ha.sil
-6	수	_	NOUN	nbn	_	5	obl	5:obl	MSeg=수|Translit=.su
+6	수	_	NOUN	nbn	ExtPos=AUX	5	obl	5:obl	MSeg=수|Translit=.su
 7	있으시잖아요	있	VERB	pvg+ecx+px+ep+ef	_	6	fixed	6:fixed	LTranslit=.iss|MSeg=있-으시-잖아요|SpaceAfter=No|Translit=.iss.eu.si.janh.a.yo
 8	.	.	PUNCT	sf	_	6	punct	6:punct	SpaceAfter=No
 
@@ -9036,7 +9036,7 @@
 2	조건이	조건	NOUN	ncn+jcs	Case=Nom	3	nsubj	3:nsubj	LTranslit=.jo.geon|MSeg=조건-이|Translit=.jo.geon.i
 2.1	이	_	ADP	jcs	_	_	_	2:case	MSeg=이|Translit=.i
 3	좋은	좋	ADJ	paa+etm	_	0	root	0:root	LTranslit=.joh|MSeg=좋-ㄴ|Translit=.joh.eun
-4	것	_	NOUN	nbn	_	3	obl	3:obl	MSeg=것|Translit=.geos
+4	것	_	NOUN	nbn	ExtPos=AUX	3	obl	3:obl	MSeg=것|Translit=.geos
 5	같습니다	같	ADJ	paa+ef	_	4	fixed	4:fixed	LTranslit=.gat|MSeg=같-습니다|SpaceAfter=No|Translit=.gat.seub.ni.da
 6	.	.	PUNCT	sf	_	4	punct	4:punct	_
 7	"	"	PUNCT	sr	_	4	punct	4:punct	SpaceAfter=No
@@ -10717,7 +10717,7 @@
 6.1	에	_	ADP	jca	_	_	_	6:case	MSeg=에|Translit=.e
 7	두르고	두르	CCONJ	pvg+ecc	_	0	root	0:root	LTranslit=.du.reu|MSeg=두르-고|Translit=.du.reu.go
 8	다닐	다니	VERB	pvg+etm	Tense=Fut	7	conj	7:conj	LTranslit=.da.ni|MSeg=다니-ㄹ|Translit=.da.nil
-9	수가	수	NOUN	nbn+jcs	Case=Nom	8	obl	8:obl	LTranslit=.su|MSeg=수-가|Translit=.su.ga
+9	수가	수	NOUN	nbn+jcs	Case=Nom|ExtPos=AUX	8	obl	8:obl	LTranslit=.su|MSeg=수-가|Translit=.su.ga
 9.1	가	_	ADP	jcs	_	_	_	9:case	MSeg=가|Translit=.ga
 10	있어	있	ADJ	paa+ef	_	9	fixed	9:fixed	LTranslit=.iss|MSeg=있-어|SpaceAfter=No|Translit=.iss.eo
 11	.	.	PUNCT	sf	_	9	punct	9:punct	SpaceAfter=No
@@ -10737,7 +10737,7 @@
 8	꺽어	꺽	SCONJ	pvg+ecs	_	9	ccomp	9:ccomp	LTranslit=.ggeog|MSeg=꺽-어|Translit=.ggeog.eo
 9	가지고	가지	CCONJ	pvg+ecc	_	0	root	0:root	LTranslit=.ga.ji|MSeg=가지-고|Translit=.ga.ji.go
 10	다닐	다니	VERB	pvg+etm	Tense=Fut	9	conj	9:conj	LTranslit=.da.ni|MSeg=다니-ㄹ|Translit=.da.nil
-11	수	_	NOUN	nbn	_	10	obl	10:obl	MSeg=수|Translit=.su
+11	수	_	NOUN	nbn	ExtPos=AUX	10	obl	10:obl	MSeg=수|Translit=.su
 12	있고	있	ADJ	paa+ef	_	11	fixed	11:fixed	LTranslit=.iss|MSeg=있-고|SpaceAfter=No|Translit=.iss.go
 13	.	.	PUNCT	sf	_	11	punct	11:punct	SpaceAfter=No
 
@@ -10749,7 +10749,7 @@
 3	별들을	별	NOUN	ncn+xsn+jco	Case=Acc	4	obj	4:obj	LTranslit=.byeol|MSeg=별-들-을|Translit=.byeol.deul.eul
 3.1	을	_	ADP	jco	_	_	_	3:case	MSeg=을|Translit=.eul
 4	꺽을	꺽	VERB	pvg+etm	Tense=Fut	0	root	0:root	LTranslit=.ggeog|MSeg=꺽-ㄹ|Translit=.ggeog.eul
-5	수가	수	NOUN	nbn+jcs	Case=Nom	4	obl	4:obl	LTranslit=.su|MSeg=수-가|Translit=.su.ga
+5	수가	수	NOUN	nbn+jcs	Case=Nom|ExtPos=AUX	4	obl	4:obl	LTranslit=.su|MSeg=수-가|Translit=.su.ga
 5.1	가	_	ADP	jcs	_	_	_	5:case	MSeg=가|Translit=.ga
 6	없잖아	없	VERB	pvg+ecx+px+ef	_	5	fixed	5:fixed	LTranslit=.eobs|MSeg=없-지-않-아|SpaceAfter=No|Translit=.eobs.janh.a
 7	!	!	PUNCT	sf	_	5	punct	5:punct	SpaceAfter=No
@@ -10759,7 +10759,7 @@
 # text = "그럴 수는 없지.
 1	"	"	PUNCT	sl	_	2	punct	2:punct	SpaceAfter=No
 2	그럴	그렇	VERB	pad+etm	Tense=Fut	0	root	0:root	LTranslit=.geu.reoh|MSeg=그렇-ㄹ|Translit=.geu.reol
-3	수는	수	NOUN	nbn+jxt	Case=Nom	2	obl	2:obl	LTranslit=.su|MSeg=수-는|Translit=.su.neun
+3	수는	수	NOUN	nbn+jxt	Case=Nom|ExtPos=AUX	2	obl	2:obl	LTranslit=.su|MSeg=수-는|Translit=.su.neun
 3.1	는	_	ADP	jxt	_	_	_	3:case	MSeg=는|Translit=.neun
 4	없지	없	ADJ	paa+ef	_	3	fixed	3:fixed	LTranslit=.eobs|MSeg=없-지|SpaceAfter=No|Translit=.eobs.ji
 5	.	.	PUNCT	sf	_	3	punct	3:punct	SpaceAfter=No
@@ -10772,7 +10772,7 @@
 3	은행에	은행	ADV	ncn+jca	_	4	obl	4:obl	LTranslit=.eun.haeng|MSeg=은행-에|Translit=.eun.haeng.e
 3.1	에	_	ADP	jca	_	_	_	3:case	MSeg=에|Translit=.e
 4	맡길	맡기	VERB	pvg+etm	Tense=Fut	0	root	0:root	LTranslit=.mat.gi|MSeg=맡기-ㄹ|Translit=.mat.gil
-5	수	_	NOUN	nbn	_	4	obl	4:obl	MSeg=수|Translit=.su
+5	수	_	NOUN	nbn	ExtPos=AUX	4	obl	4:obl	MSeg=수|Translit=.su
 6	있지	있	ADJ	paa+ef	_	5	fixed	5:fixed	LTranslit=.iss|MSeg=있-지|SpaceAfter=No|Translit=.iss.ji
 7	.	.	PUNCT	sf	_	5	punct	5:punct	_
 8	"	"	PUNCT	sr	_	5	punct	5:punct	SpaceAfter=No
@@ -10928,7 +10928,7 @@
 2	어떻게	어떻	SCONJ	pad+ecs	_	3	xcomp	3:xcomp	LTranslit=.eo.ddeoh|MSeg=어떻-게|Translit=.eo.ddeoh.ge
 3	될지	되	SCONJ	pvg+ecs	_	4	ccomp	4:ccomp	LTranslit=.doe|MSeg=되-ㄹ지|Translit=.doel.ji
 4	알	알	VERB	pvg+etm	Tense=Fut	7	ccomp	7:ccomp	LTranslit=.al|MSeg=알-ㄹ|Translit=.al
-5	수	_	NOUN	nbn	_	4	obl	4:obl	MSeg=수|Translit=.su
+5	수	_	NOUN	nbn	ExtPos=AUX	4	obl	4:obl	MSeg=수|Translit=.su
 6	없는	없	ADJ	paa+etm	_	5	fixed	5:fixed	LTranslit=.eobs|MSeg=없-는|Translit=.eobs.neun
 7	노릇이거든	노릇	VERB	ncn+jp+ef	_	0	root	0:root	LTranslit=.no.reus|MSeg=노릇-이-거든|SpaceAfter=No|Translit=.no.reus.i.geo.deun
 8	.	.	PUNCT	sf	_	7	punct	7:punct	SpaceAfter=No
@@ -11058,7 +11058,7 @@
 19.1	는	_	ADP	jxt	_	_	_	19:case	MSeg=는|Translit=.neun
 20	도무지	_	ADV	mag	_	21	advmod	21:advmod	MSeg=도무지|Translit=.do.mu.ji
 21	이해할	이해	VERB	ncpa+xsv+etm	Tense=Fut	0	root	0:root	LTranslit=.i.hae|MSeg=이해-하-ㄹ|Translit=.i.hae.hal
-22	수가	수	NOUN	nbn+jcs	Case=Nom	21	obl	21:obl	LTranslit=.su|MSeg=수-가|Translit=.su.ga
+22	수가	수	NOUN	nbn+jcs	Case=Nom|ExtPos=AUX	21	obl	21:obl	LTranslit=.su|MSeg=수-가|Translit=.su.ga
 22.1	가	_	ADP	jcs	_	_	_	22:case	MSeg=가|Translit=.ga
 23	없었다	없	ADJ	paa+ep+ef	_	22	fixed	22:fixed	LTranslit=.eobs|MSeg=없-었-다|SpaceAfter=No|Translit=.eobs.eoss.da
 24	.	.	PUNCT	sf	_	22	punct	22:punct	SpaceAfter=No
@@ -11535,7 +11535,7 @@
 2	조금도	조금	ADV	ncn+jxc	_	3	advcl	3:advcl	LTranslit=.jo.geum|MSeg=조금-도|Translit=.jo.geum.do
 2.1	도	_	ADP	jxc	_	_	_	2:case	MSeg=도|Translit=.do
 3	이상할	이상	VERB	ncps+xsm+etm	Tense=Fut	0	root	0:root	LTranslit=.i.sang|MSeg=이상-하-ㄹ|Translit=.i.sang.hal
-4	것	_	NOUN	nbn	_	3	obl	3:obl	MSeg=것|Translit=.geos
+4	것	_	NOUN	nbn	ExtPos=AUX	3	obl	3:obl	MSeg=것|Translit=.geos
 5	없지	없	ADJ	paa+ef	_	4	fixed	4:fixed	LTranslit=.eobs|MSeg=없-지|SpaceAfter=No|Translit=.eobs.ji
 6	.	.	PUNCT	sf	_	4	punct	4:punct	SpaceAfter=No
 
@@ -11660,7 +11660,7 @@
 6	싶을	_	AUX	px+etm	_	5	aux	5:aux	MSeg=싶|Translit=.sip.eul
 7	때	_	NOUN	ncn	_	12	dep	12:dep	MSeg=때|Translit=.ddae
 8	쉴	쉬	VERB	pvg+etm	Tense=Fut	11	acl	11:acl	LTranslit=.swi|MSeg=쉬-ㄹ|Translit=.swil
-9	수	_	NOUN	nbn	_	8	obl	8:obl	MSeg=수|Translit=.su
+9	수	_	NOUN	nbn	ExtPos=AUX	8	obl	8:obl	MSeg=수|Translit=.su
 10	있는	있	ADJ	paa+etm	_	9	fixed	9:fixed	LTranslit=.iss|MSeg=있-는|Translit=.iss.neun
 11	방법이	방법	NOUN	ncn+jcs	Case=Nom	12	nsubj	12:nsubj	LTranslit=.bang.beob|MSeg=방법-이|Translit=.bang.beob.i
 11.1	이	_	ADP	jcs	_	_	_	11:case	MSeg=이|Translit=.i
@@ -11699,7 +11699,7 @@
 5	한편	_	NOUN	ncn	_	6	compound	6:compound	MSeg=한편|Translit=.han.pyeon
 6	게으름부리고	게으름부리	VERB	pvg+ecx	_	0	root	0:root	LTranslit=.ge.eu.reum.bu.ri|MSeg=게으름부리-고|Translit=.ge.eu.reum.bu.ri.go
 7	싶을	_	AUX	px+etm	_	6	aux	6:aux	MSeg=싶|Translit=.sip.eul
-8	수	_	NOUN	nbn	_	6	obl	6:obl	MSeg=수|Translit=.su
+8	수	_	NOUN	nbn	ExtPos=AUX	6	obl	6:obl	MSeg=수|Translit=.su
 9	있는	있	ADJ	paa+etm	_	8	fixed	8:fixed	LTranslit=.iss|MSeg=있-는|Translit=.iss.neun
 10	것이다	것	VERB	nbn+jp+ef	Mood=Ind|VerbForm=Fin	6	advcl	6:advcl	LTranslit=.geos|MSeg=것-이-다|SpaceAfter=No|Translit=.geos.i.da
 11	.	.	PUNCT	sf	_	10	punct	10:punct	SpaceAfter=No
@@ -11730,7 +11730,7 @@
 10	한	_	NUM	nnc	_	11	nummod	11:nummod	MSeg=한|Translit=.han
 11	바퀴	_	NOUN	ncn	_	12	dep	12:dep	MSeg=바퀴|Translit=.ba.kwi
 12	돌	돌	VERB	pvg+etm	Tense=Fut	0	root	0:root	LTranslit=.dol|MSeg=돌-ㄹ|Translit=.dol
-13	수	_	NOUN	nbn	_	12	obl	12:obl	MSeg=수|Translit=.su
+13	수	_	NOUN	nbn	ExtPos=AUX	12	obl	12:obl	MSeg=수|Translit=.su
 14	있잖아	있잖	VERB	pvg+ecx+px+ef	_	13	fixed	13:fixed	LTranslit=.iss.janh|MSeg=있잖-아|SpaceAfter=No|Translit=.iss.janh.a
 15	.	.	PUNCT	sf	_	13	punct	13:punct	SpaceAfter=No
 
@@ -11764,7 +11764,7 @@
 3	원하는	원하	VERB	pvg+etm	_	4	acl	4:acl	LTranslit=.weon.ha|MSeg=원하-는|Translit=.weon.ha.neun
 4	만큼	_	NOUN	nbn	_	5	obl	5:obl	MSeg=만큼|Translit=.man.keum
 5	길어질	길	VERB	pvg+ecx+px+etm	Tense=Fut	0	root	0:root	LTranslit=.gil|MSeg=길-어-지-ㄹ|Translit=.gil.eo.jil
-6	수	_	NOUN	nbn	_	5	obl	5:obl	MSeg=수|Translit=.su
+6	수	_	NOUN	nbn	ExtPos=AUX	5	obl	5:obl	MSeg=수|Translit=.su
 7	있을거야	있	ADJ	paa+ef	_	6	fixed	6:fixed	LTranslit=.iss|MSeg=있-ㄹ거야|SpaceAfter=No|Translit=.iss.eul.geo.ya
 8	.	.	PUNCT	sf	_	6	punct	6:punct	_
 9	"	"	PUNCT	sr	_	6	punct	6:punct	SpaceAfter=No
@@ -11945,7 +11945,7 @@
 3	친구로	친구	ADV	ncn+jca	_	4	advcl	4:advcl	LTranslit=.chin.gu|MSeg=친구-로|Translit=.chin.gu.ro
 3.1	로	_	ADP	jca	_	_	_	3:case	MSeg=로|Translit=.ro
 4	삼을	삼	VERB	pvg+etm	Tense=Fut	7	acl	7:acl	LTranslit=.sam|MSeg=삼-ㄹ|Translit=.sam.eul
-5	수	_	NOUN	nbn	_	4	obl	4:obl	MSeg=수|Translit=.su
+5	수	_	NOUN	nbn	ExtPos=AUX	4	obl	4:obl	MSeg=수|Translit=.su
 6	있었던	있	ADJ	paa+ep+etm	_	5	fixed	5:fixed	LTranslit=.iss|MSeg=있-었-던|Translit=.iss.eoss.deon
 7	사람은	사람	NOUN	ncn+jxt	Case=Nom	9	dislocated	9:dislocated	LTranslit=.sa.ram|MSeg=사람-은|Translit=.sa.ram.eun
 7.1	은	_	ADP	jxt	_	_	_	7:case	MSeg=은|Translit=.eun
@@ -12296,7 +12296,7 @@
 2	그것도	그것	ADV	npd+jxc	_	3	advcl	3:advcl	LTranslit=.geu.geos|MSeg=그것-도|Translit=.geu.geos.do
 2.1	도	_	ADP	jxc	_	_	_	2:case	MSeg=도|Translit=.do
 3	알	알	VERB	pvg+etm	Tense=Fut	0	root	0:root	LTranslit=.al|MSeg=알-ㄹ|Translit=.al
-4	수	_	NOUN	nbn	_	3	obl	3:obl	MSeg=수|Translit=.su
+4	수	_	NOUN	nbn	ExtPos=AUX	3	obl	3:obl	MSeg=수|Translit=.su
 5	없다	없	ADJ	paa+ef	_	4	fixed	4:fixed	LTranslit=.eobs|MSeg=없-다|SpaceAfter=No|Translit=.eobs.da
 6	.	.	PUNCT	sf	_	4	punct	4:punct	_
 7	"	"	PUNCT	sr	_	4	punct	4:punct	SpaceAfter=No
@@ -12372,7 +12372,7 @@
 4	사람이니까	사람	SCONJ	ncn+jp+ecs	_	6	ccomp	6:ccomp	LTranslit=.sa.ram|MSeg=사람-이-니까|Translit=.sa.ram.i.ni.gga
 5	한가로이	한가로	NOUN	ncn+jcs	Case=Nom	6	nsubj	6:nsubj	LTranslit=.han.ga.ro|MSeg=한가로-이|Translit=.han.ga.ro.i
 6	돌아다닐	돌아다니	VERB	pvg+etm	Tense=Fut	0	root	0:root	LTranslit=.dol.a.da.ni|MSeg=돌아다니-ㄹ|Translit=.dol.a.da.nil
-7	수가	수	NOUN	nbn+jcs	Case=Nom	6	obl	6:obl	LTranslit=.su|MSeg=수-가|Translit=.su.ga
+7	수가	수	NOUN	nbn+jcs	Case=Nom|ExtPos=AUX	6	obl	6:obl	LTranslit=.su|MSeg=수-가|Translit=.su.ga
 7.1	가	_	ADP	jcs	_	_	_	7:case	MSeg=가|Translit=.ga
 8	없지	없	ADJ	paa+ef	_	7	fixed	7:fixed	LTranslit=.eobs|MSeg=없-지|SpaceAfter=No|Translit=.eobs.ji
 9	.	.	PUNCT	sf	_	7	punct	7:punct	SpaceAfter=No
@@ -12382,7 +12382,7 @@
 1	서재를	서재	NOUN	ncn+jco	Case=Acc	2	obj	2:obj	LTranslit=.seo.jae|MSeg=서재-를|Translit=.seo.jae.reul
 1.1	를	_	ADP	jco	_	_	_	1:case	MSeg=를|Translit=.reul
 2	떠날	떠나	VERB	pvg+etm	Tense=Fut	0	root	0:root	LTranslit=.ddeo.na|MSeg=떠나-ㄹ|Translit=.ddeo.nal
-3	수가	수	NOUN	nbn+jcs	Case=Nom	2	obl	2:obl	LTranslit=.su|MSeg=수-가|Translit=.su.ga
+3	수가	수	NOUN	nbn+jcs	Case=Nom|ExtPos=AUX	2	obl	2:obl	LTranslit=.su|MSeg=수-가|Translit=.su.ga
 3.1	가	_	ADP	jcs	_	_	_	3:case	MSeg=가|Translit=.ga
 4	없어	없	ADJ	paa+ef	_	3	fixed	3:fixed	LTranslit=.eobs|MSeg=없-어|SpaceAfter=No|Translit=.eobs.eo
 5	.	.	PUNCT	sf	_	3	punct	3:punct	SpaceAfter=No
@@ -12536,7 +12536,7 @@
 8	탐험가가	탐험가	NOUN	ncn+jcc	_	9	csubj	9:csubj	LTranslit=.tam.heom.ga|MSeg=탐험가-가|Translit=.tam.heom.ga.ga
 8.1	가	_	ADP	jcs	_	_	_	8:case	MSeg=가|Translit=.ga
 9	될	되	VERB	pvg+etm	Tense=Fut	0	root	0:root	LTranslit=.doe|MSeg=되-ㄹ|Translit=.doel
-10	수	_	NOUN	nbn	_	9	obl	9:obl	MSeg=수|Translit=.su
+10	수	_	NOUN	nbn	ExtPos=AUX	9	obl	9:obl	MSeg=수|Translit=.su
 11	있겠군요	있	ADJ	paa+ep+ef	_	10	fixed	10:fixed	LTranslit=.iss|MSeg=있-겠-군요|SpaceAfter=No|Translit=.iss.gess.gun.yo
 12	?	?	PUNCT	sf	_	10	punct	10:punct	SpaceAfter=No
 13	"	"	PUNCT	sr	_	10	punct	10:punct	SpaceAfter=No
@@ -12785,7 +12785,7 @@
 5	어떻게	어떻	SCONJ	pad+ecs	_	6	xcomp	6:xcomp	LTranslit=.eo.ddeoh|MSeg=어떻-게|Translit=.eo.ddeoh.ge
 6	될지	되	SCONJ	pvg+ecs	_	7	ccomp	7:ccomp	LTranslit=.doe|MSeg=되-ㄹ지|Translit=.doel.ji
 7	알	알	VERB	pvg+etm	Tense=Fut	0	root	0:root	LTranslit=.al|MSeg=알-ㄹ|Translit=.al
-8	수	_	NOUN	nbn	_	7	obl	7:obl	MSeg=수|Translit=.su
+8	수	_	NOUN	nbn	ExtPos=AUX	7	obl	7:obl	MSeg=수|Translit=.su
 9	없지	없	ADJ	paa+ef	_	8	fixed	8:fixed	LTranslit=.eobs|MSeg=없-지|SpaceAfter=No|Translit=.eobs.ji
 10	.	.	PUNCT	sf	_	8	punct	8:punct	_
 11	"	"	PUNCT	sr	_	8	punct	8:punct	SpaceAfter=No
@@ -12935,7 +12935,7 @@
 4.1	이	_	ADP	jcs	_	_	_	4:case	MSeg=이|Translit=.i
 5	다시	_	ADV	mag	_	6	advmod	6:advmod	MSeg=다시|Translit=.da.si
 6	깨어날	깨	VERB	pvg+ecx+px+etm	Tense=Fut	0	root	0:root	LTranslit=.ggae|MSeg=깨-어-나-ㄹ|Translit=.ggae.eo.nal
-7	수도	수	ADV	nbn+jxc	_	6	advmod	6:advmod	LTranslit=.su|MSeg=수-도|Translit=.su.do
+7	수도	수	NOUN	nbn+jxc	ExtPos=AUX	6	obl	6:obl	LTranslit=.su|MSeg=수-도|Translit=.su.do
 7.1	도	_	ADP	jxc	_	_	_	7:case	MSeg=도|Translit=.do
 8	있어요	있	VERB	paa+ef+jxf	_	7	fixed	7:fixed	LTranslit=.iss|MSeg=있-어-요|SpaceAfter=No|Translit=.iss.eo.yo
 9	.	.	PUNCT	sf	_	7	punct	7:punct	SpaceAfter=No
@@ -13491,7 +13491,7 @@
 5	거짓말을	거짓말	NOUN	ncn+jco	Case=Acc	6	obj	6:obj	LTranslit=.geo.jis.mal|MSeg=거짓말-을|Translit=.geo.jis.mal.eul
 5.1	을	_	ADP	jco	_	_	_	5:case	MSeg=을|Translit=.eul
 6	하는	하	VERB	pvg+etm	_	0	root	0:root	LTranslit=.ha|MSeg=하-는|Translit=.ha.neun
-7	수가	수	NOUN	nbn+jcs	Case=Nom	6	obl	6:obl	LTranslit=.su|MSeg=수-가|Translit=.su.ga
+7	수가	수	NOUN	nbn+jcs	Case=Nom|ExtPos=AUX	6	obl	6:obl	LTranslit=.su|MSeg=수-가|Translit=.su.ga
 7.1	가	_	ADP	jcs	_	_	_	7:case	MSeg=가|Translit=.ga
 8	있다	있	ADJ	paa+ef	_	7	fixed	7:fixed	LTranslit=.iss|MSeg=있-다|SpaceAfter=No|Translit=.iss.da
 9	.	.	PUNCT	sf	_	7	punct	7:punct	SpaceAfter=No
@@ -13534,7 +13534,7 @@
 10.1	을	_	ADP	jco	_	_	_	10:case	MSeg=을|Translit=.eul
 11	가지게	가지	VERB	pvg+ecx	_	15	ccomp	15:ccomp	LTranslit=.ga.ji|MSeg=가지-게|Translit=.ga.ji.ge
 12	할	_	AUX	px+etm	_	11	aux	11:aux	MSeg=하|Translit=.hal
-13	수도	수	ADV	nbn+jxc	_	11	advmod	11:advmod	LTranslit=.su|MSeg=수-도|Translit=.su.do
+13	수도	수	NOUN	nbn+jxc	ExtPos=AUX	11	obl	11:obl	LTranslit=.su|MSeg=수-도|Translit=.su.do
 13.1	도	_	ADP	jxc	_	_	_	13:case	MSeg=도|Translit=.do
 14	있는	있	ADJ	paa+etm	_	13	fixed	13:fixed	LTranslit=.iss|MSeg=있-는|Translit=.iss.neun
 15	이야기였다	이야기	VERB	ncn+jp+ep+ef	Mood=Ind|VerbForm=Fin	0	root	0:root	LTranslit=.i.ya.gi|MSeg=이야기-이-었-다|SpaceAfter=No|Translit=.i.ya.gi.yeoss.da
@@ -13599,7 +13599,7 @@
 7	곳에	곳	ADV	ncn+jca	_	8	obl	8:obl	LTranslit=.gos|MSeg=곳-에|Translit=.gos.e
 7.1	에	_	ADP	jca	_	_	_	7:case	MSeg=에|Translit=.e
 8	몰아넣을	몰아넣	VERB	pvg+etm	Tense=Fut	0	root	0:root	LTranslit=.mol.a.neoh|MSeg=몰아넣-ㄹ|Translit=.mol.a.neoh.eul
-9	수도	수	ADV	nbn+jxc	_	8	advmod	8:advmod	LTranslit=.su|MSeg=수-도|Translit=.su.do
+9	수도	수	NOUN	nbn+jxc	ExtPos=AUX	8	obl	8:obl	LTranslit=.su|MSeg=수-도|Translit=.su.do
 9.1	도	_	ADP	jxc	_	_	_	9:case	MSeg=도|Translit=.do
 10	있을	있	ADJ	paa+etm	_	9	fixed	9:fixed	LTranslit=.iss|MSeg=있-ㄹ|Translit=.iss.eul
 11	것이다	것	VERB	nbn+jp+ef	Mood=Ind|VerbForm=Fin	8	advcl	8:advcl	LTranslit=.geos|MSeg=것-이-다|SpaceAfter=No|Translit=.geos.i.da
@@ -13888,7 +13888,7 @@
 6	별을	별	NOUN	ncn+jco	Case=Acc	7	obj	7:obj	LTranslit=.byeol|MSeg=별-을|Translit=.byeol.eul
 6.1	을	_	ADP	jco	_	_	_	6:case	MSeg=을|Translit=.eul
 7	찾아낼	찾	VERB	pvg+ecx+px+etm	Tense=Fut	3	conj	3:conj	LTranslit=.chaj|MSeg=찾-아-내-ㄹ|Translit=.chaj.a.nael
-8	수	_	NOUN	nbn	_	7	obl	7:obl	MSeg=수|Translit=.su
+8	수	_	NOUN	nbn	ExtPos=AUX	7	obl	7:obl	MSeg=수|Translit=.su
 9	있게	있	SCONJ	paa+ecs	_	8	fixed	8:fixed	LTranslit=.iss|MSeg=있-게|Translit=.iss.ge
 10	별들이	별	NOUN	ncn+xsn+jcs	Case=Nom	12	nsubj	12:nsubj	LTranslit=.byeol|MSeg=별-들-이|Translit=.byeol.deul.i
 10.1	이	_	ADP	jcs	_	_	_	10:case	MSeg=이|Translit=.i
@@ -14136,7 +14136,7 @@
 1	여행도	여행	ADV	ncpa+jxc	_	2	advcl	2:advcl	LTranslit=.yeo.haeng|MSeg=여행-도|Translit=.yeo.haeng.do
 1.1	도	_	ADP	jxc	_	_	_	1:case	MSeg=도|Translit=.do
 2	할	하	VERB	pvg+etm	Tense=Fut	0	root	0:root	LTranslit=.ha|MSeg=하-ㄹ|Translit=.hal
-3	수	_	NOUN	nbn	_	2	obl	2:obl	MSeg=수|Translit=.su
+3	수	_	NOUN	nbn	ExtPos=AUX	2	obl	2:obl	MSeg=수|Translit=.su
 4	없잖아	없	VERB	pvg+ecx+px+ef	_	3	fixed	3:fixed	LTranslit=.eobs|MSeg=없-지-않-아|SpaceAfter=No|Translit=.eobs.janh.a
 5	.	.	PUNCT	sf	_	3	punct	3:punct	_
 6	"	"	PUNCT	sr	_	3	punct	3:punct	SpaceAfter=No
@@ -14156,7 +14156,7 @@
 7.1	를	_	ADP	jco	_	_	_	7:case	MSeg=를|Translit=.reul
 8	데려다	데리	SCONJ	pvg+ecs	_	9	ccomp	9:ccomp	LTranslit=.de.ri|MSeg=데리-어다|Translit=.de.ryeo.da
 9	줄	주	VERB	pvg+etm	Tense=Fut	0	root	0:root	LTranslit=.ju|MSeg=주-ㄹ|Translit=.jul
-10	수	_	NOUN	nbn	_	9	obl	9:obl	MSeg=수|Translit=.su
+10	수	_	NOUN	nbn	ExtPos=AUX	9	obl	9:obl	MSeg=수|Translit=.su
 11	있어	있	ADJ	paa+ef	_	10	fixed	10:fixed	LTranslit=.iss|MSeg=있-어|SpaceAfter=No|Translit=.iss.eo
 12	.	.	PUNCT	sf	_	10	punct	10:punct	_
 13	"	"	PUNCT	sr	_	10	punct	10:punct	SpaceAfter=No
@@ -14269,7 +14269,7 @@
 8.1	를	_	ADP	jco	_	_	_	8:case	MSeg=를|Translit=.reul
 9	도와	돕	VERB	pvg+ecx	_	10	ccomp	10:ccomp	LTranslit=.dob|MSeg=돕-아|Translit=.do.wa
 10	줄	주	VERB	pvg+etm	Tense=Fut	6	conj	6:conj	LTranslit=.ju|MSeg=주-ㄹ|Translit=.jul
-11	수	_	NOUN	nbn	_	10	obl	10:obl	MSeg=수|Translit=.su
+11	수	_	NOUN	nbn	ExtPos=AUX	10	obl	10:obl	MSeg=수|Translit=.su
 12	있을꺼야	있	ADJ	paa+ef	_	11	fixed	11:fixed	LTranslit=.iss|MSeg=있-ㄹ꺼야|SpaceAfter=No|Translit=.iss.eul.ggeo.ya
 13	.	.	PUNCT	sf	_	11	punct	11:punct	SpaceAfter=No
 
@@ -14307,7 +14307,7 @@
 3	그	_	DET	mmd	_	4	det	4:det	MSeg=그|Translit=.geu
 4	모든걸	_	NOUN	ncn	_	5	dep	5:dep	MSeg=모든걸|Translit=.mo.deun.geol
 5	해결할	해결	VERB	ncpa+xsv+etm	Tense=Fut	0	root	0:root	LTranslit=.hae.gyeol|MSeg=해결-하-ㄹ|Translit=.hae.gyeol.hal
-6	수	_	NOUN	nbn	_	5	obl	5:obl	MSeg=수|Translit=.su
+6	수	_	NOUN	nbn	ExtPos=AUX	5	obl	5:obl	MSeg=수|Translit=.su
 7	있어	있	ADJ	paa+ef	_	6	fixed	6:fixed	LTranslit=.iss|MSeg=있-어|SpaceAfter=No|Translit=.iss.eo
 8	.	.	PUNCT	sf	_	6	punct	6:punct	_
 9	"	"	PUNCT	sr	_	6	punct	6:punct	SpaceAfter=No
@@ -14450,7 +14450,7 @@
 5	있는지는	있	NOUN	paa+ecs+jxt	Case=Nom	6	amod	6:amod	LTranslit=.iss|MSeg=있-는지-는|Translit=.iss.neun.ji.neun
 5.1	는	_	ADP	jxt	_	_	_	5:case	MSeg=는|Translit=.neun
 6	알	알	VERB	pvg+etm	Tense=Fut	9	ccomp	9:ccomp	LTranslit=.al|MSeg=알-ㄹ|Translit=.al
-7	수	_	NOUN	nbn	_	6	obl	6:obl	MSeg=수|Translit=.su
+7	수	_	NOUN	nbn	ExtPos=AUX	6	obl	6:obl	MSeg=수|Translit=.su
 8	없는	없	ADJ	paa+etm	_	7	fixed	7:fixed	LTranslit=.eobs|MSeg=없-는|Translit=.eobs.neun
 9	노릇이야	노릇	VERB	ncn+jp+ef	_	0	root	0:root	LTranslit=.no.reus|MSeg=노릇-이-야|SpaceAfter=No|Translit=.no.reus.i.ya
 10	.	.	PUNCT	sf	_	9	punct	9:punct	SpaceAfter=No
@@ -14553,7 +14553,7 @@
 11	눈에	눈	ADV	ncn+jca	_	12	obl	12:obl	LTranslit=.nun|MSeg=눈-에|Translit=.nun.e
 11.1	에	_	ADP	jca	_	_	_	11:case	MSeg=에|Translit=.e
 12	볼	보	VERB	pvg+etm	Tense=Fut	0	root	0:root	LTranslit=.bo|MSeg=보-ㄹ|Translit=.bol
-13	수	_	NOUN	nbn	_	12	obl	12:obl	MSeg=수|Translit=.su
+13	수	_	NOUN	nbn	ExtPos=AUX	12	obl	12:obl	MSeg=수|Translit=.su
 14	있을꺼야	있	ADJ	paa+ef	_	13	fixed	13:fixed	LTranslit=.iss|MSeg=있-ㄹ꺼야|SpaceAfter=No|Translit=.iss.eul.ggeo.ya
 15	'	'	PUNCT	sr	_	13	punct	13:punct	_
 16	그러나	_	ADV	maj	_	21	advmod	21:advmod	MSeg=그러나|Translit=.geu.reo.na
@@ -14922,7 +14922,7 @@
 5	척	_	NOUN	ncn	_	6	dep	6:dep	MSeg=척|Translit=.cheog
 6	하지	하	VERB	pvg+ecx	_	0	root	0:root	LTranslit=.ha|MSeg=하-지|Translit=.ha.ji
 7	않을	_	AUX	px+etm	_	6	aux	6:aux	MSeg=않|Translit=.anh.eul
-8	수	_	NOUN	nbn	_	6	obl	6:obl	MSeg=수|Translit=.su
+8	수	_	NOUN	nbn	ExtPos=AUX	6	obl	6:obl	MSeg=수|Translit=.su
 9	없겠지	없	ADJ	paa+ep+ef	_	8	fixed	8:fixed	LTranslit=.eobs|MSeg=없-겠-지|SpaceAfter=No|Translit=.eobs.gess.ji
 10	.	.	PUNCT	sf	_	8	punct	8:punct	SpaceAfter=No
 
@@ -15011,7 +15011,7 @@
 20	왕자가	왕자	NOUN	ncn+jcc	_	21	csubj	21:csubj	LTranslit=.wang.ja|MSeg=왕자-가|Translit=.wang.ja.ga
 20.1	가	_	ADP	jcs	_	_	_	20:case	MSeg=가|Translit=.ga
 21	될	되	VERB	pvg+etm	Tense=Fut	0	root	0:root	LTranslit=.doe|MSeg=되-ㄹ|Translit=.doel
-22	수는	수	NOUN	nbn+jxt	Case=Nom	21	obl	21:obl	LTranslit=.su|MSeg=수-는|Translit=.su.neun
+22	수는	수	NOUN	nbn+jxt	Case=Nom|ExtPos=AUX	21	obl	21:obl	LTranslit=.su|MSeg=수-는|Translit=.su.neun
 22.1	는	_	ADP	jxt	_	_	_	22:case	MSeg=는|Translit=.neun
 23	없어	없	ADJ	paa+ef	_	22	fixed	22:fixed	LTranslit=.eobs|MSeg=없-어|SpaceAfter=No|Translit=.eobs.eo
 24	.	.	PUNCT	sf	_	22	punct	22:punct	_
@@ -15159,7 +15159,7 @@
 3	너하고	너하	CCONJ	pvg+ecc	_	0	root	0:root	LTranslit=.neo.ha|MSeg=너하-고|Translit=.neo.ha.go
 3.1	하고	_	ADP	jcr	_	_	_	3:case	MSeg=하고|Translit=.ha.go
 4	놀	놀	VERB	pvg+etm	Tense=Fut	3	conj	3:conj	LTranslit=.nol|MSeg=놀-ㄹ|Translit=.nol
-5	수	_	NOUN	nbn	_	4	obl	4:obl	MSeg=수|Translit=.su
+5	수	_	NOUN	nbn	ExtPos=AUX	4	obl	4:obl	MSeg=수|Translit=.su
 6	없어	없	ADJ	paa+ef	_	5	fixed	5:fixed	LTranslit=.eobs|MSeg=없-어|SpaceAfter=No|Translit=.eobs.eo
 7	.	.	PUNCT	sf	_	5	punct	5:punct	SpaceAfter=No
 
@@ -15981,7 +15981,7 @@
 5.1	만	_	ADP	jxc	_	_	_	5:case	MSeg=만|Translit=.man
 5.2	을	_	ADP	jco	_	_	_	5:case	MSeg=을|Translit=.eul
 6	알	알	VERB	pvg+etm	Tense=Fut	9	ccomp	9:ccomp	LTranslit=.al|MSeg=알-ㄹ|Translit=.al
-7	수	_	NOUN	nbn	_	6	obl	6:obl	MSeg=수|Translit=.su
+7	수	_	NOUN	nbn	ExtPos=AUX	6	obl	6:obl	MSeg=수|Translit=.su
 8	있는	있	ADJ	paa+etm	_	7	fixed	7:fixed	LTranslit=.iss|MSeg=있-는|Translit=.iss.neun
 9	거란다	거두	VERB	ncn+jp+ef	Mood=Ind|VerbForm=Fin	0	root	0:root	LTranslit=.geo.du|MSeg=거두-ㄴ다|SpaceAfter=No|Translit=.geo.ran.da
 10	.	.	PUNCT	sf	_	9	punct	9:punct	_
@@ -16779,7 +16779,7 @@
 3.1	을	_	ADP	jco	_	_	_	3:case	MSeg=을|Translit=.eul
 4	위해서	위하	SCONJ	pvg+ecs	_	5	ccomp	5:ccomp	LTranslit=.wi.ha|MSeg=위하-어서|Translit=.wi.hae.seo
 5	죽을	죽	VERB	pvg+etm	Tense=Fut	0	root	0:root	LTranslit=.jug|MSeg=죽-ㄹ|Translit=.jug.eul
-6	수	_	NOUN	nbn	_	5	obl	5:obl	MSeg=수|Translit=.su
+6	수	_	NOUN	nbn	ExtPos=AUX	5	obl	5:obl	MSeg=수|Translit=.su
 7	없을테니까	없	ADJ	paa+ef	_	6	fixed	6:fixed	LTranslit=.eobs|MSeg=없-ㄹ테니까|SpaceAfter=No|Translit=.eobs.eul.te.ni.gga
 8	.	.	PUNCT	sf	_	6	punct	6:punct	SpaceAfter=No
 
@@ -17740,7 +17740,7 @@
 6	향해	향하	SCONJ	pvg+ecs	_	8	ccomp	8:ccomp	LTranslit=.hyang.ha|MSeg=향하-어|Translit=.hyang.hae
 7	천천히	_	ADV	mag	_	8	advmod	8:advmod	MSeg=천천히|Translit=.cheon.cheon.hi
 8	걸어갈	걷	VERB	pvg+ecx+px+etm	Tense=Fut	1	conj	1:conj	LTranslit=.geot|MSeg=걷-어-가-ㄹ|Translit=.geol.eo.gal
-9	수만	수	ADV	nbn+jxc	_	8	advmod	8:advmod	LTranslit=.su|MSeg=수-만|Translit=.su.man
+9	수만	수	NOUN	nbn+jxc	ExtPos=AUX	8	obl	8:obl	LTranslit=.su|MSeg=수-만|Translit=.su.man
 9.1	만	_	ADP	jxc	_	_	_	9:case	MSeg=만|Translit=.man
 10	있다면	있	SCONJ	paa+ecs	_	9	fixed	9:fixed	LTranslit=.iss|MSeg=있-다면|Translit=.iss.da.myeon
 11	나도	나	ADV	npp+jxc	_	13	advcl	13:advcl	LTranslit=.na|MSeg=나-도|Translit=.na.do
@@ -18054,7 +18054,7 @@
 3.2	도	_	ADP	jxc	_	_	_	3:case	MSeg=도|Translit=.do
 4	좋은	좋	ADJ	paa+etm	_	15	amod	15:amod	LTranslit=.joh|MSeg=좋-ㄴ|Translit=.joh.eun
 5	것일	것	VERB	nbn+jp+etm	Tense=Fut	4	advcl	4:advcl	LTranslit=.geos|MSeg=것-이-ㄹ|Translit=.geos.il
-6	수	_	NOUN	nbn	_	4	obl	4:obl	MSeg=수|Translit=.su
+6	수	_	NOUN	nbn	ExtPos=AUX	4	obl	4:obl	MSeg=수|Translit=.su
 7	있는데	_	ADJ	paa+ef	_	6	fixed	6:fixed	MSeg=있|SpaceAfter=No|Translit=.iss.neun.de
 8	......	......	PUNCT	sf	_	6	punct	6:punct	_
 9	"	"	PUNCT	sr	_	6	punct	6:punct	_
@@ -18464,7 +18464,7 @@
 6	부서지기	부서지	VERB	pvg+etn	_	7	nmod	7:nmod	LTranslit=.bu.seo.ji|MSeg=부서지-기|Translit=.bu.seo.ji.gi
 7	쉬운게	쉬우	SCONJ	paa+ecs	_	8	xcomp	8:xcomp	LTranslit=.swi.u|MSeg=쉬우-ㄴ|Translit=.swi.un.ge
 8	없을	없	ADJ	paa+etm	_	11	amod	11:amod	LTranslit=.eobs|MSeg=없-ㄹ|Translit=.eobs.eul
-9	것	_	NOUN	nbn	_	8	obl	8:obl	MSeg=것|Translit=.geos
+9	것	_	NOUN	nbn	ExtPos=AUX	8	obl	8:obl	MSeg=것|Translit=.geos
 10	같은	같	ADJ	paa+etm	_	9	fixed	9:fixed	LTranslit=.gat|MSeg=같-ㄴ|Translit=.gat.eun
 11	느낌까지	느끼	ADV	pvg+etn+jxc	_	12	advcl	12:advcl	LTranslit=.neu.ggi|MSeg=느끼-ㅁ-까지|Translit=.neu.ggim.gga.ji
 11.1	까지	_	ADP	jxc	_	_	_	11:case	MSeg=까지|Translit=.gga.ji
@@ -18621,7 +18621,7 @@
 3.1	에	_	ADP	jca	_	_	_	3:case	MSeg=에|Translit=.e
 3.2	도	_	ADP	jxc	_	_	_	3:case	MSeg=도|Translit=.do
 4	꺼질	꺼지	VERB	pvg+etm	Tense=Fut	0	root	0:root	LTranslit=.ggeo.ji|MSeg=꺼지-ㄹ|Translit=.ggeo.jil
-5	수	_	NOUN	nbn	_	4	obl	4:obl	MSeg=수|Translit=.su
+5	수	_	NOUN	nbn	ExtPos=AUX	4	obl	4:obl	MSeg=수|Translit=.su
 6	있는	있	ADJ	paa+etm	_	5	fixed	5:fixed	LTranslit=.iss|MSeg=있-는|Translit=.iss.neun
 7	것이다	것	VERB	nbn+jp+ef	Mood=Ind|VerbForm=Fin	4	advcl	4:advcl	LTranslit=.geos|MSeg=것-이-다|SpaceAfter=No|Translit=.geos.i.da
 8	.	.	PUNCT	sf	_	7	punct	7:punct	SpaceAfter=No
@@ -19140,7 +19140,7 @@
 14.1	에서	_	ADP	jca	_	_	_	14:case	MSeg=에서|Translit=.e.seo
 14.2	도	_	ADP	jxc	_	_	_	14:case	MSeg=도|Translit=.do
 15	발겨될	발겨	VERB	ncpa+xsv+etm	Tense=Fut	0	root	0:root	LTranslit=.bal.gyeo|MSeg=발겨-되-ㄹ|Translit=.bal.gyeo.doel
-16	수	_	NOUN	nbn	_	15	obl	15:obl	MSeg=수|Translit=.su
+16	수	_	NOUN	nbn	ExtPos=AUX	15	obl	15:obl	MSeg=수|Translit=.su
 17	있는건데	있	ADJ	paa+ef	_	16	fixed	16:fixed	LTranslit=.iss|MSeg=있-는건데|SpaceAfter=No|Translit=.iss.neun.geon.de
 18	......	......	PUNCT	sf	_	16	punct	16:punct	_
 19	"	"	PUNCT	sr	_	16	punct	16:punct	_
@@ -19974,7 +19974,7 @@
 3	이야기인지	이야기	SCONJ	ncn+jp+ecs	_	5	ccomp	5:ccomp	LTranslit=.i.ya.gi|MSeg=이야기-이-ㄴ지|Translit=.i.ya.gi.in.ji
 4	도무지	_	ADV	mag	_	5	advmod	5:advmod	MSeg=도무지|Translit=.do.mu.ji
 5	알	알	VERB	pvg+etm	Tense=Fut	0	root	0:root	LTranslit=.al|MSeg=알-ㄹ|Translit=.al
-6	수가	수	NOUN	nbn+jcs	Case=Nom	5	obl	5:obl	LTranslit=.su|MSeg=수-가|Translit=.su.ga
+6	수가	수	NOUN	nbn+jcs	Case=Nom|ExtPos=AUX	5	obl	5:obl	LTranslit=.su|MSeg=수-가|Translit=.su.ga
 6.1	가	_	ADP	jcs	_	_	_	6:case	MSeg=가|Translit=.ga
 7	없었다	없	ADJ	paa+ep+ef	_	6	fixed	6:fixed	LTranslit=.eobs|MSeg=없-었-다|SpaceAfter=No|Translit=.eobs.eoss.da
 8	.	.	PUNCT	sf	_	6	punct	6:punct	SpaceAfter=No
@@ -20019,7 +20019,7 @@
 4	사람을	사람	NOUN	ncn+jco	Case=Acc	5	obj	5:obj	LTranslit=.sa.ram|MSeg=사람-을|Translit=.sa.ram.eul
 4.1	을	_	ADP	jco	_	_	_	4:case	MSeg=을|Translit=.eul
 5	죽일	죽이	VERB	pvg+etm	Tense=Fut	10	acl	10:acl	LTranslit=.jug.i|MSeg=죽이-ㄹ|Translit=.jug.il
-6	수	_	NOUN	nbn	_	5	obl	5:obl	MSeg=수|Translit=.su
+6	수	_	NOUN	nbn	ExtPos=AUX	5	obl	5:obl	MSeg=수|Translit=.su
 7	있는	있	ADJ	paa+etm	_	6	fixed	6:fixed	LTranslit=.iss|MSeg=있-는|Translit=.iss.neun
 8	저	_	DET	mmd	_	10	det	10:det	MSeg=저|Translit=.jeo
 9	노란	노랗	ADJ	paa+etm	_	10	amod	10:amod	LTranslit=.no.rah|MSeg=노랗-ㄴ|Translit=.no.ran
@@ -20113,7 +20113,7 @@
 12.1	에	_	ADP	jca	_	_	_	12:case	MSeg=에|Translit=.e
 13	받아	받	SCONJ	pvg+ecs	_	14	ccomp	14:ccomp	LTranslit=.bat|MSeg=받-아|Translit=.bat.a
 14	안을	안	VERB	pvg+etm	_	0	root	0:root	LTranslit=.an|MSeg=안-을|Translit=.an.eul
-15	수	_	NOUN	nbn	_	14	obl	14:obl	MSeg=수|Translit=.su
+15	수	_	NOUN	nbn	ExtPos=AUX	14	obl	14:obl	MSeg=수|Translit=.su
 16	있었다	있	ADJ	paa+ep+ef	_	15	fixed	15:fixed	LTranslit=.iss|MSeg=있-었-다|SpaceAfter=No|Translit=.iss.eoss.da
 17	.	.	PUNCT	sf	_	15	punct	15:punct	SpaceAfter=No
 
@@ -20306,7 +20306,7 @@
 8	나는	나	PRON	npp+jxt	Case=Nom	9	dislocated	9:dislocated	LTranslit=.na|MSeg=나-는|Translit=.na.neun
 8.1	는	_	ADP	jxt	_	_	_	8:case	MSeg=는|Translit=.neun
 9	느낄	느끼	VERB	pvg+etm	Tense=Fut	0	root	0:root	LTranslit=.neu.ggi|MSeg=느끼-ㄹ|Translit=.neu.ggil
-10	수	_	NOUN	nbn	_	9	obl	9:obl	MSeg=수|Translit=.su
+10	수	_	NOUN	nbn	ExtPos=AUX	9	obl	9:obl	MSeg=수|Translit=.su
 11	있었다	있	ADJ	paa+ep+ef	_	10	fixed	10:fixed	LTranslit=.iss|MSeg=있-었-다|SpaceAfter=No|Translit=.iss.eoss.da
 12	.	.	PUNCT	sf	_	10	punct	10:punct	SpaceAfter=No
 
@@ -20426,7 +20426,7 @@
 7	있음을	_	AUX	px+etn+jco	Case=Acc	6	aux	6:aux	MSeg=있|Translit=.iss.eum.eul
 7.1	을	_	ADP	jco	_	_	_	7:case	MSeg=을|Translit=.eul
 8	느낄	느끼	VERB	pvg+etm	Tense=Fut	0	root	0:root	LTranslit=.neu.ggi|MSeg=느끼-ㄹ|Translit=.neu.ggil
-9	수	_	NOUN	nbn	_	8	obl	8:obl	MSeg=수|Translit=.su
+9	수	_	NOUN	nbn	ExtPos=AUX	8	obl	8:obl	MSeg=수|Translit=.su
 10	있었다	있	ADJ	paa+ep+ef	_	9	fixed	9:fixed	LTranslit=.iss|MSeg=있-었-다|SpaceAfter=No|Translit=.iss.eoss.da
 11	.	.	PUNCT	sf	_	9	punct	9:punct	SpaceAfter=No
 
@@ -20474,7 +20474,7 @@
 7	"	"	PUNCT	sr	_	9	punct	9:punct	_
 8	영영	_	ADV	mag	_	9	advmod	9:advmod	MSeg=영영|Translit=.yeong.yeong
 9	돌이킬	돌이키	VERB	pvg+etm	Tense=Fut	13	acl	13:acl	LTranslit=.dol.i.ki|MSeg=돌이키-ㄹ|Translit=.dol.i.kil
-10	수	_	NOUN	nbn	_	9	obl	9:obl	MSeg=수|Translit=.su
+10	수	_	NOUN	nbn	ExtPos=AUX	9	obl	9:obl	MSeg=수|Translit=.su
 11	없는	없	ADJ	paa+etm	_	10	fixed	10:fixed	LTranslit=.eobs|MSeg=없-는|Translit=.eobs.neun
 12	어떤	어떻	VERB	pad+etm	_	13	amod	13:amod	LTranslit=.eo.ddeoh|MSeg=어떻-ㄴ|Translit=.eo.ddeon
 13	일이	일	NOUN	ncn+jcs	Case=Nom	14	nsubj	14:nsubj	LTranslit=.il|MSeg=일-이|Translit=.il.i
@@ -20499,13 +20499,13 @@
 3	다시는	다시	ADV	ncn+jxt	_	4	advmod	4:advmod	LTranslit=.da.si|MSeg=다시-는|Translit=.da.si.neun
 3.1	는	_	ADP	jxt	_	_	_	3:case	MSeg=는|Translit=.neun
 4	들을	듣	VERB	pvg+etm	Tense=Fut	8	acl	8:acl	LTranslit=.deut|MSeg=듣-ㄹ|Translit=.deul.eul
-5	수	_	NOUN	nbn	_	4	obl	4:obl	MSeg=수|Translit=.su
+5	수	_	NOUN	nbn	ExtPos=AUX	4	obl	4:obl	MSeg=수|Translit=.su
 6	없게	없	ADJ	paa+ecx	_	5	fixed	5:fixed	LTranslit=.eobs|MSeg=없-게|Translit=.eobs.ge
 7	되리라는	되	VERB	px+etm	Mood=Imp|VerbForm=Fin	4	compound	4:compound	LTranslit=.doe|MSeg=되-리라는|Translit=.doe.ri.ra.neun
 8	생각이	생각	NOUN	ncpa+jcs	Case=Nom	9	nsubj	9:nsubj	LTranslit=.saeng.gag|MSeg=생각-이|Translit=.saeng.gag.i
 8.1	이	_	ADP	jcs	_	_	_	8:case	MSeg=이|Translit=.i
 9	견딜	견디	VERB	pvg+etm	Tense=Fut	12	ccomp	12:ccomp	LTranslit=.gyeon.di|MSeg=견디-ㄹ|Translit=.gyeon.dil
-10	수	_	NOUN	nbn	_	9	obl	9:obl	MSeg=수|Translit=.su
+10	수	_	NOUN	nbn	ExtPos=AUX	9	obl	9:obl	MSeg=수|Translit=.su
 11	없는	없	ADJ	paa+etm	_	10	fixed	10:fixed	LTranslit=.eobs|MSeg=없-는|Translit=.eobs.neun
 12	일임을	일	NOUN	ncn+jp+etn+jco	Case=Acc	15	obj	15:obj	LTranslit=.il|MSeg=일-이-ㅁ-을|Translit=.il.im.eul
 12.1	을	_	ADP	jco	_	_	_	12:case	MSeg=을|Translit=.eul
@@ -20738,7 +20738,7 @@
 7	지금	_	ADV	ncn	_	8	advmod	8:advmod	MSeg=지금|Translit=.ji.geum
 8	가리켜	가리키	VERB	pvg+ecx	_	0	root	0:root	LTranslit=.ga.ri.ki|MSeg=가리키-어|Translit=.ga.ri.kyeo
 9	줄	주	VERB	px+etm	Tense=Fut	8	compound	8:compound	LTranslit=.ju|MSeg=주-ㄹ|Translit=.jul
-10	수가	수	NOUN	nbn+jcs	Case=Nom	8	obl	8:obl	LTranslit=.su|MSeg=수-가|Translit=.su.ga
+10	수가	수	NOUN	nbn+jcs	Case=Nom|ExtPos=AUX	8	obl	8:obl	LTranslit=.su|MSeg=수-가|Translit=.su.ga
 10.1	가	_	ADP	jcs	_	_	_	10:case	MSeg=가|Translit=.ga
 11	없어	없	ADJ	paa+ef	_	10	fixed	10:fixed	LTranslit=.eobs|MSeg=없-어|SpaceAfter=No|Translit=.eobs.eo
 12	.	.	PUNCT	sf	_	10	punct	10:punct	SpaceAfter=No
@@ -21214,7 +21214,7 @@
 2	난	나	PRON	npp+jxt	Case=Nom	6	nsubj	6:nsubj	LTranslit=.na|MSeg=나-ㄴ|Translit=.nan
 2.1	ㄴ	_	ADP	jxt	_	_	_	2:case	MSeg=ㄴ|Translit=.n
 3	아픈	아프	ADJ	paa+etm	_	6	amod	6:amod	LTranslit=.a.peu|MSeg=아프-ㄴ|Translit=.a.peun
-4	것	_	NOUN	nbn	_	3	obl	3:obl	MSeg=것|Translit=.geos
+4	것	_	NOUN	nbn	ExtPos=AUX	3	obl	3:obl	MSeg=것|Translit=.geos
 5	같이	같	SCONJ	paa+ecs	_	4	fixed	4:fixed	LTranslit=.gat|MSeg=같-이|Translit=.gat.i
 6	보일거야	보일	VERB	pvg+ef	_	11	parataxis	11:parataxis	LTranslit=.bo.il|MSeg=보일-거야|SpaceAfter=No|Translit=.bo.il.geo.ya
 7	......	......	PUNCT	sf	_	6	punct	6:punct	_
@@ -21682,7 +21682,7 @@
 20	이상	_	NOUN	ncn	_	21	dep	21:dep	MSeg=이상|Translit=.i.sang
 21	서	서	VERB	pvg+ecx	_	26	ccomp	26:ccomp	LTranslit=.seo|MSeg=서-어|Translit=.seo
 22	있을	_	AUX	px+etm	_	21	aux	21:aux	MSeg=있|Translit=.iss.eul
-23	수가	수	NOUN	nbn+jcs	Case=Nom	21	obl	21:obl	LTranslit=.su|MSeg=수-가|Translit=.su.ga
+23	수가	수	NOUN	nbn+jcs	Case=Nom|ExtPos=AUX	21	obl	21:obl	LTranslit=.su|MSeg=수-가|Translit=.su.ga
 23.1	가	_	ADP	jcs	_	_	_	23:case	MSeg=가|Translit=.ga
 24	없어	없	SCONJ	paa+ecs	_	23	fixed	23:fixed	LTranslit=.eobs|MSeg=없-어|Translit=.eobs.eo
 25	주저	_	ADV	mag	_	26	advmod	26:advmod	MSeg=주저|Translit=.ju.jeo
@@ -21730,7 +21730,7 @@
 2	꼼짝도	꼼짝	ADV	ncn+jxc	_	3	advcl	3:advcl	LTranslit=.ggom.jjag|MSeg=꼼짝-도|Translit=.ggom.jjag.do
 2.1	도	_	ADP	jxc	_	_	_	2:case	MSeg=도|Translit=.do
 3	할	하	VERB	pvg+etm	Tense=Fut	0	root	0:root	LTranslit=.ha|MSeg=하-ㄹ|Translit=.hal
-4	수가	수	NOUN	nbn+jcs	Case=Nom	3	obl	3:obl	LTranslit=.su|MSeg=수-가|Translit=.su.ga
+4	수가	수	NOUN	nbn+jcs	Case=Nom|ExtPos=AUX	3	obl	3:obl	LTranslit=.su|MSeg=수-가|Translit=.su.ga
 4.1	가	_	ADP	jcs	_	_	_	4:case	MSeg=가|Translit=.ga
 5	없었다	없	ADJ	paa+ep+ef	_	4	fixed	4:fixed	LTranslit=.eobs|MSeg=없-었-다|SpaceAfter=No|Translit=.eobs.eoss.da
 6	.	.	PUNCT	sf	_	4	punct	4:punct	SpaceAfter=No
@@ -21901,7 +21901,7 @@
 6.1	을	_	ADP	jco	_	_	_	6:case	MSeg=을|Translit=.eul
 7	다시	_	ADV	mag	_	8	advmod	8:advmod	MSeg=다시|Translit=.da.si
 8	찾아볼	찾	VERB	pvg+ecx+px+etm	Tense=Fut	0	root	0:root	LTranslit=.chaj|MSeg=찾-아-보-ㄹ|Translit=.chaj.a.bol
-9	수가	수	NOUN	nbn+jcs	Case=Nom	8	obl	8:obl	LTranslit=.su|MSeg=수-가|Translit=.su.ga
+9	수가	수	NOUN	nbn+jcs	Case=Nom|ExtPos=AUX	8	obl	8:obl	LTranslit=.su|MSeg=수-가|Translit=.su.ga
 9.1	가	_	ADP	jcs	_	_	_	9:case	MSeg=가|Translit=.ga
 10	없었던	없	ADJ	paa+ep+etm	_	9	fixed	9:fixed	LTranslit=.eobs|MSeg=없-었-던|Translit=.eobs.eoss.deon
 11	것이다	것	VERB	nbn+jp+ef	Mood=Ind|VerbForm=Fin	8	advcl	8:advcl	LTranslit=.geos|MSeg=것-이-다|SpaceAfter=No|Translit=.geos.i.da
@@ -22076,7 +22076,7 @@
 3	'	'	PUNCT	sl	_	5	punct	5:punct	SpaceAfter=No
 4	어쩌다가	_	ADV	mag	_	5	advmod	5:advmod	MSeg=어쩌다가|Translit=.eo.jjeo.da.ga
 5	방심할	방심	VERB	ncpa+xsv+etm	Tense=Fut	0	root	0:root	LTranslit=.bang.sim|MSeg=방심-하-ㄹ|Translit=.bang.sim.hal
-6	수도	수	ADV	nbn+jxc	_	5	advmod	5:advmod	LTranslit=.su|MSeg=수-도|Translit=.su.do
+6	수도	수	NOUN	nbn+jxc	ExtPos=AUX	5	obl	5:obl	LTranslit=.su|MSeg=수-도|Translit=.su.do
 6.1	도	_	ADP	jxc	_	_	_	6:case	MSeg=도|Translit=.do
 7	있지	있	ADJ	paa+ef	_	6	fixed	6:fixed	LTranslit=.iss|MSeg=있-지|SpaceAfter=No|Translit=.iss.ji
 8	.	.	PUNCT	sf	_	6	punct	6:punct	SpaceAfter=No
@@ -22323,7 +22323,7 @@
 17	꼭	_	ADV	mag	_	18	advmod	18:advmod	MSeg=꼭|Translit=.ggog
 18	알아	알	VERB	pvg+ecx	_	22	obj	22:obj	LTranslit=.al|MSeg=알-아|Translit=.al.a
 19	볼	보	VERB	px+etm	Tense=Fut	18	compound	18:compound	LTranslit=.bo|MSeg=보-ㄹ|Translit=.bol
-20	수	_	NOUN	nbn	_	18	obl	18:obl	MSeg=수|Translit=.su
+20	수	_	NOUN	nbn	ExtPos=AUX	18	obl	18:obl	MSeg=수|Translit=.su
 21	있기를	있	NOUN	paa+etn+jco	Case=Acc	20	fixed	20:fixed	LTranslit=.iss|MSeg=있-기-를|Translit=.iss.gi.reul
 21.1	를	_	ADP	jco	_	_	_	21:case	MSeg=를|Translit=.reul
 22	바란다	바라	VERB	pvg+ef	Mood=Ind|VerbForm=Fin	0	root	0:root	LTranslit=.ba.ra|MSeg=바라-ㄴ다|SpaceAfter=No|Translit=.ba.ran.da
@@ -22384,7 +22384,7 @@
 21.1	가	_	ADP	jcs	_	_	_	21:case	MSeg=가|Translit=.ga
 22	누구인지	누구	VERB	npd+jp+ef	_	23	ccomp	23:ccomp	LTranslit=.nu.gu|MSeg=누구-이-ㄴ지|Translit=.nu.gu.in.ji
 23	알아챌	알	VERB	pvg+ecx+px+etm	Tense=Fut	0	root	0:root	LTranslit=.al|MSeg=알-아-내-ㄹ|Translit=.al.a.chael
-24	수	_	NOUN	nbn	_	23	obl	23:obl	MSeg=수|Translit=.su
+24	수	_	NOUN	nbn	ExtPos=AUX	23	obl	23:obl	MSeg=수|Translit=.su
 25	있으리라	있	ADJ	paa+ef	_	24	fixed	24:fixed	LTranslit=.iss|MSeg=있-으리라|SpaceAfter=No|Translit=.iss.eu.ri.ra
 26	.	.	PUNCT	sf	_	24	punct	24:punct	SpaceAfter=No
 
