@@ -38,6 +38,9 @@ class Romanizer:
     def __call__(self, tok: TokenObject) -> TokenObject:
         text = tok.text
         lemmas = tok.lemma
+        p = tok.p
+        scene = tok.gold_scene
+        funct = tok.gold_function
 
         translit = self.transliterate_hangul(text)
         # ltranslit = "+".join([self.transliterate_hangul(lemma) for lemma in lemmas])
@@ -53,6 +56,12 @@ class Romanizer:
             pass
         else:
             misc.append(f"MSeg={mseg}")
+
+        if p != "_":
+            misc.append(f"Adp={p}")
+            misc.append(f"Scene={scene}")
+            misc.append(f"Funct={funct}")
+
         misc = sorted(misc)
 
 
