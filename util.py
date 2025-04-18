@@ -49,7 +49,10 @@ class Romanizer:
         if ltranslit:
             misc.append(f"LTranslit={ltranslit}")
         misc.append(f"Translit={translit}")
-        misc.append(f"MSeg={mseg}")
+        if core_lemma == "_":
+            pass
+        else:
+            misc.append(f"MSeg={mseg}")
         misc = sorted(misc)
 
 
