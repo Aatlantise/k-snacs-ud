@@ -531,7 +531,25 @@ def conllu2json(conllu_file_path):
     return chapters
 
 def main_create_json_from_conllu():
-    handcorrected_json = conllu2json("little_prince_ko.conllu")
+    """
+    Takes the hand-corrected .conllu file, restores the SNACS annotations and saves the
+    result as a _hand_corrected_.json file.
+    """
+    inheritor = conllu2json("little_prince_ko.conllu")
+    giver = json.load(open("little_prince_annotation_ready.json", encoding="utf-8"))
+
+    assert ([[len(sent) for sent in chap] for chap in inheritor] ==
+            [[len(sent) for sent in chap] for chap in giver])
+
+    for inh_chap, giv_chap in zip(inheritor, giver):
+        for inh_sent, giv_chap in zip(inh_chap, giv_chap):
+            for inh_tok, giv_tok in zip(inh_sent, giv_chap):
+                inh_tok["p"] = giv_tok["p"]
+                inh_tok["gold_scene"] = giv_tok["gold_scene"]
+                inh_tok["gold_function"] = giv_tok["gold_function"]
+
+    handcorrected_json = inheritor
+
     with open("little_prince_hand_corrected.json", "w", encoding="utf-8") as g:
         json.dump(handcorrected_json, g, ensure_ascii=False, indent=4)
 
