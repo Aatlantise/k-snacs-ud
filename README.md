@@ -73,12 +73,16 @@ Each node is a separate line, so can receive annotations, and is consistent (adp
 the highly agglutinative nature of Korean, and the consequent agreement among Korean linguists that we will not separate
 adpositions (or other meaning-carrying sub-orthographic-word elements) as free-standing tokens for UD and similar projects.
 
-## Paper
-Please cite the following when using this data:
+## Citing this work
+When using this data, please cite the following as appropriate:
 
+Original k-SNACS annotations
 [Hwang et al., 2020](https://www.aclweb.org/anthology/2020.dmr-1.6/):
 > Hwang, Jena D., Hanwool Choe, Na-Rae Han, and Nathan Schneider. "K-SNACS: Annotating Korean adposition semantics." In Proceedings of the Second International Workshop on Designing Meaning Representations. 2020. 
 
+Universal Dependencies adaptation
+[Min et al., 2025](https://github.com/UniversalDependencies/UD_Korean-LittlePrince):
+> Junghyun Min, Jena D. Hwang, and Nathan Schneider. "UD-Korean-LittlePrince." 2025.
 
 
 ## K-SNACS Team
