@@ -78,12 +78,7 @@ When using this data, please cite the following as appropriate:
 
 Original k-SNACS annotations
 [Hwang et al., 2020](https://www.aclweb.org/anthology/2020.dmr-1.6/):
-> Hwang, Jena D., Hanwool Choe, Na-Rae Han, and Nathan Schneider. "K-SNACS: Annotating Korean adposition semantics." In Proceedings of the Second International Workshop on Designing Meaning Representations. 2020. 
-
-Universal Dependencies adaptation
-[Min et al., 2025](https://github.com/UniversalDependencies/UD_Korean-LittlePrince):
-> Junghyun Min, Jena D. Hwang, and Nathan Schneider. "UD-Korean-LittlePrince." 2025.
-
+> Hwang, Jena D., Hanwool Choe, Na-Rae Han, and Nathan Schneider. "K-SNACS: Annotating Korean adposition semantics." In Proceedings of the Second International Workshop on Designing Meaning Representations. 2020.
 
 ## K-SNACS Team
 
@@ -94,6 +89,7 @@ Universal Dependencies adaptation
 * [Hanwool Choe](https://english.hku.hk/people/Faculty/258/Dr_Hanwool_Choe) - Hong Kong University
 * [Hyun Min](https://aatlantise.science/georgetown/) - Georgetown University
 * [Nathan Schneider](http://people.cs.georgetown.edu/nschneid/) - Georgetown University
+* [Elli Ahn](https://rsea.fas.harvard.edu/people/elli-ahn) - Harvard University
 
 ### Special Thanks to:
 
