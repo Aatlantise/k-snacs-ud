@@ -562,6 +562,42 @@ def main_create_json_from_conllu():
     with open("little_prince_hand_corrected.json", "w", encoding="utf-8") as g:
         json.dump(handcorrected_json, g, ensure_ascii=False, indent=4)
 
+def generate_col19(filename):
+    """
+    Takes in a conllulex file
+    and generates column 19 entries for each token line,
+    creating little_prince_ko.conllulex.
+
+    Returns: None
+    """
+    f = open(filename, encoding="utf-8")
+    g = open("little_prince_ko.conllulex", "w", encoding="utf-8")
+
+    for line in f:
+        col19 = ""
+        # check if line contains a token
+        if line.strip() and not line.startswith("#"):
+            cols = line.split("\t")
+            # if token, split and check if is part of wMWE (col 18)
+            if cols[15] == "_":
+                col19 = "O"
+            else:
+                if cols[15][-1] == "1":
+                    # begin wMWE
+                    col19 = "B"
+                else:
+                    # continue adpositional wMWE
+                    col19 = "I~-P"
+            # otherwise, check if has snacs annotations (cols 14, 15)
+            if cols[13] != "_" and cols[14] != "_":
+                col19 += f"-{cols[13]}" if cols[13] == cols[14] else f"-{cols[13]}|{cols[14]}"
+            newline = "\t".join(cols[:18] + [col19]) + "\n"
+        else:
+            # not a token but an empty line
+            newline = line
+        g.write(newline)
+
+
 if __name__ == "__main__":
     with open("little_prince_hand_corrected.json", encoding="utf-8") as f:
         annotation_json = json.load(f)
