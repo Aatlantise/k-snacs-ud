@@ -14,7 +14,7 @@ starting from our previously published dataset.
 In the code, we rely on Stanza parsers (Qi et al. 2020) to generate much of the syntactic and morphological analyses.
 We share the code so that our dataset is replicable, flexible to new models, and transparent with linguistic decisions.
 
-Running `run.sh` will produce `little_prince_ko.conllu` as well as all other byproducts:
+Running `run.sh` will produce `little_prince_ko.conllu` as well as other byproducts:
 
 `little_prince_ko.tsv` is our previously published dataset.
 `little_prince_ko.json` is the same content, in json format.
@@ -23,9 +23,7 @@ Running `run.sh` will produce `little_prince_ko.conllu` as well as all other byp
 `little_prince_merged.json` is the result of alignment between tokens from original annotations and Stanza tokens.
 `little_prince_annotation_ready.json` is the UD-compliant version of k-SNACS, and
 `little_prince_ko.conllu` is the same dataset in CoNLL-U form.
-
-The UD-Compliant version is "annotation-ready" for multi-word-expression annotations, which we plan to release in
-the CoNLL-U-LEX format.
+`little_prince_ko.conllulex` is the same dataset in CoNLL-U-Lex form, with manual and automatic additions using `util.generate_col19()`.
 
 
 
